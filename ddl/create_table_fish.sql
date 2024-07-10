@@ -1,7 +1,6 @@
 create table fish(
 	id_fish integer generated always as identity,
-	name character varying(30),
+	name character varying(30) unique,
 	description text,
-	life_style text,
 	primary key (id_fish)
 );
