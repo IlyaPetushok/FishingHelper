@@ -63,7 +63,7 @@ public class SecurityConfiguration {
         http.formLogin(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests(auth -> auth
                         .requestMatchers(SWAGGER_LIST).permitAll()
-                        .requestMatchers("/registration", "/authorization", "/confirm/**").permitAll()
+                        .requestMatchers("/auth/registration", "/auth/authorization", "/confirm/**").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         http.logout(lOut -> {
