@@ -1,0 +1,859 @@
+2024-07-29T10:31:04.332+03:00  INFO 20768 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 20768 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T10:31:04.337+03:00  INFO 20768 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T10:31:04.392+03:00  INFO 20768 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T10:31:04.392+03:00  INFO 20768 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T10:31:05.133+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:31:05.133+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T10:31:05.234+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 15 JPA repository interfaces.
+2024-07-29T10:31:05.514+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:31:05.515+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T10:31:05.538+03:00  INFO 20768 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-07-29T10:31:05.747+03:00  INFO 20768 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T10:31:06.111+03:00  INFO 20768 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T10:31:06.122+03:00  INFO 20768 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T10:31:06.122+03:00  INFO 20768 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T10:31:06.194+03:00  INFO 20768 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T10:31:06.194+03:00  INFO 20768 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1799 ms
+2024-07-29T10:31:06.347+03:00  INFO 20768 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T10:31:06.517+03:00  INFO 20768 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26d028f7
+2024-07-29T10:31:06.518+03:00  INFO 20768 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T10:31:06.637+03:00  INFO 20768 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T10:31:07.158+03:00  INFO 20768 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:31:07.255+03:00  INFO 20768 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T10:31:07.258+03:00  INFO 20768 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T10:31:07.276+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T10:31:07.277+03:00  INFO 20768 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T10:31:07.304+03:00  INFO 20768 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T10:31:07.307+03:00  INFO 20768 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T10:31:07.387+03:00  INFO 20768 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T10:31:07.438+03:00  INFO 20768 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T10:31:07.478+03:00  INFO 20768 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T10:31:07.712+03:00  INFO 20768 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T10:31:07.748+03:00  WARN 20768 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T10:31:08.909+03:00  INFO 20768 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T10:31:08.913+03:00  INFO 20768 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:31:09.213+03:00  INFO 20768 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T10:31:09.573+03:00  WARN 20768 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T10:31:10.220+03:00  WARN 20768 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f026c47b-182c-4f67-8148-8e1bf7c8e305
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T10:31:10.235+03:00  INFO 20768 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T10:31:10.573+03:00  INFO 20768 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T10:31:10.742+03:00  INFO 20768 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.689 seconds (process running for 10.279)
+2024-07-29T10:31:47.094+03:00  INFO 20768 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T10:31:47.094+03:00  INFO 20768 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T10:31:47.096+03:00  INFO 20768 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-29T10:38:58.487+03:00  INFO 20768 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:38:58.490+03:00  INFO 20768 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T10:38:58.493+03:00  INFO 20768 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T10:39:04.485+03:00  INFO 26664 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 26664 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T10:39:04.488+03:00  INFO 26664 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T10:39:04.528+03:00  INFO 26664 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T10:39:04.528+03:00  INFO 26664 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T10:39:05.471+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:39:05.471+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T10:39:05.560+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 15 JPA repository interfaces.
+2024-07-29T10:39:05.808+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:39:05.809+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T10:39:05.828+03:00  INFO 26664 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-07-29T10:39:06.008+03:00  INFO 26664 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T10:39:06.332+03:00  INFO 26664 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T10:39:06.342+03:00  INFO 26664 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T10:39:06.342+03:00  INFO 26664 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T10:39:06.413+03:00  INFO 26664 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T10:39:06.413+03:00  INFO 26664 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1883 ms
+2024-07-29T10:39:06.567+03:00  INFO 26664 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T10:39:06.812+03:00  INFO 26664 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14485747
+2024-07-29T10:39:06.814+03:00  INFO 26664 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T10:39:06.930+03:00  INFO 26664 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T10:39:07.476+03:00  INFO 26664 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:39:07.573+03:00  INFO 26664 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T10:39:07.577+03:00  INFO 26664 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T10:39:07.597+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T10:39:07.598+03:00  INFO 26664 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T10:39:07.623+03:00  INFO 26664 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T10:39:07.626+03:00  INFO 26664 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T10:39:07.701+03:00  INFO 26664 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T10:39:07.759+03:00  INFO 26664 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T10:39:07.801+03:00  INFO 26664 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T10:39:08.031+03:00  INFO 26664 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T10:39:08.070+03:00  WARN 26664 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T10:39:09.095+03:00  INFO 26664 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T10:39:09.100+03:00  INFO 26664 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:39:09.412+03:00  INFO 26664 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T10:39:09.794+03:00  WARN 26664 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T10:39:10.411+03:00  WARN 26664 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e4ae88cf-d18a-41ed-ac3a-4cd2df6467ed
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T10:39:10.423+03:00  INFO 26664 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T10:39:10.755+03:00  INFO 26664 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T10:39:10.925+03:00  INFO 26664 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.67 seconds (process running for 9.529)
+2024-07-29T10:39:22.868+03:00  INFO 26664 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T10:39:22.869+03:00  INFO 26664 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T10:39:22.870+03:00  INFO 26664 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T10:40:28.170+03:00  INFO 26664 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:40:28.172+03:00  INFO 26664 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T10:40:28.175+03:00  INFO 26664 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T10:40:33.898+03:00  INFO 28024 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 28024 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T10:40:33.900+03:00  INFO 28024 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T10:40:33.934+03:00  INFO 28024 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T10:40:33.934+03:00  INFO 28024 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T10:40:34.562+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:40:34.563+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T10:40:34.646+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 15 JPA repository interfaces.
+2024-07-29T10:40:34.887+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:40:34.888+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T10:40:34.907+03:00  INFO 28024 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-07-29T10:40:35.088+03:00  INFO 28024 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T10:40:35.392+03:00  INFO 28024 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T10:40:35.402+03:00  INFO 28024 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T10:40:35.402+03:00  INFO 28024 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T10:40:35.466+03:00  INFO 28024 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T10:40:35.466+03:00  INFO 28024 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1530 ms
+2024-07-29T10:40:35.607+03:00  INFO 28024 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T10:40:35.821+03:00  INFO 28024 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5086623f
+2024-07-29T10:40:35.823+03:00  INFO 28024 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T10:40:35.933+03:00  INFO 28024 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T10:40:36.393+03:00  INFO 28024 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:40:36.484+03:00  INFO 28024 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T10:40:36.488+03:00  INFO 28024 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T10:40:36.523+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T10:40:36.525+03:00  INFO 28024 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T10:40:36.561+03:00  INFO 28024 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T10:40:36.564+03:00  INFO 28024 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T10:40:36.637+03:00  INFO 28024 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T10:40:36.681+03:00  INFO 28024 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T10:40:36.715+03:00  INFO 28024 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T10:40:36.924+03:00  INFO 28024 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T10:40:36.963+03:00  WARN 28024 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T10:40:38.005+03:00  INFO 28024 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T10:40:38.009+03:00  INFO 28024 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:40:38.390+03:00  INFO 28024 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T10:40:38.817+03:00  WARN 28024 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T10:40:39.453+03:00  WARN 28024 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 256af8c8-d9db-430a-a11e-b50c90ae90a4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T10:40:39.464+03:00  INFO 28024 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T10:40:39.814+03:00  INFO 28024 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T10:40:40.005+03:00  INFO 28024 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.436 seconds (process running for 9.389)
+2024-07-29T10:40:47.604+03:00  INFO 28024 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T10:40:47.604+03:00  INFO 28024 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T10:40:47.606+03:00  INFO 28024 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T10:42:05.040+03:00  INFO 28024 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:42:05.042+03:00  INFO 28024 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T10:42:05.046+03:00  INFO 28024 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T10:42:12.226+03:00  INFO 35760 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 35760 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T10:42:12.228+03:00  INFO 35760 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T10:42:12.258+03:00  INFO 35760 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T10:42:12.258+03:00  INFO 35760 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T10:42:12.888+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:42:12.888+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T10:42:12.975+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 15 JPA repository interfaces.
+2024-07-29T10:42:13.217+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:42:13.218+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T10:42:13.238+03:00  INFO 35760 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-07-29T10:42:13.400+03:00  INFO 35760 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f4eea315-b56b-3778-8ad4-ed66013dee3f
+2024-07-29T10:42:13.693+03:00  INFO 35760 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T10:42:13.702+03:00  INFO 35760 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T10:42:13.703+03:00  INFO 35760 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T10:42:13.777+03:00  INFO 35760 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T10:42:13.777+03:00  INFO 35760 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
+2024-07-29T10:42:13.913+03:00  INFO 35760 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T10:42:14.049+03:00  INFO 35760 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7530090a
+2024-07-29T10:42:14.051+03:00  INFO 35760 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T10:42:14.206+03:00  INFO 35760 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T10:42:14.668+03:00  INFO 35760 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:42:14.891+03:00  INFO 35760 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T10:42:14.896+03:00  INFO 35760 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T10:42:14.913+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T10:42:14.914+03:00  INFO 35760 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T10:42:14.943+03:00  INFO 35760 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T10:42:14.945+03:00  INFO 35760 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T10:42:15.016+03:00  INFO 35760 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T10:42:15.058+03:00  INFO 35760 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T10:42:15.091+03:00  INFO 35760 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T10:42:15.293+03:00  INFO 35760 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T10:42:15.335+03:00  WARN 35760 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T10:42:16.399+03:00  INFO 35760 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T10:42:16.402+03:00  INFO 35760 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:42:16.696+03:00  INFO 35760 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T10:42:17.062+03:00  WARN 35760 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T10:42:17.872+03:00  INFO 35760 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T10:42:18.034+03:00  INFO 35760 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.232 seconds (process running for 9.159)
+2024-07-29T10:42:21.662+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T10:42:21.662+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T10:42:21.664+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T10:42:25.218+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 233 ms
+2024-07-29T10:43:32.186+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-7] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T10:43:32.214+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-7] f.a.service.impl.AdminServiceImpl        : User found with ID 3 for role update
+2024-07-29T10:43:32.308+03:00  INFO 35760 --- [admin-service] [http-nio-8082-exec-7] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 3
+2024-07-29T10:46:47.656+03:00  INFO 35760 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:46:47.659+03:00  INFO 35760 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T10:46:47.663+03:00  INFO 35760 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T10:46:56.410+03:00  INFO 30356 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 30356 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T10:46:56.412+03:00  INFO 30356 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T10:46:56.466+03:00  INFO 30356 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T10:46:56.467+03:00  INFO 30356 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T10:46:57.188+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:46:57.188+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T10:46:57.282+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 15 JPA repository interfaces.
+2024-07-29T10:46:57.542+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T10:46:57.543+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T10:46:57.563+03:00  INFO 30356 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-07-29T10:46:57.745+03:00  INFO 30356 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T10:46:58.043+03:00  INFO 30356 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T10:46:58.053+03:00  INFO 30356 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T10:46:58.053+03:00  INFO 30356 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T10:46:58.118+03:00  INFO 30356 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T10:46:58.118+03:00  INFO 30356 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1649 ms
+2024-07-29T10:46:58.261+03:00  INFO 30356 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T10:46:58.385+03:00  INFO 30356 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb12f41
+2024-07-29T10:46:58.386+03:00  INFO 30356 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T10:46:58.498+03:00  INFO 30356 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T10:46:59.010+03:00  INFO 30356 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:46:59.100+03:00  INFO 30356 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T10:46:59.103+03:00  INFO 30356 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T10:46:59.122+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T10:46:59.123+03:00  INFO 30356 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T10:46:59.148+03:00  INFO 30356 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T10:46:59.150+03:00  INFO 30356 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T10:46:59.222+03:00  INFO 30356 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T10:46:59.267+03:00  INFO 30356 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T10:46:59.313+03:00  INFO 30356 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T10:46:59.528+03:00  INFO 30356 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T10:46:59.563+03:00  WARN 30356 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T10:47:00.705+03:00  INFO 30356 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T10:47:00.711+03:00  INFO 30356 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T10:47:01.164+03:00  INFO 30356 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T10:47:01.565+03:00  WARN 30356 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T10:47:02.170+03:00  WARN 30356 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a9a1cf8-fdf4-4533-b618-3e0f467cee56
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T10:47:02.182+03:00  INFO 30356 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T10:47:02.509+03:00  INFO 30356 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T10:47:02.676+03:00  INFO 30356 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.688 seconds (process running for 9.681)
+2024-07-29T10:47:10.383+03:00  INFO 30356 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T10:47:10.383+03:00  INFO 30356 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T10:47:10.385+03:00  INFO 30356 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T11:01:32.777+03:00  INFO 30356 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:01:32.779+03:00  INFO 30356 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:01:32.783+03:00  INFO 30356 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:01:39.028+03:00  INFO 3868 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 3868 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:01:39.031+03:00  INFO 3868 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:01:39.068+03:00  INFO 3868 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:01:39.068+03:00  INFO 3868 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:01:39.721+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:01:39.721+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:01:39.809+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:01:40.070+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:01:40.071+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:01:40.093+03:00  INFO 3868 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2024-07-29T11:01:40.288+03:00  INFO 3868 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T11:01:40.609+03:00  INFO 3868 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:01:40.621+03:00  INFO 3868 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:01:40.621+03:00  INFO 3868 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:01:40.692+03:00  INFO 3868 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:01:40.692+03:00  INFO 3868 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1622 ms
+2024-07-29T11:01:40.839+03:00  INFO 3868 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:01:40.966+03:00  INFO 3868 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb12f41
+2024-07-29T11:01:40.968+03:00  INFO 3868 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:01:41.079+03:00  INFO 3868 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:01:41.553+03:00  INFO 3868 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:01:41.647+03:00  INFO 3868 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:01:41.650+03:00  INFO 3868 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:01:41.667+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:01:41.668+03:00  INFO 3868 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:01:41.693+03:00  INFO 3868 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:01:41.696+03:00  INFO 3868 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:01:41.766+03:00  INFO 3868 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:01:41.814+03:00  INFO 3868 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:01:41.850+03:00  INFO 3868 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:01:42.063+03:00  INFO 3868 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:01:42.097+03:00  WARN 3868 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:01:43.121+03:00  INFO 3868 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:01:43.125+03:00  INFO 3868 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:01:43.496+03:00  INFO 3868 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:01:43.894+03:00  WARN 3868 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:01:44.525+03:00  WARN 3868 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eb26689c-5298-4d3c-9c42-4487fe033651
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T11:01:44.537+03:00  INFO 3868 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T11:01:44.878+03:00  INFO 3868 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:01:45.054+03:00  INFO 3868 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.752 seconds (process running for 9.801)
+2024-07-29T11:01:54.278+03:00  INFO 3868 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:01:54.278+03:00  INFO 3868 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:01:54.280+03:00  INFO 3868 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T11:06:41.119+03:00  INFO 3868 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:06:41.122+03:00  INFO 3868 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:06:41.127+03:00  INFO 3868 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:06:49.183+03:00  INFO 20672 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 20672 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:06:49.185+03:00  INFO 20672 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:06:49.221+03:00  INFO 20672 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:06:49.221+03:00  INFO 20672 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:06:49.851+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:06:49.851+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:06:49.940+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:06:50.193+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:06:50.194+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:06:50.214+03:00  INFO 20672 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-07-29T11:06:50.401+03:00  INFO 20672 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T11:06:50.714+03:00  INFO 20672 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:06:50.724+03:00  INFO 20672 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:06:50.724+03:00  INFO 20672 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:06:50.792+03:00  INFO 20672 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:06:50.792+03:00  INFO 20672 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2024-07-29T11:06:50.930+03:00  INFO 20672 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:06:51.056+03:00  INFO 20672 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40fe8fd5
+2024-07-29T11:06:51.058+03:00  INFO 20672 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:06:51.166+03:00  INFO 20672 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:06:51.630+03:00  INFO 20672 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:06:51.715+03:00  INFO 20672 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:06:51.718+03:00  INFO 20672 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:06:51.736+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:06:51.737+03:00  INFO 20672 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:06:51.772+03:00  INFO 20672 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:06:51.775+03:00  INFO 20672 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:06:51.840+03:00  INFO 20672 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:06:51.885+03:00  INFO 20672 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:06:51.919+03:00  INFO 20672 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:06:52.132+03:00  INFO 20672 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:06:52.166+03:00  WARN 20672 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:06:53.145+03:00  INFO 20672 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:06:53.149+03:00  INFO 20672 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:06:53.451+03:00  INFO 20672 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:06:53.823+03:00  WARN 20672 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:06:54.452+03:00  WARN 20672 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 63ef65d4-e917-4b2e-8b20-39b167d599c3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T11:06:54.463+03:00  INFO 20672 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T11:06:54.794+03:00  INFO 20672 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:06:54.960+03:00  INFO 20672 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.753 seconds (process running for 9.582)
+2024-07-29T11:07:10.352+03:00  INFO 20672 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:07:10.352+03:00  INFO 20672 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:07:10.354+03:00  INFO 20672 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T11:12:01.434+03:00  INFO 20672 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:12:01.437+03:00  INFO 20672 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:12:01.441+03:00  INFO 20672 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:12:12.271+03:00  INFO 35076 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 35076 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:12:12.273+03:00  INFO 35076 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:12:12.312+03:00  INFO 35076 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:12:12.312+03:00  INFO 35076 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:12:12.986+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:12:12.986+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:12:13.079+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:12:13.333+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:12:13.334+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:12:13.355+03:00  INFO 35076 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2024-07-29T11:12:13.540+03:00  INFO 35076 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T11:12:13.859+03:00  INFO 35076 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:12:13.869+03:00  INFO 35076 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:12:13.870+03:00  INFO 35076 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:12:13.945+03:00  INFO 35076 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:12:13.945+03:00  INFO 35076 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1631 ms
+2024-07-29T11:12:14.089+03:00  INFO 35076 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:12:14.218+03:00  INFO 35076 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59fea5f5
+2024-07-29T11:12:14.219+03:00  INFO 35076 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:12:14.332+03:00  INFO 35076 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:12:14.806+03:00  INFO 35076 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:12:14.895+03:00  INFO 35076 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:12:14.898+03:00  INFO 35076 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:12:14.918+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:12:14.919+03:00  INFO 35076 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:12:14.943+03:00  INFO 35076 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:12:14.946+03:00  INFO 35076 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:12:15.024+03:00  INFO 35076 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:12:15.071+03:00  INFO 35076 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:12:15.107+03:00  INFO 35076 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:12:15.340+03:00  INFO 35076 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:12:15.378+03:00  WARN 35076 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:12:16.506+03:00  INFO 35076 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:12:16.510+03:00  INFO 35076 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:12:16.858+03:00  INFO 35076 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:12:17.255+03:00  WARN 35076 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:12:17.918+03:00  WARN 35076 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 65d7e7ee-eb1a-4d7a-b256-f1de06e22c2b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T11:12:17.930+03:00  INFO 35076 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T11:12:18.299+03:00  INFO 35076 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:12:18.494+03:00  INFO 35076 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.451 seconds (process running for 9.353)
+2024-07-29T11:12:24.929+03:00  INFO 35076 --- [admin-service] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:12:24.929+03:00  INFO 35076 --- [admin-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:12:24.931+03:00  INFO 35076 --- [admin-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-29T11:13:09.083+03:00  INFO 35076 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:13:09.085+03:00  INFO 35076 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:13:09.088+03:00  INFO 35076 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:13:16.724+03:00  INFO 33096 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 33096 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:13:16.726+03:00  INFO 33096 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:13:16.764+03:00  INFO 33096 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:13:16.764+03:00  INFO 33096 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:13:17.419+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:13:17.419+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:13:17.512+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:13:17.785+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:13:17.786+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:13:17.808+03:00  INFO 33096 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-07-29T11:13:18.009+03:00  INFO 33096 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T11:13:18.353+03:00  INFO 33096 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:13:18.365+03:00  INFO 33096 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:13:18.365+03:00  INFO 33096 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:13:18.437+03:00  INFO 33096 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:13:18.437+03:00  INFO 33096 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1671 ms
+2024-07-29T11:13:18.602+03:00  INFO 33096 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:13:18.730+03:00  INFO 33096 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb12f41
+2024-07-29T11:13:18.732+03:00  INFO 33096 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:13:18.843+03:00  INFO 33096 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:13:19.322+03:00  INFO 33096 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:13:19.415+03:00  INFO 33096 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:13:19.418+03:00  INFO 33096 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:13:19.438+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:13:19.439+03:00  INFO 33096 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:13:19.463+03:00  INFO 33096 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:13:19.465+03:00  INFO 33096 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:13:19.537+03:00  INFO 33096 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:13:19.582+03:00  INFO 33096 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:13:19.618+03:00  INFO 33096 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:13:19.840+03:00  INFO 33096 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:13:19.874+03:00  WARN 33096 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:13:20.932+03:00  INFO 33096 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:13:20.936+03:00  INFO 33096 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:13:21.249+03:00  INFO 33096 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:13:21.637+03:00  WARN 33096 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:13:22.296+03:00  WARN 33096 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a4550144-ca95-4d12-8045-d3a430e7e849
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T11:13:22.307+03:00  INFO 33096 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T11:13:22.654+03:00  INFO 33096 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:13:22.830+03:00  INFO 33096 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 8.248 seconds (process running for 9.268)
+2024-07-29T11:13:28.564+03:00  INFO 33096 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:13:28.564+03:00  INFO 33096 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:13:28.566+03:00  INFO 33096 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-29T11:24:34.331+03:00  INFO 33096 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:24:34.334+03:00  INFO 33096 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:24:34.336+03:00  INFO 33096 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:24:43.799+03:00  INFO 1424 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 1424 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:24:43.801+03:00  INFO 1424 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:24:43.845+03:00  INFO 1424 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:24:43.845+03:00  INFO 1424 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:24:44.592+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:24:44.592+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:24:44.707+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:24:45.000+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:24:45.001+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:24:45.024+03:00  INFO 1424 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-07-29T11:24:45.243+03:00  INFO 1424 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bc2a552-34e9-3157-acbf-dcb94ed0a158
+2024-07-29T11:24:45.599+03:00  INFO 1424 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:24:45.611+03:00  INFO 1424 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:24:45.611+03:00  INFO 1424 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:24:45.686+03:00  INFO 1424 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:24:45.686+03:00  INFO 1424 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1838 ms
+2024-07-29T11:24:45.852+03:00  INFO 1424 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:24:45.980+03:00  INFO 1424 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10b67f54
+2024-07-29T11:24:45.982+03:00  INFO 1424 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:24:46.100+03:00  INFO 1424 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:24:46.616+03:00  INFO 1424 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:24:46.705+03:00  INFO 1424 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:24:46.708+03:00  INFO 1424 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:24:46.726+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:24:46.727+03:00  INFO 1424 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:24:46.752+03:00  INFO 1424 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:24:46.755+03:00  INFO 1424 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:24:46.830+03:00  INFO 1424 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:24:46.881+03:00  INFO 1424 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:24:46.925+03:00  INFO 1424 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:24:47.197+03:00  INFO 1424 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:24:47.238+03:00  WARN 1424 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:24:48.406+03:00  INFO 1424 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:24:48.411+03:00  INFO 1424 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:24:48.777+03:00  INFO 1424 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:24:49.177+03:00  WARN 1424 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:24:49.844+03:00  WARN 1424 --- [admin-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 884e59ec-a86f-42dc-ae67-0fdb92592b92
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-07-29T11:24:49.857+03:00  INFO 1424 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-07-29T11:24:50.215+03:00  INFO 1424 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:24:50.392+03:00  INFO 1424 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 9.246 seconds (process running for 10.422)
+2024-07-29T11:26:12.339+03:00  INFO 1424 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:26:12.339+03:00  INFO 1424 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:26:12.341+03:00  INFO 1424 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-29T11:32:26.372+03:00  INFO 1424 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:32:26.374+03:00  INFO 1424 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T11:32:26.379+03:00  INFO 1424 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-29T11:34:34.462+03:00  INFO 35528 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 35528 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:34:34.465+03:00  INFO 35528 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:34:34.519+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:34.520+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:34.520+03:00  WARN 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1950e8a6 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:34.520+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:34.520+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:34.521+03:00  WARN 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70fab835 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:34.521+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:34.521+03:00  INFO 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:34.521+03:00  WARN 35528 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1b0a7baf uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:35.462+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:34:35.463+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:34:35.570+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:34:35.574+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:34:35.575+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:34:35.594+03:00  INFO 35528 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 Redis repository interface.
+2024-07-29T11:34:36.216+03:00  INFO 35528 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84962ffd-1040-3cce-86f2-cc655ddf30fe
+2024-07-29T11:34:36.749+03:00  INFO 35528 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:34:36.760+03:00  INFO 35528 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:34:36.760+03:00  INFO 35528 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:34:36.832+03:00  INFO 35528 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:34:36.833+03:00  INFO 35528 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2308 ms
+2024-07-29T11:34:36.869+03:00 ERROR 35528 --- [admin-service] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in file [E:\Хуйня\try2\FishingHelper\fishing-helper\security-server\target\classes\fishinghelper\security_server\util\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+2024-07-29T11:34:36.895+03:00  INFO 35528 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-29T11:34:36.904+03:00  WARN 35528 --- [admin-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-07-29T11:34:36.916+03:00  INFO 35528 --- [admin-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-29T11:34:36.939+03:00 ERROR 35528 --- [admin-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at fishinghelper.admin_service.AdminServiceApplication.main(AdminServiceApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.2.jar:3.3.2]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in file [E:\Хуйня\try2\FishingHelper\fishing-helper\security-server\target\classes\fishinghelper\security_server\util\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.2.jar:3.3.2]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 56 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 68 common frames omitted
+
+2024-07-29T11:34:56.125+03:00  INFO 27432 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 27432 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:34:56.127+03:00  INFO 27432 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:34:56.164+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:56.165+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:56.165+03:00  WARN 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@66971f6b uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:56.165+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:56.165+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:56.165+03:00  WARN 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@d78795 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:56.165+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:34:56.165+03:00  INFO 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T11:34:56.165+03:00  WARN 27432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2c715e84 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T11:34:56.928+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:34:56.928+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:34:57.035+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:34:57.039+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:34:57.040+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:34:57.059+03:00  INFO 27432 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 Redis repository interface.
+2024-07-29T11:34:57.615+03:00  INFO 27432 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84962ffd-1040-3cce-86f2-cc655ddf30fe
+2024-07-29T11:34:58.074+03:00  INFO 27432 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:34:58.085+03:00  INFO 27432 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:34:58.085+03:00  INFO 27432 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:34:58.155+03:00  INFO 27432 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:34:58.155+03:00  INFO 27432 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1988 ms
+2024-07-29T11:34:58.191+03:00 ERROR 27432 --- [admin-service] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in file [E:\Хуйня\try2\FishingHelper\fishing-helper\security-server\target\classes\fishinghelper\security_server\util\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+2024-07-29T11:34:58.217+03:00  INFO 27432 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-29T11:34:58.226+03:00  WARN 27432 --- [admin-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-07-29T11:34:58.238+03:00  INFO 27432 --- [admin-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-29T11:34:58.260+03:00 ERROR 27432 --- [admin-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at fishinghelper.admin_service.AdminServiceApplication.main(AdminServiceApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.2.jar:3.3.2]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in file [E:\Хуйня\try2\FishingHelper\fishing-helper\security-server\target\classes\fishinghelper\security_server\util\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.2.jar:3.3.2]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtProvider': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 56 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 68 common frames omitted
+
+2024-07-29T11:36:36.724+03:00  INFO 23648 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Starting AdminServiceApplication using Java 17 with PID 23648 (E:\Хуйня\try2\FishingHelper\fishing-helper\admin-service\target\classes started by Asus in E:\Хуйня\try2\FishingHelper\fishing-helper)
+2024-07-29T11:36:36.726+03:00  INFO 23648 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T11:36:36.762+03:00  INFO 23648 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T11:36:36.762+03:00  INFO 23648 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T11:36:37.503+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:36:37.503+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-29T11:36:37.603+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 15 JPA repository interfaces.
+2024-07-29T11:36:37.607+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-07-29T11:36:37.608+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-07-29T11:36:37.626+03:00  INFO 23648 --- [admin-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 Redis repository interface.
+2024-07-29T11:36:38.134+03:00  INFO 23648 --- [admin-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84962ffd-1040-3cce-86f2-cc655ddf30fe
+2024-07-29T11:36:38.565+03:00  INFO 23648 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-07-29T11:36:38.575+03:00  INFO 23648 --- [admin-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-29T11:36:38.575+03:00  INFO 23648 --- [admin-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-29T11:36:38.655+03:00  INFO 23648 --- [admin-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-29T11:36:38.656+03:00  INFO 23648 --- [admin-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1891 ms
+2024-07-29T11:36:38.836+03:00  INFO 23648 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-29T11:36:38.962+03:00  INFO 23648 --- [admin-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e2c6fd6
+2024-07-29T11:36:38.964+03:00  INFO 23648 --- [admin-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-29T11:36:39.087+03:00  INFO 23648 --- [admin-service] [main] liquibase.database                       : Set default schema name to public
+2024-07-29T11:36:39.675+03:00  INFO 23648 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:36:39.768+03:00  INFO 23648 --- [admin-service] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-07-29T11:36:39.771+03:00  INFO 23648 --- [admin-service] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : Run:                          0
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : Previously run:              25
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : Filtered out:                 0
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : -------------------------------
+2024-07-29T11:36:39.789+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : Total change sets:           25
+2024-07-29T11:36:39.790+03:00  INFO 23648 --- [admin-service] [main] liquibase.util                           : Update summary generated
+2024-07-29T11:36:39.815+03:00  INFO 23648 --- [admin-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-29T11:36:39.818+03:00  INFO 23648 --- [admin-service] [main] liquibase.command                        : Command execution complete
+2024-07-29T11:36:39.904+03:00  INFO 23648 --- [admin-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-29T11:36:39.970+03:00  INFO 23648 --- [admin-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-29T11:36:40.009+03:00  INFO 23648 --- [admin-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-29T11:36:40.252+03:00  INFO 23648 --- [admin-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-29T11:36:40.294+03:00  WARN 23648 --- [admin-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-29T11:36:41.674+03:00  INFO 23648 --- [admin-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-29T11:36:41.678+03:00  INFO 23648 --- [admin-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T11:36:42.384+03:00  INFO 23648 --- [admin-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-29T11:36:42.947+03:00  WARN 23648 --- [admin-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-29T11:36:42.985+03:00  INFO 23648 --- [admin-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2024-07-29T11:37:38.542+03:00  WARN 23648 --- [admin-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s476ms926µs900ns).
+2024-07-29T11:37:39.314+03:00  INFO 23648 --- [admin-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-07-29T11:37:39.477+03:00  INFO 23648 --- [admin-service] [main] f.admin_service.AdminServiceApplication  : Started AdminServiceApplication in 67.268 seconds (process running for 68.288)
+2024-07-29T11:37:46.219+03:00  INFO 23648 --- [admin-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-29T11:37:46.219+03:00  INFO 23648 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-29T11:37:46.221+03:00  INFO 23648 --- [admin-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-29T11:38:21.990+03:00  INFO 23648 --- [admin-service] [http-nio-8082-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 261 ms
+2024-07-29T13:38:40.680+03:00  INFO 23648 --- [admin-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-29T13:38:41.087+03:00  INFO 23648 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-29T13:38:41.178+03:00  INFO 23648 --- [admin-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

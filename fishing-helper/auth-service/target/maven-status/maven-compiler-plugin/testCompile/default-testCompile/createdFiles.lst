@@ -1,0 +1,5 @@
+fishinghelper\auth_service\controller\AuthenticationControllerTest.class
+fishinghelper\auth_service\controller\RegistrationControllerTest.class
+fishinghelper\auth_service\service\AuthorizationServiceTest.class
+fishinghelper\auth_service\mapper\UserMapperTest.class
+fishinghelper\auth_service\service\RegistrationServiceTest.class

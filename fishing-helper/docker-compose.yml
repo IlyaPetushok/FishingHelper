@@ -1,0 +1,105 @@
+version: '3.3'
+services:
+  db:
+    container_name: fishinghelper_container
+    image: postgres
+    environment:
+      - POSTGRES_DB=FishingHelpers
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    networks:
+      - app-network
+    ports:
+      - "5051:5432"
+
+  redis:
+    image: redis:latest
+    container_name: redis_container
+    ports:
+      - "6051:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: '256M'
+    networks:
+      - app-network
+    command: redis-server --requirepass ""
+
+  config-service:
+    build:
+      dockerfile: ./config-server/DockerFile
+    container_name: config-server-container
+    networks:
+      - app-network
+    ports:
+      - "8888:8888"
+  auth-service:
+    build:
+      dockerfile: ./auth-service/DockerFile
+    container_name: auth-service-container
+#    deploy:
+#      replicas: 3
+    networks:
+      - app-network
+    depends_on:
+      - db
+      - config-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    ports:
+      - "9091:8081"
+#      - "9191:8081"
+#      - "9291:8081"
+  user-service:
+    build:
+      dockerfile: ./user-service/DockerFile
+    container_name: user-service-container
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    depends_on:
+      - db
+      - config-service
+    networks:
+      - app-network
+    ports:
+      - "9090:8080"
+  admin-service:
+    build:
+      dockerfile: ./admin-service/DockerFile
+    container_name: admin-service-container
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    depends_on:
+      - db
+      - config-service
+    networks:
+      - app-network
+    ports:
+      - "9092:8082"
+  load-balancer-nginx:
+    build:
+      dockerfile: ./load-balancer/nginx.loadbalancer/DockerFile
+    container_name: load-balancer-nginx
+    depends_on:
+      - auth-service
+      - admin-service
+      - user-service
+    ports:
+      - "9999:9999"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
+
+

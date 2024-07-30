@@ -1,0 +1,640 @@
+2024-07-29T12:14:57.205+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:14:57.227+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:14:57.230+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:14:57.256+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:14:57.257+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2fc2a205 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:14:57.257+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7048535f uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:14:57.258+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:14:57.258+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:14:57.258+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@e3994ef uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:00.053+03:00  INFO 24048 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T12:15:00.053+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T12:15:00.055+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T12:15:00.086+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 4.086 seconds (process running for 5.281)
+2024-07-29T12:15:00.713+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:00.716+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:00.717+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:00.720+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:00.720+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:00.720+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6408be5 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:00.721+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1e57b783 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:00.722+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@73b8ab2c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.034+03:00  INFO 24048 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T12:15:01.034+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T12:15:01.035+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T12:15:01.045+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 0.64 seconds (process running for 6.24)
+2024-07-29T12:15:01.534+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:01.536+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:01.536+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:01.538+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.538+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@dd9de63 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@52a75c12 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@57f1a1de uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.546+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 0.334 seconds (process running for 6.741)
+2024-07-29T12:15:01.874+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:01.876+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:01.877+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:01.878+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.879+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@f08f8a9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.879+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5ebf776c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:01.880+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7fd3fd06 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:01.887+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 0.311 seconds (process running for 7.082)
+2024-07-29T12:15:02.171+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:02.173+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:02.174+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:02.175+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.176+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3b576ee3 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.176+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@705d914f uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.177+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6212ea52 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.183+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 0.278 seconds (process running for 7.378)
+2024-07-29T12:15:02.490+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:02.492+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:02.492+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.494+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@25110bb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.494+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@dbda472 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.495+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@41492479 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.501+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 0.289 seconds (process running for 7.696)
+2024-07-29T12:15:02.777+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T12:15:02.778+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T12:15:02.779+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T12:15:02.781+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.781+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.781+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7d6019d5 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.782+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@40b01718 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
+2024-07-29T12:15:02.782+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6d4c18b8 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
+2024-07-29T12:15:02.789+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 0.275 seconds (process running for 7.984)
+2024-07-29T12:15:03.113+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-07-29T12:15:03.122+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-07-29T12:15:03.127+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T12:15:03.128+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-07-29T12:15:03.128+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-07-29T12:15:03.416+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T12:15:03.417+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-07-29T12:15:03.425+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-07-29T12:15:03.425+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-07-29T12:15:03.441+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-07-29T12:15:03.443+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-07-29T12:15:03.450+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T12:15:03.450+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-07-29T12:15:03.457+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T12:15:03.457+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-07-29T12:15:03.465+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T12:15:03.465+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-07-29T15:35:46.615+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:46.648+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:46.651+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:46.681+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:46.681+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:49.417+03:00  INFO 33972 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T15:35:49.417+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T15:35:49.419+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T15:35:49.451+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 10.601 seconds (process running for 11.894)
+2024-07-29T15:35:51.295+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:51.297+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:51.297+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:51.299+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:51.300+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:51.648+03:00  INFO 33972 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T15:35:51.648+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T15:35:51.649+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T15:35:51.657+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 1.88 seconds (process running for 14.099)
+2024-07-29T15:35:52.964+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:52.966+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:52.966+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:52.968+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:52.968+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:52.974+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.157 seconds (process running for 15.417)
+2024-07-29T15:35:54.240+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:54.242+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:54.243+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:54.245+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:54.246+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:54.254+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.252 seconds (process running for 16.697)
+2024-07-29T15:35:55.437+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:55.439+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:55.440+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:55.442+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:55.442+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:55.449+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.179 seconds (process running for 17.892)
+2024-07-29T15:35:56.786+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:56.789+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:56.789+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:56.791+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:56.791+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:56.797+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.322 seconds (process running for 19.24)
+2024-07-29T15:35:58.393+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T15:35:58.395+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T15:35:58.395+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T15:35:58.397+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T15:35:58.397+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T15:35:58.401+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.588 seconds (process running for 20.845)
+2024-07-29T15:35:58.745+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-07-29T15:35:58.755+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-07-29T15:35:58.760+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T15:35:58.761+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-07-29T15:35:58.761+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-07-29T15:35:59.065+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T15:35:59.065+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-07-29T15:35:59.073+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-07-29T15:35:59.073+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-07-29T15:35:59.092+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-07-29T15:35:59.093+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-07-29T15:35:59.098+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T15:35:59.099+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-07-29T15:35:59.104+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T15:35:59.104+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-07-29T15:35:59.114+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T15:35:59.114+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-07-29T16:30:44.826+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:44.870+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:44.872+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:44.901+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:44.901+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:48.027+03:00  INFO 35432 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T16:30:48.027+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T16:30:48.029+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T16:30:48.072+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 5.73 seconds (process running for 7.028)
+2024-07-29T16:30:49.673+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:49.676+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:49.676+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:49.678+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:49.678+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:49.987+03:00  INFO 35432 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T16:30:49.987+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T16:30:49.988+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T16:30:49.996+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 1.594 seconds (process running for 8.951)
+2024-07-29T16:30:51.261+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:51.263+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:51.264+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:51.265+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:51.265+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:51.271+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.114 seconds (process running for 10.227)
+2024-07-29T16:30:52.366+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:52.368+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:52.368+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:52.370+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:52.370+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:52.376+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.082 seconds (process running for 11.332)
+2024-07-29T16:30:53.523+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:53.525+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:53.526+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:53.529+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:53.529+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:53.540+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.15 seconds (process running for 12.496)
+2024-07-29T16:30:54.695+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:54.697+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:54.697+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:54.699+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:54.699+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:54.704+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.122 seconds (process running for 13.66)
+2024-07-29T16:30:55.801+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T16:30:55.803+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T16:30:55.803+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T16:30:55.804+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-07-29T16:30:55.804+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
+2024-07-29T16:30:55.809+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.092 seconds (process running for 14.765)
+2024-07-29T16:30:56.133+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-07-29T16:30:56.144+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-07-29T16:30:56.149+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T16:30:56.150+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-07-29T16:30:56.150+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-07-29T16:30:56.449+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T16:30:56.450+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-07-29T16:30:56.457+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-07-29T16:30:56.458+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-07-29T16:30:56.471+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-07-29T16:30:56.473+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-07-29T16:30:56.478+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T16:30:56.478+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-07-29T16:30:56.482+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T16:30:56.483+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-07-29T16:30:56.491+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T16:30:56.491+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-07-29T22:17:47.012+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:47.077+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:47.079+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:50.843+03:00  INFO 34208 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T22:17:50.845+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T22:17:50.849+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2024-07-29T22:17:50.902+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 4.911 seconds (process running for 6.7)
+2024-07-29T22:17:51.701+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:51.707+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:51.709+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:52.119+03:00  INFO 34208 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T22:17:52.119+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T22:17:52.120+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T22:17:52.130+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 0.751 seconds (process running for 7.927)
+2024-07-29T22:17:52.646+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:52.650+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:52.651+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:52.662+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 0.338 seconds (process running for 8.459)
+2024-07-29T22:17:52.991+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:52.997+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:52.997+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:53.006+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 0.304 seconds (process running for 8.804)
+2024-07-29T22:17:53.361+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:53.367+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:53.367+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:53.379+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 0.353 seconds (process running for 9.176)
+2024-07-29T22:17:53.697+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:53.702+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:53.702+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:53.713+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 0.306 seconds (process running for 9.511)
+2024-07-29T22:17:54.020+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:17:54.025+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
+2024-07-29T22:17:54.025+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:17:54.036+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 0.305 seconds (process running for 9.834)
+2024-07-29T22:17:54.487+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-07-29T22:17:54.499+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-07-29T22:17:54.505+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T22:17:54.506+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-07-29T22:17:54.506+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-07-29T22:17:54.898+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T22:17:54.899+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-07-29T22:17:54.908+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-07-29T22:17:54.909+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-07-29T22:17:54.932+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-07-29T22:17:54.934+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-07-29T22:17:54.942+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T22:17:54.943+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-07-29T22:17:54.951+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T22:17:54.951+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-07-29T22:17:54.965+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T22:17:54.966+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-07-29T22:20:02.729+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:04.437+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:04.440+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:04.473+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:04.493+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:07.881+03:00  INFO 27044 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T22:20:07.881+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T22:20:07.884+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-07-29T22:20:07.909+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 7.092 seconds (process running for 9.014)
+2024-07-29T22:20:08.923+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:10.143+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:10.143+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:10.156+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:10.157+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:10.495+03:00  INFO 27044 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-29T22:20:10.496+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-29T22:20:10.497+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-29T22:20:10.508+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 2.244 seconds (process running for 11.614)
+2024-07-29T22:20:11.335+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:12.403+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:12.404+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:12.414+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:12.416+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:12.425+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.75 seconds (process running for 13.53)
+2024-07-29T22:20:13.183+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:14.169+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:14.169+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:14.179+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:14.180+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:14.188+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.724 seconds (process running for 15.292)
+2024-07-29T22:20:14.769+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:15.792+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:15.792+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:15.801+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:15.802+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:15.810+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.61 seconds (process running for 16.915)
+2024-07-29T22:20:16.381+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:17.403+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:17.403+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:17.413+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:17.415+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:17.424+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.591 seconds (process running for 18.53)
+2024-07-29T22:20:17.952+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-29T22:20:18.948+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-29T22:20:18.948+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-29T22:20:18.955+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-29T22:20:18.956+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-29T22:20:18.962+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.521 seconds (process running for 20.068)
+2024-07-29T22:20:19.549+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-07-29T22:20:19.562+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-07-29T22:20:19.569+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-07-29T22:20:19.570+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-07-29T22:20:19.571+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-07-29T22:20:20.042+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T22:20:20.043+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-07-29T22:20:20.051+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-07-29T22:20:20.052+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-07-29T22:20:20.072+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-07-29T22:20:20.074+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-07-29T22:20:20.083+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-07-29T22:20:20.083+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-07-29T22:20:20.090+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T22:20:20.091+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-07-29T22:20:20.107+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-07-29T22:20:20.107+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
