@@ -1,5 +1,15 @@
 version: '3.3'
 services:
+
+  load-balancer-nginx:
+    build:
+      dockerfile: ./load-balancer/nginx.loadbalancer/DockerFile
+    container_name: load-balancer-nginx
+    ports:
+      - "9999:9999"
+    networks:
+      - app-network
+
   db:
     container_name: fishinghelper_container
     image: postgres
@@ -12,7 +22,7 @@ services:
     ports:
       - "5051:5432"
 
-  redis:
+  redis_db:
     image: redis:latest
     container_name: redis_container
     ports:
@@ -37,29 +47,66 @@ services:
       - app-network
     ports:
       - "8888:8888"
-  auth-service:
+
+
+  auth-service-1:
     build:
       dockerfile: ./auth-service/DockerFile
-    container_name: auth-service-container
-#    deploy:
-#      replicas: 3
+    container_name: auth-service-container-1
     networks:
       - app-network
     depends_on:
       - db
       - config-service
     environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
       - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
     ports:
       - "9091:8081"
-#      - "9191:8081"
-#      - "9291:8081"
-  user-service:
+
+  auth-service-2:
+    build:
+      dockerfile: ./auth-service/DockerFile
+    container_name: auth-service-container-2
+    networks:
+      - app-network
+    depends_on:
+      - db
+      - config-service
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    ports:
+      - "9191:8081"
+
+  auth-service-3:
+    build:
+      dockerfile: ./auth-service/DockerFile
+    container_name: auth-service-container-3
+    networks:
+      - app-network
+    depends_on:
+      - db
+      - config-service
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    ports:
+      - "9291:8081"
+
+  user-service-1:
     build:
       dockerfile: ./user-service/DockerFile
-    container_name: user-service-container
+    container_name: user-service-container-1
     environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
       - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
     depends_on:
@@ -69,11 +116,48 @@ services:
       - app-network
     ports:
       - "9090:8080"
-  admin-service:
+
+  user-service-2:
+    build:
+      dockerfile: ./user-service/DockerFile
+    container_name: user-service-container-2
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    depends_on:
+      - db
+      - config-service
+    networks:
+      - app-network
+    ports:
+      - "9190:8080"
+
+  user-service-3:
+    build:
+      dockerfile: ./user-service/DockerFile
+    container_name: user-service-container-3
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    depends_on:
+      - db
+      - config-service
+    networks:
+      - app-network
+    ports:
+      - "9290:8080"
+
+  admin-service-1:
     build:
       dockerfile: ./admin-service/DockerFile
-    container_name: admin-service-container
+    container_name: admin-service-container-1
     environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
       - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
     depends_on:
@@ -83,18 +167,40 @@ services:
       - app-network
     ports:
       - "9092:8082"
-  load-balancer-nginx:
+
+  admin-service-2:
     build:
-      dockerfile: ./load-balancer/nginx.loadbalancer/DockerFile
-    container_name: load-balancer-nginx
+      dockerfile: ./admin-service/DockerFile
+    container_name: admin-service-container-2
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
     depends_on:
-      - auth-service
-      - admin-service
-      - user-service
-    ports:
-      - "9999:9999"
+      - db
+      - config-service
     networks:
       - app-network
+    ports:
+      - "9192:8082"
+
+  admin-service-3:
+    build:
+      dockerfile: ./admin-service/DockerFile
+    container_name: admin-service-container-3
+    environment:
+      - SPRING_REDIS_PORT=6379
+      - SPRING_REDIS_HOST=redis_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/FishingHelpers
+      - SPRING_CLOUD_CONFIG_URL=optional:configserver:http://config-service:8888
+    depends_on:
+      - db
+      - config-service
+    networks:
+      - app-network
+    ports:
+      - "9292:8082"
 
 networks:
   app-network:
