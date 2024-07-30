@@ -7,7 +7,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:29.626+03:00  INFO 35640 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:29.626+03:00  INFO 35640 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:29.650+03:00  INFO 35640 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:29.686+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:29.686+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -31,7 +31,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:33.882+03:00  INFO 35640 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:33.882+03:00  INFO 35640 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:33.883+03:00  INFO 35640 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:33.885+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:33.885+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -55,7 +55,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:34.565+03:00  INFO 35640 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:34.565+03:00  INFO 35640 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:34.565+03:00  INFO 35640 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:34.567+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:34.568+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -79,7 +79,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:35.149+03:00  INFO 35640 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:35.149+03:00  INFO 35640 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:35.149+03:00  INFO 35640 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:35.151+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:35.151+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -103,7 +103,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:35.851+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:35.851+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:35.851+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:35.853+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:35.854+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -124,7 +124,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:36.225+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:36.225+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:36.226+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:36.228+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:36.229+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -145,7 +145,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:36.533+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:36.533+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:36.533+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:36.536+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:36.537+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -166,7 +166,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:36.911+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:36.911+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:36.911+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:36.913+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:36.913+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -187,7 +187,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:37.261+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 35640 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T12:15:37.261+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 35640 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T12:15:37.262+03:00  INFO 35640 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T12:15:37.264+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T12:15:37.264+03:00  INFO 35640 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/user-service/default": Connection refused: no further information. Will be trying the next url if available
@@ -217,7 +217,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T12:15:38.167+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T12:15:38.175+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T12:15:38.176+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T12:15:38.185+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T12:15:38.185+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T12:15:38.200+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T12:15:38.201+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T12:15:38.201+03:00  INFO 35640 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -236,7 +236,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:25.065+03:00  INFO 35824 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:25.065+03:00  INFO 35824 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:25.067+03:00  INFO 35824 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:25.094+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:25.094+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -253,7 +253,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:29.653+03:00  INFO 35824 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:29.653+03:00  INFO 35824 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:29.653+03:00  INFO 35824 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:29.656+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:29.656+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -270,7 +270,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:31.124+03:00  INFO 35824 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:31.124+03:00  INFO 35824 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:31.124+03:00  INFO 35824 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:31.126+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:31.127+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -287,7 +287,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:32.666+03:00  INFO 35824 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:32.666+03:00  INFO 35824 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:32.666+03:00  INFO 35824 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:32.668+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:32.669+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -304,7 +304,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:34.292+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:34.292+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:34.293+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:34.294+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:34.295+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -318,7 +318,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:35.446+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:35.446+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:35.446+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:35.448+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:35.448+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -332,7 +332,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:36.547+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:36.547+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:36.547+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:36.548+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:36.549+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -346,7 +346,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:37.761+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:37.761+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:37.761+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:37.763+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:37.763+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -360,7 +360,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:36:38.921+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 35824 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T15:36:38.921+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 35824 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T15:36:38.921+03:00  INFO 35824 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T15:36:38.923+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T15:36:38.924+03:00  INFO 35824 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -383,7 +383,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T15:36:39.676+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T15:36:39.682+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T15:36:39.683+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T15:36:39.690+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T15:36:39.690+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T15:36:39.705+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T15:36:39.705+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T15:36:39.705+03:00  INFO 35824 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -402,7 +402,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:20.017+03:00  INFO 33568 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:20.017+03:00  INFO 33568 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:20.020+03:00  INFO 33568 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:20.047+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:20.047+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -419,7 +419,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:24.417+03:00  INFO 33568 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:24.417+03:00  INFO 33568 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:24.417+03:00  INFO 33568 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:24.419+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:24.419+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -436,7 +436,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:25.949+03:00  INFO 33568 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:25.949+03:00  INFO 33568 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:25.950+03:00  INFO 33568 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:25.952+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:25.952+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -453,7 +453,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:27.422+03:00  INFO 33568 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:27.422+03:00  INFO 33568 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:27.423+03:00  INFO 33568 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:27.424+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:27.425+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -470,7 +470,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:28.896+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:28.896+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:28.896+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:28.898+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:28.898+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -484,7 +484,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:30.032+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:30.032+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:30.032+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:30.034+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:30.035+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -498,7 +498,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:31.125+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:31.125+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:31.125+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:31.126+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:31.126+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -512,7 +512,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:32.221+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:32.221+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:32.221+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:32.223+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:32.223+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -526,7 +526,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:31:33.326+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 33568 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T16:31:33.326+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 33568 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T16:31:33.326+03:00  INFO 33568 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T16:31:33.328+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
 2024-07-29T16:31:33.328+03:00  INFO 33568 --- [user-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=user-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
@@ -549,7 +549,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T16:31:34.103+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T16:31:34.110+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T16:31:34.111+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T16:31:34.119+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T16:31:34.119+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T16:31:34.135+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T16:31:34.136+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T16:31:34.136+03:00  INFO 33568 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -568,7 +568,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:04.766+03:00  INFO 29076 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:04.766+03:00  INFO 29076 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Starting AuthorControllerTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:04.769+03:00  INFO 29076 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:08.955+03:00  INFO 29076 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
 2024-07-29T22:01:08.956+03:00  INFO 29076 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
@@ -583,7 +583,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:09.953+03:00  INFO 29076 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:09.953+03:00  INFO 29076 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Starting JournalistControllerTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:09.954+03:00  INFO 29076 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:10.444+03:00  INFO 29076 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
 2024-07-29T22:01:10.445+03:00  INFO 29076 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
@@ -598,7 +598,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:10.855+03:00  INFO 29076 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:10.855+03:00  INFO 29076 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Starting UserArticleControllerTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:10.856+03:00  INFO 29076 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:11.172+03:00  INFO 29076 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
 2024-07-29T22:01:11.173+03:00  INFO 29076 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
@@ -613,7 +613,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:11.632+03:00  INFO 29076 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:11.632+03:00  INFO 29076 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Starting UserPlaceControllerTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:11.633+03:00  INFO 29076 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:11.973+03:00  INFO 29076 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
 2024-07-29T22:01:11.973+03:00  INFO 29076 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
@@ -628,7 +628,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:12.527+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:12.527+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Starting ArticleMapperTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:12.528+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:12.538+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Started ArticleMapperTest in 0.324 seconds (process running for 10.617)
 2024-07-29T22:01:12.858+03:00  WARN 29076 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
@@ -640,7 +640,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:12.864+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:12.864+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Starting CommentMapperTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:12.864+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:12.873+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Started CommentMapperTest in 0.297 seconds (process running for 10.952)
 2024-07-29T22:01:13.190+03:00  WARN 29076 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
@@ -652,7 +652,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:13.195+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:13.195+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Starting FishMapperTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:13.196+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:13.206+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Started FishMapperTest in 0.317 seconds (process running for 11.285)
 2024-07-29T22:01:13.557+03:00  WARN 29076 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
@@ -664,7 +664,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:13.562+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:13.562+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Starting PlaceMapperTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:13.563+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:13.570+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Started PlaceMapperTest in 0.348 seconds (process running for 11.649)
 2024-07-29T22:01:13.920+03:00  WARN 29076 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
@@ -676,7 +676,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T22:01:13.926+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 29076 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\user-service)
+2024-07-29T22:01:13.926+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Starting SurveyMapperTest using Java 17 with PID 29076 (started by Asus in E:\ï¿½ï¿½ï¿½ï¿½ï¿½\try2\FishingHelper\fishing-helper\user-service)
 2024-07-29T22:01:13.927+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
 2024-07-29T22:01:13.935+03:00  INFO 29076 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Started SurveyMapperTest in 0.35 seconds (process running for 12.014)
 2024-07-29T22:01:14.388+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : start service article for create
@@ -697,7 +697,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T22:01:14.894+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T22:01:14.903+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T22:01:14.903+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T22:01:14.914+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T22:01:14.914+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T22:01:14.933+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T22:01:14.934+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T22:01:14.934+03:00  INFO 29076 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -863,7 +863,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T22:04:10.490+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T22:04:10.499+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T22:04:10.499+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T22:04:10.515+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T22:04:10.515+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T22:04:10.543+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T22:04:10.544+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T22:04:10.544+03:00  INFO 26664 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -1029,7 +1029,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T22:05:14.651+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
 2024-07-29T22:05:14.660+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
 2024-07-29T22:05:14.660+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
-2024-07-29T22:05:14.671+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=â îáðàáîòêå)
+2024-07-29T22:05:14.671+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 2024-07-29T22:05:14.692+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
 2024-07-29T22:05:14.693+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
 2024-07-29T22:05:14.693+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
@@ -1039,3 +1039,501 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2024-07-29T22:05:14.819+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding place with ID: 1
 2024-07-29T22:05:14.821+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Saving updated place with ID: 1
 2024-07-29T22:05:14.821+03:00  INFO 34172 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Survey created successfully with ID: 1
+2024-07-30T13:02:26.804+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:28.090+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:28.091+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:28.114+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:28.122+03:00  INFO 21988 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:30.941+03:00  INFO 21988 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T13:02:30.941+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T13:02:30.944+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-07-30T13:02:30.969+03:00  INFO 21988 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Started AuthorControllerTest in 5.971 seconds (process running for 7.54)
+2024-07-30T13:02:32.052+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:33.168+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:33.168+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:33.181+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:33.183+03:00  INFO 21988 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:33.610+03:00  INFO 21988 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T13:02:33.610+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T13:02:33.611+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T13:02:33.638+03:00  INFO 21988 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Started JournalistControllerTest in 2.251 seconds (process running for 10.209)
+2024-07-30T13:02:34.363+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:35.394+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:35.395+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:35.410+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:35.413+03:00  INFO 21988 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:35.734+03:00  INFO 21988 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T13:02:35.735+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T13:02:35.736+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T13:02:35.748+03:00  INFO 21988 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Started UserArticleControllerTest in 2.036 seconds (process running for 12.319)
+2024-07-30T13:02:36.579+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:37.770+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:37.771+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:37.782+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:37.785+03:00  INFO 21988 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:38.074+03:00  INFO 21988 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T13:02:38.074+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T13:02:38.075+03:00  INFO 21988 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T13:02:38.081+03:00  INFO 21988 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Started UserPlaceControllerTest in 2.206 seconds (process running for 14.651)
+2024-07-30T13:02:38.880+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:39.965+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:39.966+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:39.975+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:39.976+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:39.983+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Started ArticleMapperTest in 1.717 seconds (process running for 16.553)
+2024-07-30T13:02:40.549+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:41.617+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:41.618+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:41.626+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:41.628+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:41.634+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Started CommentMapperTest in 1.621 seconds (process running for 18.204)
+2024-07-30T13:02:42.155+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:43.257+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:43.257+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:43.265+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:43.267+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:43.273+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Started FishMapperTest in 1.621 seconds (process running for 19.842)
+2024-07-30T13:02:43.860+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:45.069+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:45.069+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:45.077+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:45.079+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:45.088+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Started PlaceMapperTest in 1.803 seconds (process running for 21.657)
+2024-07-30T13:02:45.653+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T13:02:46.712+03:00  INFO 21988 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
+2024-07-30T13:02:46.713+03:00  INFO 21988 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T13:02:46.721+03:00  WARN 21988 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T13:02:46.722+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T13:02:46.729+03:00  INFO 21988 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Started SurveyMapperTest in 1.629 seconds (process running for 23.299)
+2024-07-30T13:02:47.122+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : start service article for create
+2024-07-30T13:02:47.122+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to create article: ArticleDTORequest(name=Test Title, description=null, idUser=1, importance=false, tagsList=null, photos=null)
+2024-07-30T13:02:47.137+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Article created successfully with ID: 1
+2024-07-30T13:02:47.143+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Starting service method: findArticle
+2024-07-30T13:02:47.143+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to find articles by tags: null
+2024-07-30T13:02:47.356+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: createCommentForPlace
+2024-07-30T13:02:47.356+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Received request to create comment: CommentDTO(id=null, text=null, grade=5, user=null) for place ID: 1
+2024-07-30T13:02:47.361+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T13:02:47.361+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T13:02:47.365+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Comment created successfully for place ID: 1
+2024-07-30T13:02:47.369+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T13:02:47.369+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T13:02:47.374+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place with ID 1 with filter: FilterRequest(page=0, size=10, sortDirection=asc, sortByName=id, pageable=Page request [number: 0, size 10, sort: id: ASC])
+2024-07-30T13:02:47.581+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T13:02:47.581+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 0 surveys for calculating time to catch statistics
+2024-07-30T13:02:47.583+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T13:02:47.593+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
+2024-07-30T13:02:47.594+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
+2024-07-30T13:02:47.608+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+2024-07-30T13:02:47.626+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T13:02:47.626+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
+2024-07-30T13:02:47.626+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T13:02:47.742+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Starting createSurvey method
+2024-07-30T13:02:47.742+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Received survey request: SurveyDTORequest(userId=1, morning=false, afternoon=false, evening=false, fishList=[])
+2024-07-30T13:02:47.746+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding user with ID: 1
+2024-07-30T13:02:47.747+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding place with ID: 1
+2024-07-30T13:02:47.748+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Saving updated place with ID: 1
+2024-07-30T13:02:47.748+03:00  INFO 21988 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Survey created successfully with ID: 1
+2024-07-30T16:09:49.592+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:09:50.749+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:09:50.751+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:09:50.793+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:09:50.807+03:00  INFO 26020 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:09:54.848+03:00  INFO 26020 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:09:54.850+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:09:54.855+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2024-07-30T16:09:54.897+03:00  INFO 26020 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Started AuthorControllerTest in 7.412 seconds (process running for 9.234)
+2024-07-30T16:09:56.341+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:09:57.224+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:09:57.225+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:09:57.239+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:09:57.241+03:00  INFO 26020 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:09:57.806+03:00  INFO 26020 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:09:57.806+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:09:57.808+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T16:09:57.822+03:00  INFO 26020 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Started JournalistControllerTest in 2.245 seconds (process running for 12.159)
+2024-07-30T16:09:58.719+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:09:59.729+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:09:59.730+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:09:59.746+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:09:59.749+03:00  INFO 26020 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:00.092+03:00  INFO 26020 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:10:00.092+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:10:00.094+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-07-30T16:10:00.104+03:00  INFO 26020 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Started UserArticleControllerTest in 2.19 seconds (process running for 14.441)
+2024-07-30T16:10:00.962+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:01.942+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:01.943+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:01.955+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:01.956+03:00  INFO 26020 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:02.220+03:00  INFO 26020 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:10:02.220+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:10:02.221+03:00  INFO 26020 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-30T16:10:02.230+03:00  INFO 26020 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Started UserPlaceControllerTest in 2.006 seconds (process running for 16.567)
+2024-07-30T16:10:03.059+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:04.125+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:04.125+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:04.133+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:04.135+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:04.141+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Started ArticleMapperTest in 1.723 seconds (process running for 18.478)
+2024-07-30T16:10:04.756+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:05.607+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:05.607+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:05.616+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:05.617+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:05.623+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Started CommentMapperTest in 1.453 seconds (process running for 19.96)
+2024-07-30T16:10:06.172+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:07.010+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:07.011+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:07.018+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:07.020+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:07.027+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Started FishMapperTest in 1.388 seconds (process running for 21.364)
+2024-07-30T16:10:07.730+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:08.719+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:08.719+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:08.726+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:08.728+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:08.735+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Started PlaceMapperTest in 1.692 seconds (process running for 23.072)
+2024-07-30T16:10:09.256+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:10:10.110+03:00  INFO 26020 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:10:10.110+03:00  INFO 26020 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:10:10.118+03:00  WARN 26020 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:10:10.120+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:10:10.127+03:00  INFO 26020 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Started SurveyMapperTest in 1.378 seconds (process running for 24.464)
+2024-07-30T16:10:10.559+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : start service article for create
+2024-07-30T16:10:10.559+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to create article: ArticleDTORequest(name=Test Title, description=null, idUser=1, importance=false, tagsList=null, photos=null)
+2024-07-30T16:10:10.575+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Article created successfully with ID: 1
+2024-07-30T16:10:10.581+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Starting service method: findArticle
+2024-07-30T16:10:10.582+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to find articles by tags: null
+2024-07-30T16:10:10.851+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: createCommentForPlace
+2024-07-30T16:10:10.851+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Received request to create comment: CommentDTO(id=null, text=null, grade=5, user=null) for place ID: 1
+2024-07-30T16:10:10.856+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T16:10:10.856+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T16:10:10.860+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Comment created successfully for place ID: 1
+2024-07-30T16:10:10.866+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T16:10:10.866+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T16:10:10.873+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place with ID 1 with filter: FilterRequest(page=0, size=10, sortDirection=asc, sortByName=id, pageable=Page request [number: 0, size 10, sort: id: ASC])
+2024-07-30T16:10:11.106+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T16:10:11.107+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 0 surveys for calculating time to catch statistics
+2024-07-30T16:10:11.108+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T16:10:11.117+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
+2024-07-30T16:10:11.117+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
+2024-07-30T16:10:11.127+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+2024-07-30T16:10:11.146+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T16:10:11.146+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
+2024-07-30T16:10:11.146+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T16:10:11.277+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Starting createSurvey method
+2024-07-30T16:10:11.277+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Received survey request: SurveyDTORequest(userId=1, morning=false, afternoon=false, evening=false, fishList=[])
+2024-07-30T16:10:11.284+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding user with ID: 1
+2024-07-30T16:10:11.285+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding place with ID: 1
+2024-07-30T16:10:11.286+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Saving updated place with ID: 1
+2024-07-30T16:10:11.286+03:00  INFO 26020 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Survey created successfully with ID: 1
+2024-07-30T16:29:24.212+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:27.247+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:27.250+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:27.297+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:27.315+03:00  INFO 27124 --- [user-service] [main] f.u.controller.AuthorControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:30.701+03:00  INFO 27124 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:29:30.701+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:29:30.704+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-07-30T16:29:30.733+03:00  INFO 27124 --- [user-service] [main] f.u.controller.AuthorControllerTest      : Started AuthorControllerTest in 8.488 seconds (process running for 10.342)
+2024-07-30T16:29:32.462+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:33.627+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:33.627+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:33.646+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:33.649+03:00  INFO 27124 --- [user-service] [main] f.u.controller.JournalistControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:34.175+03:00  INFO 27124 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:29:34.175+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:29:34.177+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T16:29:34.191+03:00  INFO 27124 --- [user-service] [main] f.u.controller.JournalistControllerTest  : Started JournalistControllerTest in 2.966 seconds (process running for 13.801)
+2024-07-30T16:29:35.798+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:36.794+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:36.796+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:36.815+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:36.818+03:00  INFO 27124 --- [user-service] [main] f.u.c.UserArticleControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:37.228+03:00  INFO 27124 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:29:37.229+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:29:37.230+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T16:29:37.240+03:00  INFO 27124 --- [user-service] [main] f.u.c.UserArticleControllerTest          : Started UserArticleControllerTest in 2.784 seconds (process running for 16.85)
+2024-07-30T16:29:38.335+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:39.268+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:39.269+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:39.278+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:39.280+03:00  INFO 27124 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:39.602+03:00  INFO 27124 --- [user-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-30T16:29:39.602+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-30T16:29:39.603+03:00  INFO 27124 --- [user-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-30T16:29:39.614+03:00  INFO 27124 --- [user-service] [main] f.u.controller.UserPlaceControllerTest   : Started UserPlaceControllerTest in 2.247 seconds (process running for 19.224)
+2024-07-30T16:29:40.423+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:42.392+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:42.392+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:42.405+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:42.407+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:42.418+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.ArticleMapperTest  : Started ArticleMapperTest in 2.571 seconds (process running for 22.027)
+2024-07-30T16:29:43.089+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:44.132+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:44.132+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:44.144+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:44.148+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:44.159+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.CommentMapperTest  : Started CommentMapperTest in 1.712 seconds (process running for 23.769)
+2024-07-30T16:29:45.367+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:46.805+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:46.806+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:46.822+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:46.825+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:46.837+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.FishMapperTest     : Started FishMapperTest in 2.65 seconds (process running for 26.447)
+2024-07-30T16:29:47.426+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:48.328+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:48.328+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:48.335+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:48.336+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:48.344+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.PlaceMapperTest    : Started PlaceMapperTest in 1.491 seconds (process running for 27.953)
+2024-07-30T16:29:48.870+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-07-30T16:29:49.899+03:00  INFO 27124 --- [user-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=e3a821c15de9394fdf2fb06008b2d2789c03b2ad, state=null
+2024-07-30T16:29:49.899+03:00  INFO 27124 --- [user-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-07-30T16:29:49.909+03:00  WARN 27124 --- [user-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-07-30T16:29:49.911+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:29:49.920+03:00  INFO 27124 --- [user-service] [main] f.user_service.mapper.SurveyMapperTest   : Started SurveyMapperTest in 1.561 seconds (process running for 29.53)
+2024-07-30T16:29:50.427+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : start service article for create
+2024-07-30T16:29:50.428+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to create article: ArticleDTORequest(name=Test Title, description=null, idUser=1, importance=false, tagsList=null, photos=null)
+2024-07-30T16:29:50.441+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Article created successfully with ID: 1
+2024-07-30T16:29:50.447+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Starting service method: findArticle
+2024-07-30T16:29:50.447+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.ArticleServiceImpl      : Received request to find articles by tags: null
+2024-07-30T16:29:50.678+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: createCommentForPlace
+2024-07-30T16:29:50.679+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Received request to create comment: CommentDTO(id=null, text=null, grade=5, user=null) for place ID: 1
+2024-07-30T16:29:50.685+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T16:29:50.685+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T16:29:50.688+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Comment created successfully for place ID: 1
+2024-07-30T16:29:50.693+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Starting comment service method: showComments
+2024-07-30T16:29:50.693+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place ID: 1
+2024-07-30T16:29:50.698+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.CommentsServiceImpl     : Fetching comments for place with ID 1 with filter: FilterRequest(page=0, size=10, sortDirection=asc, sortByName=id, pageable=Page request [number: 0, size 10, sort: id: ASC])
+2024-07-30T16:29:50.953+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T16:29:50.954+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 0 surveys for calculating time to catch statistics
+2024-07-30T16:29:50.956+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T16:29:50.966+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting createPlace method
+2024-07-30T16:29:50.966+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received request to create place: PlaceDTORequest(name=null, coordinates=null, requirePayment=false, description=null, photos=null, fish=null, typePlace=null, owner=OwnerDTO(id=null, name=null, number=null))
+2024-07-30T16:29:50.977+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Saved Place entity: Place(id=null, name=null, coordinates=null, requirePayment=false, description=null, rating=0, status=ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+2024-07-30T16:29:51.002+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Starting calculateStatisticTimeToCatch method
+2024-07-30T16:29:51.002+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Received 2 surveys for calculating time to catch statistics
+2024-07-30T16:29:51.003+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.PlaceServiceImpl        : Time to catch statistics calculated successfully
+2024-07-30T16:29:51.124+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Starting createSurvey method
+2024-07-30T16:29:51.124+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Received survey request: SurveyDTORequest(userId=1, morning=false, afternoon=false, evening=false, fishList=[])
+2024-07-30T16:29:51.132+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding user with ID: 1
+2024-07-30T16:29:51.132+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Finding place with ID: 1
+2024-07-30T16:29:51.133+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Saving updated place with ID: 1
+2024-07-30T16:29:51.134+03:00  INFO 27124 --- [user-service] [main] f.u.service.impl.SurveyServiceImpl       : Survey created successfully with ID: 1
