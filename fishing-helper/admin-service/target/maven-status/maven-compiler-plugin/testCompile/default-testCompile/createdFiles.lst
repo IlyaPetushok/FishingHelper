@@ -1,9 +1,0 @@
-fishinghelper\admin_service\mapper\UserMapperTest.class
-fishinghelper\admin_service\mapper\ArticleMapperTest.class
-fishinghelper\admin_service\mapper\RoleMapperTest.class
-fishinghelper\admin_service\service\AdminServiceTest.class
-fishinghelper\admin_service\mapper\MistakeMapperTest.class
-fishinghelper\admin_service\mapper\PlaceMapperTest.class
-fishinghelper\admin_service\controller\AdminControllerTest.class
-fishinghelper\admin_service\service\ModeratorServiceTest.class
-fishinghelper\admin_service\controller\ModeratorControllerTest.class
