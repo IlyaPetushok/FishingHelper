@@ -44,7 +44,7 @@ public class RegistrationControllerTest {
     public void testRegistrationUser() throws Exception {
         UserDTORequestRegistration userDTO = new UserDTORequestRegistration();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/registration")
+        mockMvc.perform(MockMvcRequestBuilders.post("/auth/registration")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(userDTO)))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
@@ -57,7 +57,7 @@ public class RegistrationControllerTest {
     public void testConfirmMail() throws Exception {
         String email = "test@example.com";
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/confirm/email/{mail}", email))
+        mockMvc.perform(MockMvcRequestBuilders.get("/auth/confirm/email/{mail}", email))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
 

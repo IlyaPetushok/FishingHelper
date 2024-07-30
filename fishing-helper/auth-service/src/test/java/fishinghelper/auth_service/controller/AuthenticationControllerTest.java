@@ -52,7 +52,7 @@ public class AuthenticationControllerTest  {
         when(authorizationService.userAuthorization(any(UserDTORequestAuthorization.class)))
                 .thenReturn(responseDto);
 
-        mockMvc.perform(post("/authorization")
+        mockMvc.perform(post("/auth/authorization")
                         .contentType("application/json")
                         .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
@@ -62,7 +62,7 @@ public class AuthenticationControllerTest  {
 
     @Test
     void testRefreshToken() throws Exception {
-        mockMvc.perform(post("/refresh-token")
+        mockMvc.perform(post("/auth/refresh-token")
                         .header("Authorization", "Bearer refreshToken"))
                 .andExpect(status().isOk());
 
@@ -73,14 +73,14 @@ public class AuthenticationControllerTest  {
     void testRequestUpdatePassword() throws Exception {
         Integer userId = 1;
 
-        mockMvc.perform(get("/update/user/{id}/password", userId)).andExpect(status().isOk());
+        mockMvc.perform(get("/auth/update/user/{id}/password", userId)).andExpect(status().isOk());
 
         verify(authorizationService, times(1)).requestUpdatePassword(userId);
     }
 
     @Test
     void testUpdatePassword() throws Exception {
-        mockMvc.perform(post("/update/password")
+        mockMvc.perform(post("/auth/update/password")
                         .param("password", "newPassword"))
                 .andExpect(status().isOk());
 

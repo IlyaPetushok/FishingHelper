@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@RequestMapping("/auth")
 @RestController
 public class AuthenticationController {
     private final AuthorizationService authorizationService;

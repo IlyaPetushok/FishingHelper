@@ -13,7 +13,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/place")
+@RequestMapping("/user/place")
 public class UserPlaceController {
 
     private final PlaceService placeService;

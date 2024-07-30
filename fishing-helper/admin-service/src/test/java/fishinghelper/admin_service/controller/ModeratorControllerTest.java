@@ -48,7 +48,7 @@ public class ModeratorControllerTest {
         when(moderatorService.showArticleByStatus(any(String.class), any(FilterRequest.class)))
                 .thenReturn(List.of(new ArticleDTOResponse())); // Adjust the return type as necessary
 
-        mockMvc.perform(get("/redactor/article/active")
+        mockMvc.perform(get("/admin/redactor/article/active")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -58,7 +58,7 @@ public class ModeratorControllerTest {
     public void testUpdateStatusArticle_Success() throws Exception {
         String jsonRequest = "{\"status\":\"active\"}";
 
-        mockMvc.perform(post("/redactor/article/1/status")
+        mockMvc.perform(post("/admin/redactor/article/1/status")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -70,7 +70,7 @@ public class ModeratorControllerTest {
     public void testUpdateArticle_Success() throws Exception {
         String jsonRequest = "{\"title\":\"New Title\"}";
 
-        mockMvc.perform(post("/redactor/article/1/update")
+        mockMvc.perform(post("/admin/redactor/article/1/update")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -80,7 +80,7 @@ public class ModeratorControllerTest {
 
     @Test
     public void testDeleteArticle_Success() throws Exception {
-        mockMvc.perform(get("/article/1/delete"))
+        mockMvc.perform(get("/admin/article/1/delete"))
                 .andExpect(status().isOk());
 
         verify(moderatorService).deleteArticle(anyInt());
@@ -90,7 +90,7 @@ public class ModeratorControllerTest {
     public void testUpdateStatusPlace_Success() throws Exception {
         String jsonRequest = "{\"filter\":\"value\"}";
 
-        mockMvc.perform(get("/redactor/place/active")
+        mockMvc.perform(get("/admin/redactor/place/active")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -102,7 +102,7 @@ public class ModeratorControllerTest {
     public void testUpdatePlace_Success() throws Exception {
         String jsonRequest = "{\"location\":\"New Location\"}";
 
-        mockMvc.perform(post("/redactor/place/1/update")
+        mockMvc.perform(post("/admin/redactor/place/1/update")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -112,7 +112,7 @@ public class ModeratorControllerTest {
 
     @Test
     public void testDeletePlace_Success() throws Exception {
-        mockMvc.perform(get("/place/1/delete"))
+        mockMvc.perform(get("/admin/place/1/delete"))
                 .andExpect(status().isOk());
 
         verify(moderatorService).deletePlace(anyInt());

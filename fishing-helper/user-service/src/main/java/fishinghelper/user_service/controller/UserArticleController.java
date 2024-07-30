@@ -11,7 +11,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/article")
+@RequestMapping("/user/article")
 public class UserArticleController {
     private final ArticleService articleService;
 

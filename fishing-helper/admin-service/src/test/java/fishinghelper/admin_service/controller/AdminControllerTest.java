@@ -62,7 +62,7 @@ public class AdminControllerTest {
         when(adminService.findUserByFilter(any(UserDTOFilter.class)))
                 .thenReturn(List.of(new UserDTOResponse()));
 
-        mockMvc.perform(post("/users/filter")
+        mockMvc.perform(post("/admin/users/filter")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());
@@ -72,7 +72,7 @@ public class AdminControllerTest {
     public void testUserSetConstrain_Success() throws Exception {
         String jsonRequest = "{\"constraint\":\"value\"}";
 
-        mockMvc.perform(post("/users/1/constrain")
+        mockMvc.perform(post("/admin/users/1/constrain")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());

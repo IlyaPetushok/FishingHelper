@@ -49,7 +49,7 @@ public class AuthorControllerTest {
     public void testCreatePlace() throws Exception {
         PlaceDTORequest placeDTO = new PlaceDTORequest();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/create/place")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/create/place")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(placeDTO)))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
@@ -63,7 +63,7 @@ public class AuthorControllerTest {
         SurveyDTORequest surveyDTO = new SurveyDTORequest();
         Integer placeId = 1;
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/place/{id}/survey", placeId)
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/place/{id}/survey", placeId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(surveyDTO)))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
@@ -80,7 +80,7 @@ public class AuthorControllerTest {
 
         System.out.println(new ObjectMapper().writeValueAsString(filterRequest));
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/survey/filter")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/survey/filter")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +

@@ -50,7 +50,7 @@ public class UserArticleControllerTest {
 
         when(articleService.findArticleById(articleId)).thenReturn(articleDTOResponse);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/article/{id}", articleId)
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/article/{id}", articleId)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -65,7 +65,7 @@ public class UserArticleControllerTest {
         List<ArticleDTOResponse> articleListDTO = List.of(new ArticleDTOResponse());
         when(articleService.findArticle(tagsDTO)).thenReturn(articleListDTO);
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/article/find")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/article/find")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(tagsDTO)))
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -81,7 +81,7 @@ public class UserArticleControllerTest {
         List<ArticleDTOResponse> articleListDTO=List.of(new ArticleDTOResponse());
         when(articleService.showAllArticle(filterRequest)).thenReturn(articleListDTO);
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/article")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/article")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +
@@ -102,7 +102,7 @@ public class UserArticleControllerTest {
 
         when(articleService.showAllArticleFilter(articleDTOFilter)).thenReturn(List.of(new ArticleDTOResponse()));
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/article/filter")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/article/filter")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +

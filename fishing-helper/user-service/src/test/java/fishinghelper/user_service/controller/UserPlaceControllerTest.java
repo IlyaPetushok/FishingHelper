@@ -55,7 +55,7 @@ public class UserPlaceControllerTest {
     public void testShowAllPlaces() throws Exception {
         when(placeService.showAllPlaces()).thenReturn(List.of(new PlaceDTOResponseAll()));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/place")
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/place")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -69,7 +69,7 @@ public class UserPlaceControllerTest {
         Integer placeId = 1;
         when(placeService.showPlace(placeId)).thenReturn(new PlaceWithStatisticDTOResponse());
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/place/{id}", placeId)
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/place/{id}", placeId)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
@@ -83,7 +83,7 @@ public class UserPlaceControllerTest {
         Integer placeId = 1;
         CommentDTO commentDTO = new CommentDTO();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/place/{id}/comment", placeId)
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/place/{id}/comment", placeId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(commentDTO)))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
@@ -98,7 +98,7 @@ public class UserPlaceControllerTest {
 
         when(commentsService.showComments(anyInt(), any(FilterRequest.class))).thenReturn(List.of(new CommentDTO()));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/place/{id}/comments", placeId)
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/place/{id}/comments", placeId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +
@@ -117,7 +117,7 @@ public class UserPlaceControllerTest {
     public void testFindPlaceByFilter() throws Exception {
         when(placeService.showAllPlaces(any(FilterRequest.class))).thenReturn(List.of(new PlaceDTOResponseAll()));
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/place")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/place")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +
@@ -137,7 +137,7 @@ public class UserPlaceControllerTest {
 
         when(placeService.showAllPlacesFilter(any(PlaceDTOFilter.class))).thenReturn(List.of(new PlaceDTOResponseAll()));
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/place/filter")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/place/filter")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
                                 "    \"page\":0,\n" +

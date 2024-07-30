@@ -46,7 +46,7 @@ public class JournalistControllerTest {
     public void testCreateArticle() throws Exception {
         ArticleDTORequest articleDTO = new ArticleDTORequest();
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/create/article")
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/create/article")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(articleDTO)))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
