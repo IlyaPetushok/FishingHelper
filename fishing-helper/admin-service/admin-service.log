@@ -1,4 +1,7 @@
-2024-07-29T12:14:57.205+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:21.660+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:22.953+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:22.954+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:22.978+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -7,22 +10,15 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:14:57.227+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:14:57.230+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:14:57.256+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:14:57.257+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2fc2a205 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:14:57.257+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:14:57.257+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7048535f uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:14:57.258+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:14:57.258+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:14:57.258+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@e3994ef uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:00.053+03:00  INFO 24048 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T12:15:00.053+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T12:15:00.055+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T12:15:00.086+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 4.086 seconds (process running for 5.281)
-2024-07-29T12:15:00.713+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:22.986+03:00  INFO 18384 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:25.511+03:00  INFO 18384 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-01T00:25:25.512+03:00  INFO 18384 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-01T00:25:25.515+03:00  INFO 18384 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-08-01T00:25:25.541+03:00  INFO 18384 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 5.794 seconds (process running for 7.284)
+2024-08-01T00:25:26.498+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:27.609+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:27.610+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:27.621+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -31,22 +27,15 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:00.716+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:00.717+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:00.720+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:00.720+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:00.720+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6408be5 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:00.721+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1e57b783 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:00.721+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:00.722+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@73b8ab2c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.034+03:00  INFO 24048 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T12:15:01.034+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T12:15:01.035+03:00  INFO 24048 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T12:15:01.045+03:00  INFO 24048 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 0.64 seconds (process running for 6.24)
-2024-07-29T12:15:01.534+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:27.623+03:00  INFO 18384 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:28.023+03:00  INFO 18384 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-01T00:25:28.023+03:00  INFO 18384 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-01T00:25:28.024+03:00  INFO 18384 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-08-01T00:25:28.037+03:00  INFO 18384 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 2.137 seconds (process running for 9.779)
+2024-08-01T00:25:28.883+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:29.987+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:29.988+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:29.998+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -55,19 +44,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:01.536+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:01.536+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:01.538+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.538+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@dd9de63 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@52a75c12 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.539+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.539+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@57f1a1de uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.546+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 0.334 seconds (process running for 6.741)
-2024-07-29T12:15:01.874+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:30.000+03:00  INFO 18384 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:30.008+03:00  INFO 18384 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.799 seconds (process running for 11.75)
+2024-08-01T00:25:30.982+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:32.914+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:32.915+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:32.922+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -76,19 +58,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:01.876+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:01.877+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:01.878+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.879+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@f08f8a9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.879+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5ebf776c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:01.879+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:01.880+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7fd3fd06 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:01.887+03:00  INFO 24048 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 0.311 seconds (process running for 7.082)
-2024-07-29T12:15:02.171+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:32.923+03:00  INFO 18384 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:32.930+03:00  INFO 18384 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 2.894 seconds (process running for 14.673)
+2024-08-01T00:25:33.485+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:34.418+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:34.418+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:34.426+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -97,19 +72,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:02.173+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:02.174+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:02.175+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.176+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3b576ee3 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.176+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@705d914f uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.176+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.177+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6212ea52 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.183+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 0.278 seconds (process running for 7.378)
-2024-07-29T12:15:02.490+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:34.427+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:34.435+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.493 seconds (process running for 16.177)
+2024-08-01T00:25:34.928+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:35.803+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:35.804+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:35.812+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -118,19 +86,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:02.492+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:02.492+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.494+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@25110bb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.494+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@dbda472 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.494+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.495+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@41492479 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.501+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 0.289 seconds (process running for 7.696)
-2024-07-29T12:15:02.777+03:00  WARN 24048 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:35.813+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:35.821+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.368 seconds (process running for 17.563)
+2024-08-01T00:25:36.355+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:25:37.312+03:00  INFO 18384 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:25:37.313+03:00  INFO 18384 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:25:37.320+03:00  WARN 18384 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -139,36 +100,29 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T12:15:02.778+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 24048 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T12:15:02.779+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T12:15:02.781+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.781+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.781+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7d6019d5 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.782+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@40b01718 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T12:15:02.782+03:00  INFO 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information. Will be trying the next url if available
-2024-07-29T12:15:02.782+03:00  WARN 24048 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6d4c18b8 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/admin-service/default": Connection refused: no further information
-2024-07-29T12:15:02.789+03:00  INFO 24048 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 0.275 seconds (process running for 7.984)
-2024-07-29T12:15:03.113+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
-2024-07-29T12:15:03.122+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
-2024-07-29T12:15:03.127+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
-2024-07-29T12:15:03.128+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
-2024-07-29T12:15:03.128+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
-2024-07-29T12:15:03.416+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T12:15:03.417+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
-2024-07-29T12:15:03.425+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
-2024-07-29T12:15:03.425+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
-2024-07-29T12:15:03.441+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
-2024-07-29T12:15:03.443+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
-2024-07-29T12:15:03.450+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T12:15:03.450+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
-2024-07-29T12:15:03.457+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T12:15:03.457+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
-2024-07-29T12:15:03.465+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T12:15:03.465+03:00  INFO 24048 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
-2024-07-29T15:35:46.615+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:25:37.322+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:25:37.330+03:00  INFO 18384 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.495 seconds (process running for 19.072)
+2024-08-01T00:25:37.737+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-08-01T00:25:37.745+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-08-01T00:25:37.749+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-08-01T00:25:37.749+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-08-01T00:25:37.750+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-08-01T00:25:38.037+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-08-01T00:25:38.037+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-08-01T00:25:38.044+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-08-01T00:25:38.044+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-08-01T00:25:38.058+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-08-01T00:25:38.060+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-08-01T00:25:38.064+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-08-01T00:25:38.064+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-08-01T00:25:38.069+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-08-01T00:25:38.069+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-08-01T00:25:38.077+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-08-01T00:25:38.077+03:00  INFO 18384 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-08-01T00:28:27.456+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:28.536+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:28.537+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:28.559+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -177,15 +131,15 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:46.648+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:46.651+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:46.681+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:46.681+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:49.417+03:00  INFO 33972 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T15:35:49.417+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T15:35:49.419+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T15:35:49.451+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 10.601 seconds (process running for 11.894)
-2024-07-29T15:35:51.295+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:28.571+03:00  INFO 18364 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:30.983+03:00  INFO 18364 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-01T00:28:30.985+03:00  INFO 18364 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-01T00:28:30.988+03:00  INFO 18364 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-08-01T00:28:31.012+03:00  INFO 18364 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 5.343 seconds (process running for 6.808)
+2024-08-01T00:28:31.938+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:32.861+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:32.861+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:32.872+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -194,15 +148,15 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:51.297+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:51.297+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:51.299+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:51.300+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:51.648+03:00  INFO 33972 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T15:35:51.648+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T15:35:51.649+03:00  INFO 33972 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T15:35:51.657+03:00  INFO 33972 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 1.88 seconds (process running for 14.099)
-2024-07-29T15:35:52.964+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:32.873+03:00  INFO 18364 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:33.189+03:00  INFO 18364 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-08-01T00:28:33.189+03:00  INFO 18364 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-08-01T00:28:33.190+03:00  INFO 18364 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-08-01T00:28:33.200+03:00  INFO 18364 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 1.881 seconds (process running for 8.995)
+2024-08-01T00:28:33.910+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:34.877+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:34.878+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:34.886+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -211,12 +165,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:52.966+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:52.966+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:52.968+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:52.968+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:52.974+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.157 seconds (process running for 15.417)
-2024-07-29T15:35:54.240+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:34.888+03:00  INFO 18364 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:34.895+03:00  INFO 18364 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.544 seconds (process running for 10.69)
+2024-08-01T00:28:35.433+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:36.352+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:36.353+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:36.364+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -225,12 +179,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:54.242+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:54.243+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:54.245+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:54.246+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:54.254+03:00  INFO 33972 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.252 seconds (process running for 16.697)
-2024-07-29T15:35:55.437+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:36.366+03:00  INFO 18364 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:36.373+03:00  INFO 18364 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.453 seconds (process running for 12.168)
+2024-08-01T00:28:37.022+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:37.954+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:37.954+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:37.962+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -239,12 +193,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:55.439+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:55.440+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:55.442+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:55.442+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:55.449+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.179 seconds (process running for 17.892)
-2024-07-29T15:35:56.786+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:37.964+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:37.971+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.584 seconds (process running for 13.766)
+2024-08-01T00:28:38.528+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:39.439+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:39.439+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:39.447+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -253,12 +207,12 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:56.789+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:56.789+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:56.791+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:56.791+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:56.797+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.322 seconds (process running for 19.24)
-2024-07-29T15:35:58.393+03:00  WARN 33972 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:39.449+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:39.454+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.461 seconds (process running for 15.249)
+2024-08-01T00:28:39.952+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:28:40.845+03:00  INFO 18364 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:28:40.845+03:00  INFO 18364 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:28:40.852+03:00  WARN 18364 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -267,29 +221,29 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T15:35:58.395+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 33972 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T15:35:58.395+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T15:35:58.397+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T15:35:58.397+03:00  INFO 33972 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T15:35:58.401+03:00  INFO 33972 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.588 seconds (process running for 20.845)
-2024-07-29T15:35:58.745+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
-2024-07-29T15:35:58.755+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
-2024-07-29T15:35:58.760+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
-2024-07-29T15:35:58.761+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
-2024-07-29T15:35:58.761+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
-2024-07-29T15:35:59.065+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T15:35:59.065+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
-2024-07-29T15:35:59.073+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
-2024-07-29T15:35:59.073+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
-2024-07-29T15:35:59.092+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
-2024-07-29T15:35:59.093+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
-2024-07-29T15:35:59.098+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T15:35:59.099+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
-2024-07-29T15:35:59.104+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T15:35:59.104+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
-2024-07-29T15:35:59.114+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T15:35:59.114+03:00  INFO 33972 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
-2024-07-29T16:30:44.826+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
+2024-08-01T00:28:40.854+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:28:40.860+03:00  INFO 18364 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.395 seconds (process running for 16.654)
+2024-08-01T00:28:41.185+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
+2024-08-01T00:28:41.193+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
+2024-08-01T00:28:41.199+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
+2024-08-01T00:28:41.199+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
+2024-08-01T00:28:41.200+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
+2024-08-01T00:28:41.511+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-08-01T00:28:41.511+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
+2024-08-01T00:28:41.518+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
+2024-08-01T00:28:41.519+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
+2024-08-01T00:28:41.532+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
+2024-08-01T00:28:41.533+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
+2024-08-01T00:28:41.537+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
+2024-08-01T00:28:41.537+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
+2024-08-01T00:28:41.542+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-08-01T00:28:41.542+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
+2024-08-01T00:28:41.548+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
+2024-08-01T00:28:41.549+03:00  INFO 18364 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
+2024-08-01T00:30:11.110+03:00  INFO 612 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2024-08-01T00:30:12.354+03:00  INFO 612 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=2ffe0139e23ed7baa85472385e3c23c71dc7f255, state=null
+2024-08-01T00:30:12.356+03:00  INFO 612 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
+2024-08-01T00:30:12.387+03:00  WARN 612 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -298,343 +252,548 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-07-29T16:30:44.870+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:44.872+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:44.901+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:44.901+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:48.027+03:00  INFO 35432 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T16:30:48.027+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T16:30:48.029+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T16:30:48.072+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 5.73 seconds (process running for 7.028)
-2024-07-29T16:30:49.673+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T16:30:49.676+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:49.676+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:49.678+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:49.678+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:49.987+03:00  INFO 35432 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T16:30:49.987+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T16:30:49.988+03:00  INFO 35432 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T16:30:49.996+03:00  INFO 35432 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 1.594 seconds (process running for 8.951)
-2024-07-29T16:30:51.261+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T16:30:51.263+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:51.264+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:51.265+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:51.265+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:51.271+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.114 seconds (process running for 10.227)
-2024-07-29T16:30:52.366+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T16:30:52.368+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:52.368+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:52.370+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:52.370+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:52.376+03:00  INFO 35432 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.082 seconds (process running for 11.332)
-2024-07-29T16:30:53.523+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T16:30:53.525+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:53.526+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:53.529+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:53.529+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:53.540+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.15 seconds (process running for 12.496)
-2024-07-29T16:30:54.695+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
+2024-08-01T00:30:12.406+03:00  INFO 612 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T00:30:14.102+03:00  WARN 612 --- [admin-service] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface fishinghelper.admin_service.service.AdminService.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 17
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 17+35-LTS-2724
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 17+35-LTS-2724
+JVM info           : mixed mode, sharing
+OS name            : Windows 10
+OS version         : 10.0
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface fishinghelper.admin_service.service.AdminService]
+2024-08-01T00:30:14.124+03:00  INFO 612 --- [admin-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-01T00:30:14.221+03:00 ERROR 612 --- [admin-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface fishinghelper.admin_service.service.AdminService.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 17
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 17+35-LTS-2724
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 17+35-LTS-2724
+JVM info           : mixed mode, sharing
+OS name            : Windows 10
+OS version         : 10.0
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface fishinghelper.admin_service.service.AdminService]
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:158) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:185) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:167) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:141) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:129) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface fishinghelper.admin_service.service.AdminService]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:168) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:399) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:190) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:410) ~[byte-buddy-1.14.18.jar:na]
+	... 95 common frames omitted
+Caused by: java.lang.IllegalStateException: 
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:285) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.mockClass(InlineBytecodeGenerator.java:218) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.lambda$mockClass$0(TypeCachingBytecodeGenerator.java:78) ~[mockito-core-5.12.0.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:168) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:399) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:190) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:410) ~[byte-buddy-1.14.18.jar:na]
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:75) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMockType(InlineDelegateByteBuddyMockMaker.java:414) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.doCreateMock(InlineDelegateByteBuddyMockMaker.java:373) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMock(InlineDelegateByteBuddyMockMaker.java:352) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.createMock(InlineByteBuddyMockMaker.java:56) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:99) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.Mockito.mock(Mockito.java:2104) ~[mockito-core-5.12.0.jar:na]
+	... 95 common frames omitted
+Caused by: java.lang.TypeNotPresentException: Type fishinghelper.admin_service.dto.UserDTOResponse not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.MethodRepository.computeReturnType(MethodRepository.java:75) ~[na:na]
+	at java.base/sun.reflect.generics.repository.MethodRepository.getReturnType(MethodRepository.java:66) ~[na:na]
+	at java.base/java.lang.reflect.Method.getGenericReturnType(Method.java:295) ~[na:na]
+	at net.bytebuddy.description.type.TypeDescription$Generic$LazyProjection$ForLoadedReturnType.resolve(TypeDescription.java:6728) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.type.TypeDescription$Generic$LazyProjection.accept(TypeDescription.java:6302) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodDescription$AbstractBase.asToken(MethodDescription.java:902) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodDescription$AbstractBase.asToken(MethodDescription.java:453) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodList$AbstractBase.asTokenList(MethodList.java:90) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.dynamic.scaffold.InstrumentedType$Factory$Default$1.represent(InstrumentedType.java:438) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.ByteBuddy.redefine(ByteBuddy.java:886) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.ByteBuddy.redefine(ByteBuddy.java:861) ~[byte-buddy-1.14.18.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.transform(InlineBytecodeGenerator.java:390) ~[mockito-core-5.12.0.jar:na]
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244) ~[na:na]
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:541) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses0(Native Method) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses(InstrumentationImpl.java:169) ~[na:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:281) ~[mockito-core-5.12.0.jar:na]
+	... 109 common frames omitted
+Caused by: java.lang.ClassNotFoundException: fishinghelper.admin_service.dto.UserDTOResponse
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 132 common frames omitted
+
+2024-08-01T00:30:14.349+03:00  WARN 612 --- [admin-service] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [fishinghelper.admin_service.controller.AdminControllerTest@374ccb9]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2c7c0e36 testClass = fishinghelper.admin_service.controller.AdminControllerTest, locations = [], classes = [fishinghelper.admin_service.controller.AdminController], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@307cf964 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7fcf2fc1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@41294f8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@2c61b948, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@44d52de2, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1e44b638, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@e8c024bb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@1df2c58a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4ae9cfc1, org.springframework.boot.test.context.SpringBootTestAnnotation@1d3f4932], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface fishinghelper.admin_service.service.AdminService.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 17
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 17+35-LTS-2724
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 17+35-LTS-2724
+JVM info           : mixed mode, sharing
+OS name            : Windows 10
+OS version         : 10.0
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface fishinghelper.admin_service.service.AdminService]
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:158) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:185) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:167) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:141) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:129) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.11.jar:6.1.11]
+	... 74 common frames omitted
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface fishinghelper.admin_service.service.AdminService]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:168) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:399) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:190) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:410) ~[byte-buddy-1.14.18.jar:na]
+	... 95 common frames omitted
+Caused by: java.lang.IllegalStateException: 
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:285) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.mockClass(InlineBytecodeGenerator.java:218) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.lambda$mockClass$0(TypeCachingBytecodeGenerator.java:78) ~[mockito-core-5.12.0.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:168) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:399) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:190) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:410) ~[byte-buddy-1.14.18.jar:na]
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:75) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMockType(InlineDelegateByteBuddyMockMaker.java:414) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.doCreateMock(InlineDelegateByteBuddyMockMaker.java:373) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMock(InlineDelegateByteBuddyMockMaker.java:352) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.createMock(InlineByteBuddyMockMaker.java:56) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:99) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84) ~[mockito-core-5.12.0.jar:na]
+	at org.mockito.Mockito.mock(Mockito.java:2104) ~[mockito-core-5.12.0.jar:na]
+	... 95 common frames omitted
+Caused by: java.lang.TypeNotPresentException: Type fishinghelper.admin_service.dto.UserDTOResponse not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.MethodRepository.computeReturnType(MethodRepository.java:75) ~[na:na]
+	at java.base/sun.reflect.generics.repository.MethodRepository.getReturnType(MethodRepository.java:66) ~[na:na]
+	at java.base/java.lang.reflect.Method.getGenericReturnType(Method.java:295) ~[na:na]
+	at net.bytebuddy.description.type.TypeDescription$Generic$LazyProjection$ForLoadedReturnType.resolve(TypeDescription.java:6728) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.type.TypeDescription$Generic$LazyProjection.accept(TypeDescription.java:6302) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodDescription$AbstractBase.asToken(MethodDescription.java:902) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodDescription$AbstractBase.asToken(MethodDescription.java:453) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.description.method.MethodList$AbstractBase.asTokenList(MethodList.java:90) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.dynamic.scaffold.InstrumentedType$Factory$Default$1.represent(InstrumentedType.java:438) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.ByteBuddy.redefine(ByteBuddy.java:886) ~[byte-buddy-1.14.18.jar:na]
+	at net.bytebuddy.ByteBuddy.redefine(ByteBuddy.java:861) ~[byte-buddy-1.14.18.jar:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.transform(InlineBytecodeGenerator.java:390) ~[mockito-core-5.12.0.jar:na]
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244) ~[na:na]
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:541) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses0(Native Method) ~[na:na]
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses(InstrumentationImpl.java:169) ~[na:na]
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:281) ~[mockito-core-5.12.0.jar:na]
+	... 109 common frames omitted
+Caused by: java.lang.ClassNotFoundException: fishinghelper.admin_service.dto.UserDTOResponse
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 132 common frames omitted
+
+2024-08-01T00:30:14.495+03:00  WARN 612 --- [admin-service] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [fishinghelper.admin_service.controller.AdminControllerTest@aa1bb14]
+
+java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@2c7c0e36 testClass = fishinghelper.admin_service.controller.AdminControllerTest, locations = [], classes = [fishinghelper.admin_service.controller.AdminController], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@307cf964 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7fcf2fc1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@41294f8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@2c61b948, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@44d52de2, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1e44b638, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@e8c024bb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@1df2c58a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4ae9cfc1, org.springframework.boot.test.context.SpringBootTestAnnotation@1d3f4932], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:145) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-08-01T00:30:14.511+03:00  WARN 612 --- [admin-service] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [fishinghelper.admin_service.controller.AdminControllerTest@4c635edc]
+
+java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@2c7c0e36 testClass = fishinghelper.admin_service.controller.AdminControllerTest, locations = [], classes = [fishinghelper.admin_service.controller.AdminController], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@307cf964 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7fcf2fc1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@41294f8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@2c61b948, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@44d52de2, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@1e44b638, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@e8c024bb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@1df2c58a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4ae9cfc1, org.springframework.boot.test.context.SpringBootTestAnnotation@1d3f4932], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:145) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
 
-2024-07-29T16:30:54.697+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:54.697+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:54.699+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:54.699+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:54.704+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.122 seconds (process running for 13.66)
-2024-07-29T16:30:55.801+03:00  WARN 35432 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T16:30:55.803+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 35432 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T16:30:55.803+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T16:30:55.804+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-07-29T16:30:55.804+03:00  INFO 35432 --- [admin-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=admin-service, profiles=[default], label=null, version=7d481024b6ee55cedac266eb0e78178308493b98, state=null
-2024-07-29T16:30:55.809+03:00  INFO 35432 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.092 seconds (process running for 14.765)
-2024-07-29T16:30:56.133+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
-2024-07-29T16:30:56.144+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
-2024-07-29T16:30:56.149+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
-2024-07-29T16:30:56.150+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
-2024-07-29T16:30:56.150+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
-2024-07-29T16:30:56.449+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T16:30:56.450+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
-2024-07-29T16:30:56.457+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
-2024-07-29T16:30:56.458+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
-2024-07-29T16:30:56.471+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
-2024-07-29T16:30:56.473+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
-2024-07-29T16:30:56.478+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T16:30:56.478+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
-2024-07-29T16:30:56.482+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T16:30:56.483+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
-2024-07-29T16:30:56.491+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T16:30:56.491+03:00  INFO 35432 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
-2024-07-29T22:17:47.012+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:47.077+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Starting AdminControllerTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:47.079+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:50.843+03:00  INFO 34208 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T22:17:50.845+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T22:17:50.849+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
-2024-07-29T22:17:50.902+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 4.911 seconds (process running for 6.7)
-2024-07-29T22:17:51.701+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:51.707+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Starting ModeratorControllerTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:51.709+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:52.119+03:00  INFO 34208 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T22:17:52.119+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T22:17:52.120+03:00  INFO 34208 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T22:17:52.130+03:00  INFO 34208 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 0.751 seconds (process running for 7.927)
-2024-07-29T22:17:52.646+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:52.650+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Starting ArticleMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:52.651+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:52.662+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 0.338 seconds (process running for 8.459)
-2024-07-29T22:17:52.991+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:52.997+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Starting MistakeMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:52.997+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:53.006+03:00  INFO 34208 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 0.304 seconds (process running for 8.804)
-2024-07-29T22:17:53.361+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:53.367+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Starting PlaceMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:53.367+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:53.379+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 0.353 seconds (process running for 9.176)
-2024-07-29T22:17:53.697+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:53.702+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Starting RoleMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:53.702+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:53.713+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 0.306 seconds (process running for 9.511)
-2024-07-29T22:17:54.020+03:00  WARN 34208 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:17:54.025+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Starting UserMapperTest using Java 17 with PID 34208 (started by Asus in E:\Õóéíÿ\try2\FishingHelper\fishing-helper\admin-service)
-2024-07-29T22:17:54.025+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:17:54.036+03:00  INFO 34208 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 0.305 seconds (process running for 9.834)
-2024-07-29T22:17:54.487+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
-2024-07-29T22:17:54.499+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
-2024-07-29T22:17:54.505+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
-2024-07-29T22:17:54.506+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
-2024-07-29T22:17:54.506+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
-2024-07-29T22:17:54.898+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T22:17:54.899+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
-2024-07-29T22:17:54.908+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
-2024-07-29T22:17:54.909+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
-2024-07-29T22:17:54.932+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
-2024-07-29T22:17:54.934+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
-2024-07-29T22:17:54.942+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T22:17:54.943+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
-2024-07-29T22:17:54.951+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T22:17:54.951+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
-2024-07-29T22:17:54.965+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T22:17:54.966+03:00  INFO 34208 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved
-2024-07-29T22:20:02.729+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:04.437+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:04.440+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:04.473+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:04.493+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.AdminControllerTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:07.881+03:00  INFO 27044 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T22:20:07.881+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T22:20:07.884+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2024-07-29T22:20:07.909+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.AdminControllerTest       : Started AdminControllerTest in 7.092 seconds (process running for 9.014)
-2024-07-29T22:20:08.923+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:10.143+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:10.143+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:10.156+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:10.157+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:10.495+03:00  INFO 27044 --- [admin-service] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-07-29T22:20:10.496+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-07-29T22:20:10.497+03:00  INFO 27044 --- [admin-service] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-07-29T22:20:10.508+03:00  INFO 27044 --- [admin-service] [main] f.a.controller.ModeratorControllerTest   : Started ModeratorControllerTest in 2.244 seconds (process running for 11.614)
-2024-07-29T22:20:11.335+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:12.403+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:12.404+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:12.414+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:12.416+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:12.425+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.ArticleMapperTest             : Started ArticleMapperTest in 1.75 seconds (process running for 13.53)
-2024-07-29T22:20:13.183+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:14.169+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:14.169+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:14.179+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:14.180+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:14.188+03:00  INFO 27044 --- [admin-service] [main] f.a.mapper.MistakeMapperTest             : Started MistakeMapperTest in 1.724 seconds (process running for 15.292)
-2024-07-29T22:20:14.769+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:15.792+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:15.792+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:15.801+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:15.802+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:15.810+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.PlaceMapperTest   : Started PlaceMapperTest in 1.61 seconds (process running for 16.915)
-2024-07-29T22:20:16.381+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:17.403+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:17.403+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:17.413+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:17.415+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:17.424+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.RoleMapperTest    : Started RoleMapperTest in 1.591 seconds (process running for 18.53)
-2024-07-29T22:20:17.952+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2024-07-29T22:20:18.948+03:00  INFO 27044 --- [admin-service] [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=admin-service, profiles=[default], label=null, version=ce3a129b7d687640b5f85109fdde94cc92d5339f, state=null
-2024-07-29T22:20:18.948+03:00  INFO 27044 --- [admin-service] [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/IlyaPetushok/config-server-fishing-helper.git/application.properties'}]
-2024-07-29T22:20:18.955+03:00  WARN 27044 --- [admin-service] [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/C:/Users/Asus/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/C:/Users/Asus/.m2/repository/org/json/json/20231013/json-20231013.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2024-07-29T22:20:18.956+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : No active profile set, falling back to 1 default profile: "default"
-2024-07-29T22:20:18.962+03:00  INFO 27044 --- [admin-service] [main] f.admin_service.mapper.UserMapperTest    : Started UserMapperTest in 1.521 seconds (process running for 20.068)
-2024-07-29T22:20:19.549+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User with ID 1 has permission to update roles.
-2024-07-29T22:20:19.562+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : Constraints set successfully for user with ID: 1
-2024-07-29T22:20:19.569+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : start admin service for update user role
-2024-07-29T22:20:19.570+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User found with ID 1 for role update
-2024-07-29T22:20:19.571+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.AdminServiceImpl        : User roles updated successfully for user with ID 1
-2024-07-29T22:20:20.042+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T22:20:20.043+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE approved
-2024-07-29T22:20:20.051+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update place
-2024-07-29T22:20:20.052+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : place find buy id 1 for update
-2024-07-29T22:20:20.072+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : admin service start update article
-2024-07-29T22:20:20.074+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : article find buy id 1 for update
-2024-07-29T22:20:20.083+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating PLACE by status
-2024-07-29T22:20:20.083+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : PLACE not approved
-2024-07-29T22:20:20.090+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T22:20:20.091+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE approved
-2024-07-29T22:20:20.107+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : Admin service start updating ARTICLE by status
-2024-07-29T22:20:20.107+03:00  INFO 27044 --- [admin-service] [main] f.a.service.impl.ModeratorServiceImpl    : ARTICLE not approved

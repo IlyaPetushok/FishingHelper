@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"fishinghelper.admin_service", "fishinghelper.common_module","fishinghelper.security_server"})
+@ComponentScan(basePackages = {"fishinghelper.admin_service", "fishinghelper.common_module","fishinghelper.security_server","fishinghelper.notification_service"})
 public class AdminServiceApplication {
 
     public static void main(String[] args) {

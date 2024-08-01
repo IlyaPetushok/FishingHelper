@@ -15,6 +15,8 @@ import fishinghelper.common_module.entity.common.Mistake;
 import fishinghelper.common_module.entity.common.Status;
 import fishinghelper.common_module.entity.place.Place;
 import fishinghelper.common_module.filter.FilterRequest;
+import fishinghelper.notification_service.config.RabbitConfig;
+import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,15 +42,17 @@ public class ModeratorServiceImpl implements ModeratorService {
     private final ArticleMapper articleMapper;
     private final PlaceMapper placeMapper;
     private final MistakeMapper mistakeMapper;
+    private final RabbitMQProducer rabbitMQProducer;
 
     @Autowired
-    public ModeratorServiceImpl(ArticleRepositories articleRepositories, PlaceRepositories placeRepositories, MistakeRepositories mistakeRepositories, ArticleMapper articleMapper, PlaceMapper placeMapper, MistakeMapper mistakeMapper) {
+    public ModeratorServiceImpl(ArticleRepositories articleRepositories, PlaceRepositories placeRepositories, MistakeRepositories mistakeRepositories, ArticleMapper articleMapper, PlaceMapper placeMapper, MistakeMapper mistakeMapper, RabbitMQProducer rabbitMQProducer) {
         this.articleRepositories = articleRepositories;
         this.placeRepositories = placeRepositories;
         this.mistakeRepositories = mistakeRepositories;
         this.articleMapper = articleMapper;
         this.placeMapper = placeMapper;
         this.mistakeMapper = mistakeMapper;
+        this.rabbitMQProducer = rabbitMQProducer;
     }
 
 
@@ -205,6 +209,9 @@ public class ModeratorServiceImpl implements ModeratorService {
                         .orElseThrow(() -> new ArticleNotFoundException(HttpStatus.NOT_FOUND, "Article not found by ID for update"));
                 article.setStatus(Status.getStatus(Status.APPROVED));
                 articleRepositories.save(article);
+                if(article.isImportance()){
+                    rabbitMQProducer.sendMessageQueue("Important notification"+ article.getName()+",link:"+"http:/localhost:9999/article"+article.getId(), RabbitConfig.ROUTING_KEY);
+                }
             }
             case PLACE -> {
                 Place place = placeRepositories.findById(id)
@@ -214,4 +221,6 @@ public class ModeratorServiceImpl implements ModeratorService {
             }
         }
     }
+
+
 }
