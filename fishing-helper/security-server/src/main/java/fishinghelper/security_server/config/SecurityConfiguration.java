@@ -33,6 +33,7 @@ import java.io.IOException;
         securedEnabled = true,
         jsr250Enabled = true)
 @ComponentScan(basePackages = {"fishinghelper.common_module"})
+//add keycloak
 public class SecurityConfiguration {
     private final JwtFilter jwtFilter;
     private final LogoutHandler logoutHandler;
