@@ -1,38 +1,26 @@
 package fishinghelper.security_server.config;
 
 
-import fishinghelper.security_server.util.JwtFilter;
 import fishinghelper.security_server.util.JwtProvider;
-import io.jsonwebtoken.Jwt;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import org.keycloak.OAuth2Constants;
+import org.keycloak.admin.client.Keycloak;
+import org.keycloak.admin.client.KeycloakBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
-import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
-
-import java.io.IOException;
-import java.util.Collection;
-import java.util.stream.Collectors;
 
 @Configuration
 @EnableWebSecurity
@@ -41,39 +29,61 @@ import java.util.stream.Collectors;
         jsr250Enabled = true)
 @ComponentScan(basePackages = {"fishinghelper.common_module"})
 public class SecurityConfiguration {
-//    private final JwtFilter jwtFilter;
-//    private final LogoutHandler logoutHandler;
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-secret}")
+    private String clientSecret;
 
-//    @Bean
-//    public JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter(){
-//        return new JwtGrantedAuthoritiesConverter();
-//    }
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-id}")
+    private String clientId;
 
+    @Value("${spring.security.keycloak.admin.name}")
+    private String adminName;
+
+    @Value("${spring.security.keycloak.admin.password}")
+    private String adminPassword;
+
+    @Value("${spring.security.keycloak.realm.name}")
+    private String realmName;
+
+    @Value("${spring.security.keycloak.server.url}")
+    private String serverUrl;
+
+    private final LogoutHandler logoutHandler;
     private final JwtProvider jwtProvider;
 
     @Autowired
-    public SecurityConfiguration(JwtProvider jwtProvider) {
+    public SecurityConfiguration(LogoutHandler logoutHandler, JwtProvider jwtProvider) {
+        this.logoutHandler = logoutHandler;
         this.jwtProvider = jwtProvider;
     }
 
-    private static final String[] SWAGGER_LIST={
+    private static final String[] SWAGGER_LIST = {
             "/swagger-ui/**",
             "/v3/api-docs/**",
             "/swagger-resources/**",
             "/swagger-resources"
     };
 
-    private static final String[] AUTH_SERVICE_ENDPOINT={
+    private static final String[] AUTH_SERVICE_ENDPOINT = {
             "/auth/registration",
             "/auth/authorization",
+            "/logout",
+            "/auth/introspect",
+            "/auth/refresh-token",
             "/confirm/**"
     };
 
-//    @Autowired
-//    public SecurityConfiguration(JwtFilter jwtFilter, LogoutHandler logoutHandler) {
-//        this.jwtFilter = jwtFilter;
-//        this.logoutHandler = logoutHandler;
-//    }
+    @Bean
+    public Keycloak keycloak(){
+        return KeycloakBuilder.builder()
+                .serverUrl(serverUrl)
+                .realm(realmName)
+                .grantType(OAuth2Constants.PASSWORD)
+                .username(adminName)
+                .password(adminPassword)
+                .clientId(clientId)
+                .clientSecret(clientSecret)
+                .build();
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -85,27 +95,19 @@ public class SecurityConfiguration {
         http.csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.formLogin(AbstractHttpConfigurer::disable);
         http.oauth2ResourceServer(oauth2 -> oauth2
-                .jwt(jwtConfigurer -> jwtConfigurer.jwtAuthenticationConverter(jwtProvider))
+                .jwt(jwtConfigurer -> jwtConfigurer
+                        .jwtAuthenticationConverter(jwtProvider))
         );
-        http.oauth2Login(Customizer.withDefaults());
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers(SWAGGER_LIST).permitAll()
-                        .requestMatchers(AUTH_SERVICE_ENDPOINT).permitAll()
-                        .anyRequest().authenticated());
-//                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-//        http.logout(lOut -> {
-//            lOut.logoutUrl("/logout")
-//                    .addLogoutHandler(logoutHandler)
-//                    .logoutSuccessHandler(((request, response, authentication) -> SecurityContextHolder.clearContext()));
-//        });
+                .requestMatchers(SWAGGER_LIST).permitAll()
+                .requestMatchers(AUTH_SERVICE_ENDPOINT).permitAll()
+                .anyRequest().authenticated());
+        http.oauth2Login(Customizer.withDefaults());
+
+        http.logout(lOut -> lOut.logoutUrl("/logout")
+                .addLogoutHandler(logoutHandler)
+                .logoutSuccessHandler(((request, response, authentication) -> SecurityContextHolder.clearContext())));
         return http.build();
     }
-
-//    @Bean
-//    Collection generateAuthoritiesFromClaim(Collection roles) {
-//        return (Collection) roles.stream().map(role -> new SimpleGrantedAuthority("ROLE_" + role)).collect(
-//                Collectors.toList());
-//    }
 }
