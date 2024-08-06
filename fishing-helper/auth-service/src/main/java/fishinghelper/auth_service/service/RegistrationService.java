@@ -8,6 +8,7 @@ import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.RoleType;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.security_server.service.KeyCloakService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,15 +31,17 @@ public class RegistrationService {
     private final RoleRepositories roleRepositories;
     private final UserMapper userMapper;
     private final EmailService emailService;
+    private final KeyCloakService keyCloakService;
 
 
     @Autowired
-    public RegistrationService(UserRepositories userRepositories, PasswordEncoder passwordEncoder, RoleRepositories roleRepositories, UserMapper userMapper, EmailService emailService) {
+    public RegistrationService(UserRepositories userRepositories, PasswordEncoder passwordEncoder, RoleRepositories roleRepositories, UserMapper userMapper, EmailService emailService, KeyCloakService keyCloakService) {
         this.userRepositories = userRepositories;
         this.passwordEncoder = passwordEncoder;
         this.roleRepositories = roleRepositories;
         this.userMapper = userMapper;
         this.emailService = emailService;
+        this.keyCloakService = keyCloakService;
     }
 
     /**
@@ -50,6 +53,8 @@ public class RegistrationService {
      */
 
     public void createUser(UserDTORequestRegistration userDTORequestRegistration) {
+        keyCloakService.addUser(userMapper.toEntity(userDTORequestRegistration));
+
         userDTORequestRegistration.setPassword(passwordEncoder.encode(userDTORequestRegistration.getPassword()));
         User user=userMapper.toEntity(userDTORequestRegistration);
 
@@ -58,6 +63,7 @@ public class RegistrationService {
         user.setDateRegistration(new Date());
         user=userRepositories.save(user);
 
+//add rabit mq
         String body="Dear "+user.getName()+"!!!\n"
                 +"Please confirm your mail for FishingHelpers\n"
                 +"http://localhost:8081/confirm/mail/"
