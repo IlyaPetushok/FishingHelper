@@ -1,8 +1,6 @@
 package fishinghelper.admin_service.service;
 
-import fishinghelper.admin_service.dto.ConstrainDTO;
-import fishinghelper.admin_service.dto.UserDTORequest;
-import fishinghelper.admin_service.dto.UserDTOResponse;
+import fishinghelper.admin_service.dto.*;
 import fishinghelper.admin_service.dto.filter.UserDTOFilter;
 
 import java.util.List;
