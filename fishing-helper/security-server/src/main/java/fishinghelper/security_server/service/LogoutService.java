@@ -6,10 +6,17 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
 import static org.springframework.util.StringUtils.hasText;
 
@@ -18,44 +25,39 @@ import static org.springframework.util.StringUtils.hasText;
 @Slf4j
 public class LogoutService implements LogoutHandler {
     public static final String BEARER = "Bearer ";
-    private final TokenRepository tokenRepository;
-    private final JwtProvider jwtProvider;
+    private final RestTemplate restTemplate=new RestTemplate();
 
-    @Autowired
-    public LogoutService(TokenRepository tokenRepository, JwtProvider jwtProvider) {
-        this.tokenRepository = tokenRepository;
-        this.jwtProvider = jwtProvider;
-    }
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-secret}")
+    private String clientSecret;
 
-    /**
-     * Performs logout operation for a user based on the JWT token extracted from the request.
-     *
-     * <p>First, it checks if the Authorization header contains a valid JWT token starting with "Bearer".
-     * If not, the method returns without performing any action.
-     *
-     * <p>The method extracts the JWT token, retrieves the login information using {@code jwtProvider},
-     * and logs the logout operation including the user's login.
-     * It then deletes the token from the {@code tokenRepository} associated with the user's login.
-     *
-     * @param request        The HttpServletRequest containing the HTTP request information.
-     * @param response       The HttpServletResponse for sending HTTP responses.
-     * @param authentication The Authentication object representing the current user's authentication details.
-     */
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-id}")
+    private String clientId;
+
+    @Value("${spring.security.keycloak.logout.url}")
+    private String logoutUrl;
+
 
     @Override
     public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
         String bearer = request.getHeader(HttpHeaders.AUTHORIZATION);
 
         if (!hasText(bearer) || !bearer.startsWith(BEARER)) {
-            return;
+//            except
+            System.out.println("exception");
         }
-        String jwt=bearer.replace(BEARER, "").trim();;
-        String login=jwtProvider.getLogin(jwt);
+        String token=bearer.replace(BEARER, "").trim();
 
-        log.info("Выполняется выход пользователя с логином: {}", login);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-        tokenRepository.deleteById(login);
+        MultiValueMap<String,String> multiValueMap= new LinkedMultiValueMap<>();
+        multiValueMap.add("client_id",clientId);
+        multiValueMap.add("client_secret", clientSecret);
+        multiValueMap.add("refresh_token", token);
 
-        log.info("Токен пользователя с логином {} успешно удален", login);
+        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap,headers);
+
+        restTemplate.postForEntity(logoutUrl, httpEntity, Object.class);
+
     }
 }
