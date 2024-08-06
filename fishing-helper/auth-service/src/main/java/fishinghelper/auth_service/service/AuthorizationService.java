@@ -1,34 +1,30 @@
 package fishinghelper.auth_service.service;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
+import fishinghelper.auth_service.dto.TokenRequest;
 import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
-import fishinghelper.auth_service.exception.InvalidDataException;
 import fishinghelper.auth_service.exception.UserNotFoundException;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.User;
-import fishinghelper.security_server.dao.TokenRepository;
-import fishinghelper.security_server.entity.Token;
-import fishinghelper.security_server.exception.TokenExpiredException;
-import fishinghelper.security_server.util.JwtFilter;
+import fishinghelper.security_server.service.KeyCloakService;
 import fishinghelper.security_server.util.JwtProvider;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Objects;
-
-import static org.springframework.util.StringUtils.hasText;
 
 /**
  * Service class for handling user authorization and token management.
@@ -41,107 +37,109 @@ import static org.springframework.util.StringUtils.hasText;
 @Service
 public class AuthorizationService {
     private static final String SUBJECT_UPDATE_PASSWORD = "Request Update Password";
-    private static final String BEARER = "Bearer ";
 
-    private final TokenRepository tokenRepository;
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-id}")
+    private String clientId;
+
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-secret}")
+    private String clientSecret;
+
+    @Value("${spring.security.oauth2.client.url.token}")
+    private String urlOpenIdToken;
+
     private final UserRepositories userRepositories;
-    private final PasswordEncoder passwordEncoder;
-    private final JwtFilter jwtFilter;
-    private final JwtProvider jwtProvider;
     private final EmailService emailService;
+    private final ObjectMapper objectMapper;
+    private final RestTemplate restTemplate;
+    private final JwtProvider jwtProvider;
+    private final KeyCloakService keyCloakService;
 
     @Autowired
-    public AuthorizationService(TokenRepository tokenRepository, UserRepositories userRepositories, PasswordEncoder passwordEncoder, JwtFilter jwtFilter, JwtProvider jwtProvider, EmailService emailService) {
-        this.tokenRepository = tokenRepository;
+    public AuthorizationService(UserRepositories userRepositories, EmailService emailService, ObjectMapper objectMapper, RestTemplate restTemplate, JwtProvider jwtProvider, KeyCloakService keyCloakService) {
         this.userRepositories = userRepositories;
-        this.passwordEncoder = passwordEncoder;
-        this.jwtFilter = jwtFilter;
-        this.jwtProvider = jwtProvider;
         this.emailService = emailService;
+        this.objectMapper = objectMapper;
+        this.restTemplate = restTemplate;
+        this.jwtProvider = jwtProvider;
+        this.keyCloakService = keyCloakService;
     }
 
-    /**
-     * Handles user authorization based on the provided credentials.
-     * Generates JWT token and refresh token upon successful authorization.
-     *
-     * @param userDTORequestAuthorization DTO containing user login and password
-     * @return AuthenticationDTOResponse containing JWT token and refresh token
-     * @throws InvalidDataException if user login or password is invalid
-     */
+    public ResponseEntity<?> userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-    public AuthenticationDTOResponse userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
-        String login = userDTORequestAuthorization.getLogin();
-        log.info("Authorizing user: {}", login);
+        MultiValueMap<String, String> multiValueMap = new LinkedMultiValueMap<>();
+        multiValueMap.add("client_id", clientId);
+        multiValueMap.add("client_secret", clientSecret);
+        multiValueMap.add("grant_type", "password");
+        multiValueMap.add("username", userDTORequestAuthorization.getLogin());
+        multiValueMap.add("password", userDTORequestAuthorization.getPassword());
 
-        User user = userRepositories.findUserByLogin(login);
-        if (Objects.isNull(user)) {
-            log.warn("User {} not found", login);
-            throw new InvalidDataException(HttpStatus.UNAUTHORIZED, "invalid data for authorize");
-        }
+        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
 
-        if (!passwordEncoder.matches(userDTORequestAuthorization.getPassword(), user.getPassword())) {
-            log.warn("Invalid password for user {}", userDTORequestAuthorization.getPassword());
-            throw new InvalidDataException(HttpStatus.UNAUTHORIZED, "invalid data for authorize");
-        }
-
-        String token = jwtProvider.generateToken(user);
-        String refreshToken = jwtProvider.generateRefreshToken(user);
-        tokenRepository.save(new Token(login, token));
-
-        log.info("User {} authorized successfully", login + " " + userDTORequestAuthorization.getPassword());
-        return new AuthenticationDTOResponse(token, refreshToken);
+        return restTemplate.postForEntity(urlOpenIdToken, httpEntity, Object.class);
     }
 
+    public void checkExpireToken(TokenRequest tokenRequest) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-    /**
-     * Refreshes the JWT token using the provided refresh token.
-     * Updates the token in the database and returns the updated tokens in the response.
-     *
-     * @param request  HTTP request containing the refresh token in the Authorization header
-     * @param response HTTP response where the updated tokens are written
-     * @throws TokenExpiredException if the refresh token is expired
-     */
+        MultiValueMap<String, String> multiValueMap = new LinkedMultiValueMap<>();
+        multiValueMap.add("client_id", clientId);
+        multiValueMap.add("client_secret", clientSecret);
+        multiValueMap.add("token", tokenRequest.getToken());
 
-    public void refreshToken(HttpServletRequest request, HttpServletResponse response) {
-        String bearer = request.getHeader(HttpHeaders.AUTHORIZATION);
-        if (!hasText(bearer) && !bearer.startsWith(BEARER)) {
-            log.warn("Authorization header is missing or invalid");
-            return;
-        }
-
-        String refreshToken = bearer.replace(BEARER, "").trim();
-        String login = jwtProvider.getLogin(refreshToken);
-
-        if (login != null) {
-            User user = userRepositories.findUserByLogin(login);
-
-            if (jwtProvider.validateToken(refreshToken)) {
-                String token = jwtProvider.generateToken(user);
-                tokenRepository.save(new Token(login, token));
-
-                AuthenticationDTOResponse authenticationDTOResponse = new AuthenticationDTOResponse(token, refreshToken);
-                try (OutputStream outputStream = response.getOutputStream()) {
-                    ObjectMapper objectMapper = new ObjectMapper();
-                    objectMapper.writeValue(outputStream, authenticationDTOResponse);
-
-                    log.info("Token refreshed successfully for user {}", login);
-                } catch (IOException e) {
-                    log.error("Failed to write response data", e);
-                    e.printStackTrace();
-                }
-            } else {
-                log.warn("Token expired for user {}", login);
-                throw new TokenExpiredException(HttpStatus.FORBIDDEN, "token has expired");
+        HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
+        ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken+"/introspect", httpEntity, String.class);
+        if (response.getStatusCode() == HttpStatus.OK) {
+            String responseBody = Objects.requireNonNull(response.getBody()).toString();
+            JsonNode jsonNode = null;
+            try {
+                jsonNode = objectMapper.readTree(responseBody);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
             }
+            assert jsonNode != null;
+            boolean isActive = jsonNode.get("active").asBoolean();
+            if (isActive) {
+                System.out.println("Token is active.");
+            } else {
+                System.out.println("Token is inactive or invalid.");
+                throw new RuntimeException("Token is inactive or invalid.");
+            }
+        } else {
+            throw new RuntimeException("Failed to introspect token: " + response.getStatusCode());
+        }
+    }
+
+
+    public ResponseEntity<?> refreshToken(TokenRequest tokenRequest) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("grant_type", "refresh_token");
+        body.add("client_id", clientId);
+        body.add("client_secret", clientSecret);
+        body.add("refresh_token", tokenRequest.getToken());
+
+        HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
+
+        ResponseEntity<?> responseEntity = restTemplate.postForEntity(urlOpenIdToken, requestEntity, Object.class);
+
+        if (responseEntity.getStatusCode() == HttpStatus.OK) {
+            return responseEntity;
+        } else {
+            throw new RuntimeException("Failed to refresh token: " + responseEntity.getStatusCode());
         }
     }
 
 
     /**
-            * Requests an update of the user's password based on their ID.
-            *
-            * @param id the user's identifier
-            * @throws UserNotFoundException if the user is not found
+     * Requests an update of the user's password based on their ID.
+     *
+     * @param id the user's identifier
+     * @throws UserNotFoundException if the user is not found
      */
     public void requestUpdatePassword(Integer id) {
         User user = userRepositories.findById(id)
@@ -173,24 +171,18 @@ public class AuthorizationService {
         return html.toString();
     }
 
-    /**
-     * Updates the user's password based on data from an HTTP request.
-     *
-     * @param request the HTTP request containing parameters, including the new password
-     */
+
+
     public void updatePassword(HttpServletRequest request) {
+        String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         String password = request.getParameter("password");
-        String jwt = jwtFilter.getTokenRequest(request);
-        String login = jwtProvider.getLogin(jwt);
 
-        User user = userRepositories.findUserByLogin(login);
-
-        if (user == null) {
-            log.error("User not found for login: " + login);
-            throw new UserNotFoundException(HttpStatus.NOT_FOUND, "user not found by login:" + login);
+        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+            String token = authorizationHeader.substring("Bearer ".length()).trim();
+            String login = jwtProvider.getLoginFromJwt(token);
+            keyCloakService.updateUser(login,password);
+        } else {
+            System.out.println("Authorization header is missing or not in Bearer format");
         }
-
-        user.setPassword(passwordEncoder.encode(password));
-        userRepositories.save(user);
     }
 }
