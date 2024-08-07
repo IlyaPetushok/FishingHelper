@@ -90,22 +90,21 @@ public class AuthorizationService {
         multiValueMap.add("token", tokenRequest.getToken());
 
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
-        ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken+"/introspect", httpEntity, String.class);
+        ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", httpEntity, String.class);
+
         if (response.getStatusCode() == HttpStatus.OK) {
             String responseBody = Objects.requireNonNull(response.getBody()).toString();
-            JsonNode jsonNode = null;
             try {
-                jsonNode = objectMapper.readTree(responseBody);
+                JsonNode jsonNode = objectMapper.readTree(responseBody);
+                boolean isActive = jsonNode.get("active").asBoolean();
+                if (isActive) {
+                    System.out.println("Token is active.");
+                } else {
+                    System.out.println("Token is inactive or invalid.");
+                    throw new RuntimeException("Token is inactive or invalid.");
+                }
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
-            }
-            assert jsonNode != null;
-            boolean isActive = jsonNode.get("active").asBoolean();
-            if (isActive) {
-                System.out.println("Token is active.");
-            } else {
-                System.out.println("Token is inactive or invalid.");
-                throw new RuntimeException("Token is inactive or invalid.");
             }
         } else {
             throw new RuntimeException("Failed to introspect token: " + response.getStatusCode());
@@ -172,7 +171,6 @@ public class AuthorizationService {
     }
 
 
-
     public void updatePassword(HttpServletRequest request) {
         String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         String password = request.getParameter("password");
@@ -180,7 +178,7 @@ public class AuthorizationService {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             String token = authorizationHeader.substring("Bearer ".length()).trim();
             String login = jwtProvider.getLoginFromJwt(token);
-            keyCloakService.updateUser(login,password);
+            keyCloakService.updateUserPassword(login, password);
         } else {
             System.out.println("Authorization header is missing or not in Bearer format");
         }
