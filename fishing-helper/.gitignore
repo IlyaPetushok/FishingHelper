@@ -1,8 +1,0 @@
-*.idea
-*.iml
-target/
-/auth-service/target/
-/user-service/target/
-/config-server/target/
-/common-module/target/
-/admin-service/target/

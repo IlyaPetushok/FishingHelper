@@ -1,5 +1,0 @@
-FROM nginx
-
-COPY ./load-balancer/nginx.loadbalancer/nginx.conf /etc/nginx/conf.d/fishing_nginx.conf
-
-#ENTRYPOINT ["service", "nginx", "start"]
