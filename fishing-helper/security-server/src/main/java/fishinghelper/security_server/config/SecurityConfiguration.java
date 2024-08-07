@@ -1,6 +1,5 @@
 package fishinghelper.security_server.config;
 
-
 import fishinghelper.security_server.util.JwtProvider;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
@@ -21,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableWebSecurity
@@ -69,11 +69,11 @@ public class SecurityConfiguration {
             "/logout",
             "/auth/introspect",
             "/auth/refresh-token",
-            "/confirm/**"
+            "/auth/confirm/**"
     };
 
     @Bean
-    public Keycloak keycloak(){
+    public Keycloak keycloak() {
         return KeycloakBuilder.builder()
                 .serverUrl(serverUrl)
                 .realm(realmName)
@@ -86,6 +86,11 @@ public class SecurityConfiguration {
     }
 
     @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
@@ -95,14 +100,17 @@ public class SecurityConfiguration {
         http.csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
         http.oauth2ResourceServer(oauth2 -> oauth2
                 .jwt(jwtConfigurer -> jwtConfigurer
                         .jwtAuthenticationConverter(jwtProvider))
         );
+
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers(SWAGGER_LIST).permitAll()
                 .requestMatchers(AUTH_SERVICE_ENDPOINT).permitAll()
                 .anyRequest().authenticated());
+
         http.oauth2Login(Customizer.withDefaults());
 
         http.logout(lOut -> lOut.logoutUrl("/logout")
