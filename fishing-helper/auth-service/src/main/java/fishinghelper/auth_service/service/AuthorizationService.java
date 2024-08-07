@@ -9,6 +9,9 @@ import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
 import fishinghelper.auth_service.exception.UserNotFoundException;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.notification_service.config.RabbitConfig;
+import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
+import fishinghelper.security_server.exception.CustomResponseException;
 import fishinghelper.security_server.service.KeyCloakService;
 import fishinghelper.security_server.util.JwtProvider;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,11 +22,9 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Objects;
 
 /**
@@ -36,8 +37,6 @@ import java.util.Objects;
 @Slf4j
 @Service
 public class AuthorizationService {
-    private static final String SUBJECT_UPDATE_PASSWORD = "Request Update Password";
-
     @Value("${spring.security.oauth2.client.registration.keycloak.client-id}")
     private String clientId;
 
@@ -48,22 +47,28 @@ public class AuthorizationService {
     private String urlOpenIdToken;
 
     private final UserRepositories userRepositories;
-    private final EmailService emailService;
     private final ObjectMapper objectMapper;
     private final RestTemplate restTemplate;
     private final JwtProvider jwtProvider;
     private final KeyCloakService keyCloakService;
+    private final RabbitMQProducer rabbitMQProducer;
 
     @Autowired
-    public AuthorizationService(UserRepositories userRepositories, EmailService emailService, ObjectMapper objectMapper, RestTemplate restTemplate, JwtProvider jwtProvider, KeyCloakService keyCloakService) {
+    public AuthorizationService(UserRepositories userRepositories, ObjectMapper objectMapper, RestTemplate restTemplate, JwtProvider jwtProvider, KeyCloakService keyCloakService, RabbitMQProducer rabbitMQProducer) {
         this.userRepositories = userRepositories;
-        this.emailService = emailService;
         this.objectMapper = objectMapper;
         this.restTemplate = restTemplate;
         this.jwtProvider = jwtProvider;
         this.keyCloakService = keyCloakService;
+        this.rabbitMQProducer = rabbitMQProducer;
     }
 
+    /**
+     * Authorizes a user by sending a POST request to the authorization server.
+     *
+     * @param userDTORequestAuthorization the user credentials and other authorization details
+     * @return a ResponseEntity containing the result of the authorization request
+     */
     public ResponseEntity<?> userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -77,7 +82,14 @@ public class AuthorizationService {
 
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
 
-        return restTemplate.postForEntity(urlOpenIdToken, httpEntity, Object.class);
+        try {
+            ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken, httpEntity, Object.class);
+            log.info("Authorization request successful. Response: {}", response);
+            return response;
+        } catch (HttpClientErrorException | HttpServerErrorException e) {
+            log.error("Authorization request failed with status code {} and response body: {}", e.getStatusCode(), e.getResponseBodyAsString(), e);
+            throw new CustomResponseException(HttpStatus.BAD_REQUEST,"Authorization request failed");
+        }
     }
 
     public void checkExpireToken(TokenRequest tokenRequest) {
@@ -98,20 +110,27 @@ public class AuthorizationService {
                 JsonNode jsonNode = objectMapper.readTree(responseBody);
                 boolean isActive = jsonNode.get("active").asBoolean();
                 if (isActive) {
-                    System.out.println("Token is active.");
+                    log.info("Token is active.");
                 } else {
-                    System.out.println("Token is inactive or invalid.");
+                    log.error("Token is inactive or invalid.");
                     throw new RuntimeException("Token is inactive or invalid.");
                 }
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
         } else {
-            throw new RuntimeException("Failed to introspect token: " + response.getStatusCode());
+            throw new CustomResponseException(HttpStatus.UNAUTHORIZED,"Failed to introspect token: ");
         }
     }
 
 
+    /**
+     * Refreshes the access token using the provided refresh token.
+     *
+     * @param tokenRequest the request containing the refresh token
+     * @return a ResponseEntity containing the response from the token endpoint
+     * @throws RuntimeException if the token refresh fails or if an unexpected error occurs
+     */
     public ResponseEntity<?> refreshToken(TokenRequest tokenRequest) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -129,7 +148,7 @@ public class AuthorizationService {
         if (responseEntity.getStatusCode() == HttpStatus.OK) {
             return responseEntity;
         } else {
-            throw new RuntimeException("Failed to refresh token: " + responseEntity.getStatusCode());
+            throw new CustomResponseException(HttpStatus.BAD_REQUEST,"Failed to refresh token");
         }
     }
 
@@ -143,34 +162,16 @@ public class AuthorizationService {
     public void requestUpdatePassword(Integer id) {
         User user = userRepositories.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND, "user not found by id:" + id));
-        emailService.sendMessage(user, SUBJECT_UPDATE_PASSWORD, readFile());
+
+        rabbitMQProducer.sendMessageQueue(user.getMail(), RabbitConfig.ROUTING_KEY_3);
     }
+
 
     /**
-     * Reads the content of an HTML file to use in an email message.
+     * Updates the user password based on the provided HTTP request.
      *
-     * @return the content of the HTML file as a string
+     * @param request the HTTP request containing the authorization header and the new password
      */
-    private String readFile() {
-        String line;
-        StringBuilder html = new StringBuilder();
-        try {
-            FileReader fileReader = new FileReader("D:\\intexsoft\\FishingHelper\\FishingHelpers\\auth-service\\src\\main\\resources\\html.txt");
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-            while ((line = bufferedReader.readLine()) != null) {
-                html.append(line);
-
-            }
-
-            bufferedReader.close();
-        } catch (IOException e) {
-            System.out.println("Ошибка чтения файла: " + e.getMessage());
-        }
-        return html.toString();
-    }
-
-
     public void updatePassword(HttpServletRequest request) {
         String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         String password = request.getParameter("password");
@@ -180,7 +181,7 @@ public class AuthorizationService {
             String login = jwtProvider.getLoginFromJwt(token);
             keyCloakService.updateUserPassword(login, password);
         } else {
-            System.out.println("Authorization header is missing or not in Bearer format");
+            log.warn("Authorization header is missing or not in Bearer format. Header: {}", authorizationHeader);
         }
     }
 }
