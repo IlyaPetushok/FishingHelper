@@ -19,7 +19,6 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public ResponseEntity<?> registrationUser(@RequestBody UserDTORequestRegistration userDTORequestRegistration){
-        System.out.println("hi");
         registrationService.createUser(userDTORequestRegistration);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }

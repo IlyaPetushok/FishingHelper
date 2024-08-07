@@ -1,110 +1,181 @@
 package fishinghelper.security_server.util;
 
-import fishinghelper.common_module.entity.user.Role;
-import fishinghelper.common_module.entity.user.User;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import fishinghelper.security_server.exception.CustomResponseException;
+import fishinghelper.security_server.exception.TokenExpiredException;
+import fishinghelper.security_server.exception.TokenNotFoundException;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.time.DateUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.http.*;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.jwt.JwtClaimNames;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.JwtDecoders;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
-import java.security.Key;
-import java.util.Date;
+import java.util.Collection;
+import java.util.Objects;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+
+/**
+ * Provides methods for handling JWT tokens including introspection and converting JWT tokens to authentication tokens.
+ *
+ * <p>Author: Ilya Petushok</p>
+ */
 @Slf4j
 @Service
-@Data
-public class JwtProvider {
-    @Value("${jwt.secret}")
-    private String secretKey;
+public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> {
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-id}")
+    private String clientId;
 
-    @Value("${jwt.time}")
-    private String timeExpire;
+    @Value("${spring.security.oauth2.client.registration.keycloak.client-secret}")
+    private String clientSecret;
 
-    @Value("${jwt.refresh.time}")
-    private String timeRefreshExpire;
+    @Value("${spring.security.oauth2.client.url.token}")
+    private String urlOpenIdToken;
 
-    /**
-     * Generates a refresh token for the specified user.
-     *
-     * @param user The User object for which the refresh token is generated.
-     * @return The generated refresh token.
-     */
-    public String generateRefreshToken(User user){
-        log.info("generate refresh token ...");
-        return buildToken(user,timeRefreshExpire);
+
+    @Value("${spring.security.oauth2.client.provider.keycloak.user-name-attribute}")
+    private String principleAttribute;
+
+    @Value("${spring.security.oauth2.client.provider.keycloak.issuer-uri}")
+    private String urlRealm;
+
+    private final RestTemplate restTemplate = new RestTemplate();
+    private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
+    private final CustomUserDetailService customUserDetailService;
+
+    @Autowired
+    public JwtProvider(CustomUserDetailService customUserDetailService) {
+        this.customUserDetailService = customUserDetailService;
     }
 
     /**
-     * Generates an access token for the specified user.
+     * Converts a JWT token to an {@link AbstractAuthenticationToken} for Spring Security.
      *
-     * @param user The User object for which the access token is generated.
-     * @return The generated access token.
+     * @param jwt The JWT token to convert.
+     * @return An {@link AbstractAuthenticationToken} containing the JWT and authorities.
      */
-    public String generateToken(User user){
-        log.info("generate acess token ...");
-        return buildToken(user,timeExpire);
+    @Override
+    public AbstractAuthenticationToken convert(@NotNull Jwt jwt) {
+        checkActiveSession(jwt);
+        String login = jwt.getClaimAsString(principleAttribute);
+
+        Collection<GrantedAuthority> authorities = Stream.concat(
+                jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
+                customUserDetailService.loadUserByUsername(login).getAuthorities().stream()
+        ).collect(Collectors.toSet());
+
+        return new JwtAuthenticationToken(
+                jwt,
+                authorities,
+                getPrincipleClaimName(jwt)
+        );
     }
 
     /**
-     * Builds a JWT token for the specified user with the given expiration time.
+     * Checks if the given JWT token is active by performing introspection.
      *
-     * @param user The User object for which the token is built.
-     * @param time The expiration time (in minutes) for the token.
-     * @return The generated JWT token as a String.
+     * @param jwt The JWT token to check.
      */
-    public String buildToken(User user,String time){
-        Date date = DateUtils.addMinutes(new Date(), Integer.parseInt(time));
-        Claims claims = Jwts.claims().setSubject(user.getLogin());
-        claims.put("role", user.getRoles().stream().map(Role::getName).collect(Collectors.toList()));
-        claims.put("name", user.getName());
-        return Jwts.builder()
-                .setClaims(claims)
-                .setExpiration(date)
-                .signWith(getSignedKey())
-                .compact();
+    public void checkActiveSession(Jwt jwt) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("client_id", clientId);
+        body.add("client_secret", clientSecret);
+        body.add("token", jwt.getTokenValue());
+
+        HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
+
+
+        try {
+            ResponseEntity<String> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", requestEntity, String.class);
+            handleResponse(response);
+        } catch (CustomResponseException e) {
+            log.error("An error occurred while checking the active session: ", e);
+            throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Failed to introspect token.");
+        }
+
     }
 
     /**
-     * Validates the provided JWT token.
+     * Handles the response from the token introspection endpoint.
      *
-     * @param token The JWT token to be validated.
-     * @return true if the token is valid (not expired), false otherwise.
+     * @param response The response from the introspection endpoint.
      */
-    public boolean validateToken(String token) {
-        Jws<Claims> claimsJws=Jwts.parserBuilder().setSigningKey(getSignedKey()).build().parseClaimsJws(token);
-        return !claimsJws.getBody().getExpiration().before(new Date());
+    private void handleResponse(ResponseEntity<String> response) {
+        if (response.getStatusCode() == HttpStatus.OK) {
+            processResponseBody(response.getBody());
+        } else {
+            log.error("Failed to introspect token. HTTP status: " + response.getStatusCode());
+            throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Failed to introspect token");
+        }
     }
 
     /**
-     * Retrieves the login (subject) from the provided JWT token.
+     * Processes the response body to check if the token is active.
+     *
+     * @param responseBody The response body from the introspection endpoint.
+     */
+    private void processResponseBody(String responseBody) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            JsonNode jsonNode = objectMapper.readTree(responseBody);
+            boolean isActive = jsonNode.get("active").asBoolean();
+
+            if (isActive) {
+                log.info("Token is active.");
+            } else {
+                log.warn("Token is inactive or invalid.");
+                throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Token is inactive or invalid.");
+            }
+        } catch (JsonProcessingException e) {
+            log.error("Failed to process token introspection response: ", e);
+            throw new CustomResponseException(HttpStatus.NO_CONTENT,"Failed to process token introspection response.");
+        }
+    }
+
+    /**
+     * Retrieves the login (principal) from the JWT token.
      *
      * @param token The JWT token from which to retrieve the login.
-     * @return The login (subject) extracted from the JWT token.
+     * @return The login (principal) extracted from the JWT token.
      */
-    public String getLogin(String token) {
-        Claims claims = Jwts.parserBuilder()
-                .setSigningKey(getSignedKey())
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
-        return claims.getSubject();
+    public String getLoginFromJwt(String token) {
+        JwtDecoder jwtDecoder = JwtDecoders.fromIssuerLocation(urlRealm);
+        Jwt jwt = jwtDecoder.decode(token);
+        return jwt.getClaimAsString(principleAttribute);
     }
 
+
     /**
-     * Retrieves the signing key used for JWT token validation.
+     * Retrieves the claim name for the principal from the JWT.
      *
-     * @return The signing key as a Key object.
+     * @param jwt The JWT token from which to retrieve the claim name.
+     * @return The claim name for the principal.
      */
-    private Key getSignedKey(){
-        byte[] keyBytes= Decoders.BASE64.decode(secretKey);
-        return Keys.hmacShaKeyFor(keyBytes);
+    private String getPrincipleClaimName(Jwt jwt) {
+        String claimName = JwtClaimNames.SUB;
+        if (Objects.nonNull(principleAttribute)) {
+            claimName = principleAttribute;
+        }
+        return jwt.getClaim(claimName);
     }
+
 }

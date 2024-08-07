@@ -20,7 +20,7 @@ public class EmailService {
     }
 
 //    @Async
-    public void sendMessageToUsers(List<String> userEmails,String subject,String body){
+    public  void sendMessageToUsers(List<String> userEmails,String subject,String body){
         for (String mail : userEmails){
             sendMessage(mail,subject,body);
         }
