@@ -8,6 +8,8 @@ import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.RoleType;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.notification_service.config.RabbitConfig;
+import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
 import fishinghelper.security_server.service.KeyCloakService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,23 +25,22 @@ import java.util.List;
 @Slf4j
 @Service
 public class RegistrationService {
-    private final String SUBJECT="Confirm Email";
 
     private final UserRepositories userRepositories;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepositories roleRepositories;
     private final UserMapper userMapper;
-    private final EmailService emailService;
     private final KeyCloakService keyCloakService;
+    private final RabbitMQProducer rabbitMQProducer;
 
     @Autowired
-    public RegistrationService(UserRepositories userRepositories, PasswordEncoder passwordEncoder, RoleRepositories roleRepositories, UserMapper userMapper, EmailService emailService, KeyCloakService keyCloakService) {
+    public RegistrationService(UserRepositories userRepositories, PasswordEncoder passwordEncoder, RoleRepositories roleRepositories, UserMapper userMapper, KeyCloakService keyCloakService, RabbitMQProducer rabbitMQProducer) {
         this.userRepositories = userRepositories;
         this.passwordEncoder = passwordEncoder;
         this.roleRepositories = roleRepositories;
         this.userMapper = userMapper;
-        this.emailService = emailService;
         this.keyCloakService = keyCloakService;
+        this.rabbitMQProducer = rabbitMQProducer;
     }
 
     /**
@@ -49,7 +50,6 @@ public class RegistrationService {
      *
      * @param userDTORequestRegistration DTO containing user registration details
      */
-
     public void createUser(UserDTORequestRegistration userDTORequestRegistration) {
         keyCloakService.addUser(userMapper.toEntity(userDTORequestRegistration));
 
@@ -61,14 +61,7 @@ public class RegistrationService {
         user.setDateRegistration(new Date());
         user=userRepositories.save(user);
 
-//add rabit mq
-        String encodedEmail = Base64.getEncoder().encodeToString(user.getMail().getBytes(StandardCharsets.UTF_8));
-        String body="Dear "+user.getName()+"!!!\n"
-                +"Please confirm your mail for FishingHelpers\n"
-                +"http://localhost:8081/auth/confirm/email/"
-                + encodedEmail;
-
-        emailService.sendMessage(user,SUBJECT,body);
+        rabbitMQProducer.sendMessageQueue(user.getMail(), RabbitConfig.ROUTING_KEY_2);
 
         log.info("User successfully registered");
     }
