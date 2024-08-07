@@ -2,6 +2,7 @@ package fishinghelper.auth_service.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
+import fishinghelper.auth_service.dto.TokenRequest;
 import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
 import fishinghelper.auth_service.service.AuthorizationService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,6 +16,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -43,30 +46,29 @@ public class AuthenticationControllerTest  {
 
     @Test
     void testAuthorization() throws Exception {
-//        UserDTORequestAuthorization requestDto = new UserDTORequestAuthorization();
-//        requestDto.setLogin("login");
-//        requestDto.setPassword("password");
-//
-//        AuthenticationDTOResponse responseDto = new AuthenticationDTOResponse("token", "refreshToken");
-//
-//        when(authorizationService.userAuthorization(any(UserDTORequestAuthorization.class)))
-//                .thenReturn(responseDto);
-//
-//        mockMvc.perform(post("/auth/authorization")
-//                        .contentType("application/json")
-//                        .content(new ObjectMapper().writeValueAsString(requestDto)))
-//                .andExpect(status().isOk());
-//
-//        verify(authorizationService, times(1)).userAuthorization(any(UserDTORequestAuthorization.class));
+        UserDTORequestAuthorization requestDto = new UserDTORequestAuthorization();
+        requestDto.setLogin("login");
+        requestDto.setPassword("password");
+
+        when(authorizationService.userAuthorization(any(UserDTORequestAuthorization.class)))
+                .thenReturn(any());
+
+        mockMvc.perform(post("/auth/authorization")
+                        .contentType("application/json")
+                        .content(new ObjectMapper().writeValueAsString(requestDto)))
+                .andExpect(status().isOk());
+
+        verify(authorizationService, times(1)).userAuthorization(any(UserDTORequestAuthorization.class));
     }
 
     @Test
     void testRefreshToken() throws Exception {
-//        mockMvc.perform(post("/auth/refresh-token")
-//                        .header("Authorization", "Bearer refreshToken"))
-//                .andExpect(status().isOk());
-//
-//        verify(authorizationService, times(1)).refreshToken(any(HttpServletRequest.class), any(HttpServletResponse.class));
+        TokenRequest tokenRequest=new TokenRequest();
+        mockMvc.perform(post("/auth/refresh-token")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(new ObjectMapper().writeValueAsString(tokenRequest)))
+                .andExpect(status().isOk());
+        verify(authorizationService, times(1)).refreshToken(any());
     }
 
     @Test

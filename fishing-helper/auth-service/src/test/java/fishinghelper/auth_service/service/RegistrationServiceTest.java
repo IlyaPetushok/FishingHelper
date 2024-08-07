@@ -7,13 +7,17 @@ import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.RoleType;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
+import fishinghelper.security_server.service.KeyCloakService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.Base64Utils;
 
+import java.util.Base64;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -35,10 +39,13 @@ public class RegistrationServiceTest {
     private UserMapper userMapper;
 
     @Mock
-    private EmailService emailService;
+    private PasswordEncoder passwordEncoder;
 
     @Mock
-    private PasswordEncoder passwordEncoder;
+    private KeyCloakService keyCloakService;
+
+    @Mock
+    private RabbitMQProducer rabbitMQProducer;
 
     @BeforeEach
     void setUp() {
@@ -64,31 +71,33 @@ public class RegistrationServiceTest {
         when(userMapper.toEntity(request)).thenReturn(user);
         when(roleRepositories.findRoleByName(RoleType.USER.name())).thenReturn(userRole);
         when(userRepositories.save(user)).thenReturn(user);
-        doNothing().when(emailService).sendMessage(any(User.class), anyString(), anyString());
+        doNothing().when(rabbitMQProducer).sendMessageQueue(any(), anyString());
 
         registrationService.createUser(request);
 
         verify(passwordEncoder, times(1)).encode("plainpassword");
-        verify(userMapper, times(1)).toEntity(request);
         verify(roleRepositories, times(1)).findRoleByName(RoleType.USER.name());
         verify(userRepositories, times(1)).save(user);
-        verify(emailService, times(1)).sendMessage(eq(user), anyString(), anyString());
+        verify(rabbitMQProducer, times(1)).sendMessageQueue(any(), anyString());
     }
 
     @Test
     void testUpdateStatusConfirmEmail() {
-        String mail = "john.doe%40example.com";
+        String mail = "john.doe@example.com";
+        String mailEncoded = Base64.getEncoder().encodeToString(mail.getBytes());
+
         User user = new User();
-        user.setMail("john.doe@example.com");
+        user.setMail(mail);
         user.setMailStatus(false);
 
-        when(userRepositories.findUserByMail("john.doe@example.com")).thenReturn(user);
+        when(userRepositories.findUserByMail(mail)).thenReturn(user);
         when(userRepositories.save(user)).thenReturn(user);
 
-        registrationService.updateStatusConfirmEmail(mail);
+        registrationService.updateStatusConfirmEmail(mailEncoded);
 
         assertTrue(user.isMailStatus());
-        verify(userRepositories, times(1)).findUserByMail("john.doe@example.com");
+        verify(userRepositories, times(1)).findUserByMail(mail);
         verify(userRepositories, times(1)).save(user);
+        verify(keyCloakService, times(1)).updateUserStatusEmail(user.getLogin());
     }
 }
