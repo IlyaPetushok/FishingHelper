@@ -20,13 +20,28 @@ public class RabbitConfig {
     @Value("${port.rabbit}")
     private Integer portRabbit;
 
-    public static final String QUEUE_NAME = "not_spr_queue";
+    public static final String QUEUE_NAME_3 = "not_spr_queue_3";
+    public static final String QUEUE_NAME_2 = "not_spr_queue_2";
+    public static final String QUEUE_NAME_1 = "not_spr_queue";
     public static final String EXCHANGE_NAME = "not_spr_exch";
-    public static final String ROUTING_KEY = "spr_123";
+    public static final String ROUTING_KEY_1 = "spr_123";
+    public static final String ROUTING_KEY_2 = "spr_123_2";
+    public static final String ROUTING_KEY_3 = "spr_123_3";
+
 
     @Bean
     public Queue queue() {
-        return new Queue(QUEUE_NAME, true);
+        return new Queue(QUEUE_NAME_1, true);
+    }
+
+    @Bean
+    public Queue queue2(){
+        return new Queue(QUEUE_NAME_2,true);
+    }
+
+    @Bean
+    public Queue queue3(){
+        return new Queue(QUEUE_NAME_3,true);
     }
 
     @Bean
@@ -36,7 +51,17 @@ public class RabbitConfig {
 
     @Bean
     public Binding binding(Queue queue, DirectExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
+        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY_1);
+    }
+
+    @Bean
+    public Binding binding2(Queue queue2,DirectExchange exchange){
+        return BindingBuilder.bind(queue2).to(exchange).with(ROUTING_KEY_2);
+    }
+
+    @Bean
+    public Binding binding3(Queue queue3,DirectExchange exchange){
+        return BindingBuilder.bind(queue3).to(exchange).with(ROUTING_KEY_3);
     }
 
     @Bean

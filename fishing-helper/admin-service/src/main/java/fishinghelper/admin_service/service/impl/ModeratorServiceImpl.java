@@ -210,7 +210,7 @@ public class ModeratorServiceImpl implements ModeratorService {
                 article.setStatus(Status.getStatus(Status.APPROVED));
                 articleRepositories.save(article);
                 if(article.isImportance()){
-                    rabbitMQProducer.sendMessageQueue("Important notification"+ article.getName()+",link:"+"http:/localhost:9999/article"+article.getId(), RabbitConfig.ROUTING_KEY);
+                    rabbitMQProducer.sendMessageQueue("Important notification"+ article.getName()+",link:"+"http:/localhost:9999/article"+article.getId(), RabbitConfig.ROUTING_KEY_1);
                 }
             }
             case PLACE -> {

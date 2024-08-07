@@ -67,6 +67,7 @@ public class SecurityConfiguration {
             "/auth/registration",
             "/auth/authorization",
             "/logout",
+            "/auth/update/**",
             "/auth/introspect",
             "/auth/refresh-token",
             "/auth/confirm/**"
