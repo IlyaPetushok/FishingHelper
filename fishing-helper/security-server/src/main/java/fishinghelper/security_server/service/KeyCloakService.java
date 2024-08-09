@@ -142,4 +142,14 @@ public class KeyCloakService {
 
         return users.get(0);
     }
+
+    public void updateUserRole(User user){
+        UserRepresentation userRepresentation = findUserByName(user.getLogin());
+        List<RoleRepresentation> roles = user.getRoles().stream()
+                .map(roleName -> keycloak.realm(realmName).roles().get(roleName.getName()+"_REALM").toRepresentation())
+                .collect(Collectors.toList());
+
+        UsersResource usersResource = keycloak.realm(realmName).users();
+        usersResource.get(userRepresentation.getId()).roles().realmLevel().add(roles);
+    }
 }
