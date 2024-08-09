@@ -104,7 +104,7 @@ public class AdminServiceImpl implements AdminService {
         User user = userRepositories.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND, "user not found by id:" + id));
 
-        if (user.getRoles().stream().anyMatch(role -> role.getName().equals(RoleType.MODERATOR.name()) || role.getName().equals(RoleType.ADMIN.name()))) {
+        if (keyCloakService.getUserRole(user).stream().anyMatch(role -> role.getName().equals(RoleType.MODERATOR.name()) || role.getName().equals(RoleType.ADMIN.name()))) {
             throw new NoAccessRightException(HttpStatus.FORBIDDEN, "This user have larger role than you!!!");
         }
 
