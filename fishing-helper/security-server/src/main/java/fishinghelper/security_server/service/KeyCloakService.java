@@ -1,11 +1,13 @@
 package fishinghelper.security_server.service;
 
+import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.security_server.exception.CustomResponseException;
 import fishinghelper.security_server.exception.UserFailedCreateException;
-import fishinghelper.security_server.exception.UserNotFoundException;
 import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.keycloak.admin.client.Keycloak;
+import org.keycloak.admin.client.resource.RoleMappingResource;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
@@ -30,6 +32,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class KeyCloakService {
+
     @Value("${spring.security.keycloak.realm.name}")
     private String realmName;
 
@@ -134,13 +137,10 @@ public class KeyCloakService {
      */
     public UserRepresentation findUserByName(String login){
         UsersResource usersResource = keycloak.realm(realmName).users();
-        List<UserRepresentation> users = usersResource.search(login, true);
-
-        if (users.isEmpty()) {
-            throw new UserNotFoundException(HttpStatus.NOT_FOUND, "User not found in keycloak");
-        }
-
-        return users.get(0);
+        return usersResource.search(login, true)
+                .stream()
+                .findFirst()
+                .orElseThrow(()->new CustomResponseException(HttpStatus.UNAUTHORIZED,"User dont authorized"));
     }
 
     public void updateUserRole(User user){
@@ -151,5 +151,18 @@ public class KeyCloakService {
 
         UsersResource usersResource = keycloak.realm(realmName).users();
         usersResource.get(userRepresentation.getId()).roles().realmLevel().add(roles);
+    }
+
+    public List<Role> getUserRole(User user){
+        UserRepresentation userRepresentation = findUserByName(user.getLogin());
+
+        UserResource userResource = keycloak.realm(realmName).users().get(userRepresentation.getId());
+        RoleMappingResource roleMappingResource = userResource.roles();
+        List<RoleRepresentation> realmRoles = roleMappingResource.realmLevel().listEffective(true);
+
+        return realmRoles.stream()
+                .filter(role-> role.getName().contains("_REALM"))
+                .map(role -> new Role(role.getName().replace("_REALM","")))
+                .collect(Collectors.toList());
     }
 }
