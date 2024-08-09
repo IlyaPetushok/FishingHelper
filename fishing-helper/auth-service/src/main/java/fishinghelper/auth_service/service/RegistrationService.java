@@ -51,15 +51,15 @@ public class RegistrationService {
      * @param userDTORequestRegistration DTO containing user registration details
      */
     public void createUser(UserDTORequestRegistration userDTORequestRegistration) {
-        keyCloakService.addUser(userMapper.toEntity(userDTORequestRegistration));
-
-        userDTORequestRegistration.setPassword(passwordEncoder.encode(userDTORequestRegistration.getPassword()));
-        User user=userMapper.toEntity(userDTORequestRegistration);
+        User user = userMapper.toEntity(userDTORequestRegistration);
+        user.setPassword(passwordEncoder.encode(userDTORequestRegistration.getPassword()));
 
         List<Role> roleList = List.of(roleRepositories.findRoleByName(RoleType.USER.name()));
         user.setRoles(roleList);
         user.setDateRegistration(new Date());
-        user=userRepositories.save(user);
+        user = userRepositories.save(user);
+
+        keyCloakService.addUser(userMapper.toEntity(userDTORequestRegistration));
 
         rabbitMQProducer.sendMessageQueue(user.getMail(), RabbitConfig.ROUTING_KEY_2);
 
@@ -73,15 +73,15 @@ public class RegistrationService {
      *
      * @param email this mail for confirm user
      */
-    public void updateStatusConfirmEmail(String email){
+    public void updateStatusConfirmEmail(String email) {
         log.info("User confirm mail ....");
 
-        String mailDecode=new String(Base64.getDecoder().decode(email), StandardCharsets.UTF_8);
-        User user =userRepositories.findUserByMail(mailDecode);
+        String mailDecode = new String(Base64.getDecoder().decode(email), StandardCharsets.UTF_8);
+        User user = userRepositories.findUserByMail(mailDecode);
 
         if (user == null) {
             log.error("User not found for email: " + mailDecode);
-            throw new UserNotFoundException(HttpStatus.NOT_FOUND,"user not found by email:" +mailDecode);
+            throw new UserNotFoundException(HttpStatus.NOT_FOUND, "user not found by email:" + mailDecode);
         }
 
         user.setMailStatus(true);
