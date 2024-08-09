@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface RoleRepositories extends JpaRepository<Role,Integer> {
     Role findRoleByName(String name);
+    List<Role> findRolesByNameIn(List<String> name);
 //    List<Role> selectFindByPriviliges(String namePriviliges);
 }
