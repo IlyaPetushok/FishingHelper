@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.security_server.exception.CustomResponseException;
-import fishinghelper.security_server.exception.TokenExpiredException;
 import fishinghelper.security_server.exception.TokenNotFoundException;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +25,8 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -73,18 +74,27 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
     @Override
     public AbstractAuthenticationToken convert(@NotNull Jwt jwt) {
         checkActiveSession(jwt);
+
         String login = jwt.getClaimAsString(principleAttribute);
+        List<String> roleNames = getStrings(jwt.getClaims());
 
         Collection<GrantedAuthority> authorities = Stream.concat(
-                jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
-                customUserDetailService.loadUserByUsername(login).getAuthorities().stream()
-        ).collect(Collectors.toSet());
+                    jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
+                    customUserDetailService.loadUserByUsername(login,roleNames).stream()
+            ).collect(Collectors.toSet());
 
-        return new JwtAuthenticationToken(
-                jwt,
-                authorities,
-                getPrincipleClaimName(jwt)
-        );
+            return new JwtAuthenticationToken(
+                    jwt,
+                    authorities,
+                    getPrincipleClaimName(jwt)
+            );
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<String> getStrings(Map<String, Object> claims) {
+        Map<String,Object> resource_access= (Map<String,Object>) claims.get("resource_access");
+        Map<String,Object> accounts= (Map<String,Object>) resource_access.get("fishing-helper-rest-api");
+        return (List<String>)accounts.get("roles");
     }
 
     /**
@@ -102,7 +112,6 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
         body.add("token", jwt.getTokenValue());
 
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
-
 
         try {
             ResponseEntity<String> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", requestEntity, String.class);
