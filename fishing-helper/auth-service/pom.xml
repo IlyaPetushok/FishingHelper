@@ -42,6 +42,16 @@
         </dependency>
 
         <dependency>
+            <groupId>fishinghelper</groupId>
+            <artifactId>security-server</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>fishinghelper</groupId>
+            <artifactId>notification-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -55,19 +65,7 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
         </dependency>
-        <dependency>
-            <groupId>fishinghelper</groupId>
-            <artifactId>security-server</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
 
-        <dependency>
-            <groupId>fishinghelper</groupId>
-            <artifactId>notification-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
     <build>
