@@ -21,7 +21,7 @@ public class AdminController {
         this.adminService = adminService;
     }
 
-    @PreAuthorize("hasAuthority('UPDATE') and (hasRole('ROLE_AUTHOR') or" +
+    @PreAuthorize("hasAuthority('UPDATE') and (hasRole('ROLE_ADMIN') or" +
             " (hasRole('ROLE_MODERATOR') and @adminServiceImpl.checkUpdateUserRole(#userDTORequest,#id)))")
     @PostMapping("/user/{id}/role")
     public ResponseEntity<?> adminUpdateRole(@PathVariable("id") Integer id, @RequestBody UserDTORequest userDTORequest) {
@@ -29,7 +29,7 @@ public class AdminController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PreAuthorize("hasAuthority('READ') and (hasRole('ROLE_AUTHOR') or hasRole('ROLE_MODERATOR'))")
+    @PreAuthorize("hasAuthority('READ') and (hasRole('ROLE_ADMIN') or hasRole('ROLE_MODERATOR'))")
     @PostMapping("/users/filter")
     public ResponseEntity<?> findUserByFilter(@RequestBody UserDTOFilter userDTOFilter) {
         return new ResponseEntity<>(adminService.findUserByFilter(userDTOFilter), HttpStatus.OK);
