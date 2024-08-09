@@ -15,6 +15,7 @@ import fishinghelper.common_module.dao.PrivilegesRepository;
 import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.*;
+import fishinghelper.security_server.service.KeyCloakService;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,14 +39,16 @@ public class AdminServiceImpl implements AdminService {
     private final RoleMapper roleMapper;
     public final RoleRepositories roleRepositories;
     public final PrivilegesRepository privilegesRepository;
+    private final KeyCloakService keyCloakService;
 
     @Autowired
-    public AdminServiceImpl(UserRepositories userRepositories, UserMapper userMapper, RoleMapper roleMapper, RoleRepositories roleRepositories, PrivilegesRepository privilegesRepository) {
+    public AdminServiceImpl(UserRepositories userRepositories, UserMapper userMapper, RoleMapper roleMapper, RoleRepositories roleRepositories, PrivilegesRepository privilegesRepository, KeyCloakService keyCloakService) {
         this.userRepositories = userRepositories;
         this.userMapper = userMapper;
         this.roleMapper = roleMapper;
         this.roleRepositories = roleRepositories;
         this.privilegesRepository = privilegesRepository;
+        this.keyCloakService = keyCloakService;
     }
 
     /**
@@ -63,8 +67,14 @@ public class AdminServiceImpl implements AdminService {
 
         log.info("User found with ID {} for role update", id);
 
-        user.setRoles(roleMapper.toEntities(userDTORequest.getRoles()));
+        List<String> roleNames=userDTORequest.getRoles().stream()
+                .map(RoleDTO::getName)
+                .collect(Collectors.toList());
+        List<Role> roleList=roleRepositories.findRolesByNameIn(roleNames);
+        user.setRoles(roleList);
+
         userRepositories.save(user);
+        keyCloakService.updateUserRole(user);
 
         log.info("User roles updated successfully for user with ID {}", id);
     }
@@ -98,8 +108,8 @@ public class AdminServiceImpl implements AdminService {
             throw new NoAccessRightException(HttpStatus.FORBIDDEN, "This user have larger role than you!!!");
         }
 
-        List<Role> roles = roleRepositories.findAllById(userDTORequest.getRoles().stream()
-                .map(RoleDTO::getId)
+        List<Role> roles = roleRepositories.findRolesByNameIn(userDTORequest.getRoles().stream()
+                .map(RoleDTO::getName)
                 .collect(Collectors.toList()));
 
         if (roles.stream().anyMatch(role -> role.getName().equals(RoleType.MODERATOR.name()) || role.getName().equals(RoleType.ADMIN.name()))) {
