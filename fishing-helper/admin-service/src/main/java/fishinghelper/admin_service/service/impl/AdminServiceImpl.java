@@ -1,14 +1,10 @@
 package fishinghelper.admin_service.service.impl;
 
 
-import fishinghelper.admin_service.dto.ConstrainDTO;
-import fishinghelper.admin_service.dto.RoleDTO;
-import fishinghelper.admin_service.dto.UserDTORequest;
-import fishinghelper.admin_service.dto.UserDTOResponse;
+import fishinghelper.admin_service.dto.*;
 import fishinghelper.admin_service.dto.filter.UserDTOFilter;
 import fishinghelper.admin_service.exception.NoAccessRightException;
 import fishinghelper.admin_service.exception.UserNotFoundException;
-import fishinghelper.admin_service.mapper.RoleMapper;
 import fishinghelper.admin_service.mapper.UserMapper;
 import fishinghelper.admin_service.service.AdminService;
 import fishinghelper.common_module.dao.PrivilegesRepository;
@@ -16,7 +12,6 @@ import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.*;
 import fishinghelper.security_server.service.KeyCloakService;
-import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +19,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,16 +30,14 @@ import java.util.stream.Collectors;
 public class AdminServiceImpl implements AdminService {
     private final UserRepositories userRepositories;
     private final UserMapper userMapper;
-    private final RoleMapper roleMapper;
     public final RoleRepositories roleRepositories;
     public final PrivilegesRepository privilegesRepository;
     private final KeyCloakService keyCloakService;
 
     @Autowired
-    public AdminServiceImpl(UserRepositories userRepositories, UserMapper userMapper, RoleMapper roleMapper, RoleRepositories roleRepositories, PrivilegesRepository privilegesRepository, KeyCloakService keyCloakService) {
+    public AdminServiceImpl(UserRepositories userRepositories, UserMapper userMapper, RoleRepositories roleRepositories, PrivilegesRepository privilegesRepository, KeyCloakService keyCloakService) {
         this.userRepositories = userRepositories;
         this.userMapper = userMapper;
-        this.roleMapper = roleMapper;
         this.roleRepositories = roleRepositories;
         this.privilegesRepository = privilegesRepository;
         this.keyCloakService = keyCloakService;
@@ -67,10 +59,10 @@ public class AdminServiceImpl implements AdminService {
 
         log.info("User found with ID {} for role update", id);
 
-        List<String> roleNames=userDTORequest.getRoles().stream()
+        List<String> roleNames = userDTORequest.getRoles().stream()
                 .map(RoleDTO::getName)
                 .collect(Collectors.toList());
-        List<Role> roleList=roleRepositories.findRolesByNameIn(roleNames);
+        List<Role> roleList = roleRepositories.findRolesByNameIn(roleNames);
         user.setRoles(roleList);
 
         userRepositories.save(user);
@@ -120,6 +112,13 @@ public class AdminServiceImpl implements AdminService {
         return true;
     }
 
+
+    @Override
+    public List<UserDTOResponseFindRole> findUsersByRole(String role) {
+        List<String> loginsUser = keyCloakService.findUserByRole(role);
+        return userMapper.toDTOSResponse(userRepositories.findUserByLoginIn(loginsUser));
+    }
+
     /**
      * Sets constraints (privileges) for a user based on the given ConstrainDTO.
      *
@@ -137,7 +136,7 @@ public class AdminServiceImpl implements AdminService {
         List<Privileges> constrainUser = user.getPrivileges();
 
         for (Privileges constraint : constrainNew) {
-            if (constrainUser.stream().noneMatch(cons -> cons.getName().equals(constraint.getName()))){
+            if (constrainUser.stream().noneMatch(cons -> cons.getName().equals(constraint.getName()))) {
                 constrainUser.add(constraint);
             }
         }
@@ -157,11 +156,6 @@ public class AdminServiceImpl implements AdminService {
 
             if (Objects.nonNull(userDTOFilter.getMail())) {
                 predicates.add(criteriaBuilder.like(root.get(User_.MAIL), "%" + userDTOFilter.getMail() + "%"));
-            }
-
-            if (Objects.nonNull(userDTOFilter.getRole())) {
-                Join<User, Role> userRoleJoin = root.join(User_.ROLES);
-                predicates.add(userRoleJoin.get(Role_.NAME).in(userDTOFilter.getRole()));
             }
 
             if (userDTOFilter.getDateRegistrationStart() != null && userDTOFilter.getDateRegistrationFinish() != null) {

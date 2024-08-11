@@ -4,6 +4,7 @@ import fishinghelper.admin_service.dto.ConstrainDTO;
 import fishinghelper.admin_service.dto.UserDTORequest;
 import fishinghelper.admin_service.dto.filter.UserDTOFilter;
 import fishinghelper.admin_service.service.AdminService;
+import jakarta.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,5 +41,11 @@ public class AdminController {
     public ResponseEntity<?> userSetConstrain(@PathVariable("id") Integer id, @RequestBody ConstrainDTO constrainDTO){
         adminService.setConstrainUser(constrainDTO,id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/users/{role}")
+    public ResponseEntity<?> findUsersByRole(@PathVariable("role") String role){
+        return  new ResponseEntity<>(adminService.findUsersByRole(role),HttpStatus.OK);
     }
 }
