@@ -16,4 +16,5 @@ public interface UserRepositories extends JpaRepository<User,Integer> {
     User findUserByMail(String mail);
     List<User> findUsersByMailStatus(boolean flag);
     Page<User> findAll(Specification<User> userSpecification, Pageable pageable);
+    List<User> findUserByLoginIn(List<String> logins);
 }
