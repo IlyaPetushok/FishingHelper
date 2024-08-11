@@ -165,4 +165,22 @@ public class KeyCloakService {
                 .map(role -> new Role(role.getName().replace("_REALM","")))
                 .collect(Collectors.toList());
     }
+
+    public List<String> findUserByRole(String role) {
+        List<UserRepresentation> userRepresentations = keycloak.realm(realmName).users().list();
+
+        return userRepresentations.stream()
+                .filter(us-> hasRole(us,role))
+                .map(us -> us.getUsername())
+                .collect(Collectors.toList());
+    }
+
+    private boolean hasRole(UserRepresentation user, String roleName) {
+        UserResource userResource = keycloak.realm(realmName).users().get(user.getId());
+        RoleMappingResource roleMappingResource = userResource.roles();
+
+        List<RoleRepresentation> realmRoles = roleMappingResource.realmLevel().listEffective();
+        return realmRoles.stream()
+                .anyMatch(role -> role.getName().equals(roleName+"_REALM"));
+    }
 }
