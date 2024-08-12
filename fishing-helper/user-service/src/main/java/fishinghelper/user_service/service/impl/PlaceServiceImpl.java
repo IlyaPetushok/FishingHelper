@@ -21,8 +21,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -41,14 +42,16 @@ public class PlaceServiceImpl implements PlaceService {
     private final SurveyRepositories surveyRepositories;
     private final OwnerRepositories ownerRepositories;
     private final PlaceMapper placeMapper;
+    private final RestTemplate restTemplate;
 
 
     @Autowired
-    public PlaceServiceImpl(PlaceRepositories placeRepositories, SurveyRepositories surveyRepositories, OwnerRepositories ownerRepositories, PlaceMapper placeMapper) {
+    public PlaceServiceImpl(PlaceRepositories placeRepositories, SurveyRepositories surveyRepositories, OwnerRepositories ownerRepositories, PlaceMapper placeMapper, RestTemplate restTemplate) {
         this.placeRepositories = placeRepositories;
         this.surveyRepositories = surveyRepositories;
         this.ownerRepositories = ownerRepositories;
         this.placeMapper = placeMapper;
+        this.restTemplate = restTemplate;
     }
 
     /**
@@ -148,8 +151,20 @@ public class PlaceServiceImpl implements PlaceService {
     public PlaceWithStatisticDTOResponse showPlace(Integer id) {
         Place place = placeRepositories.findById(id)
                 .orElseThrow(() -> new PlaceNotFoundCustomException(HttpStatus.NOT_FOUND, "not found place by id"));
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<WeatherPlaceDTORequest> httpEntity = new HttpEntity<>(new WeatherPlaceDTORequest(place.getCoordinates()), headers);
+
+        ResponseEntity<WeatherPlaceDTOResponse> weather = restTemplate.postForEntity("http://localhost:8083/weather", httpEntity, WeatherPlaceDTOResponse.class);
+
+        if (weather.getStatusCode() != HttpStatus.OK) {
+            throw new PlaceNotFoundCustomException(HttpStatus.NOT_FOUND, "Place not found by location");
+        }
         TimeToCatchFish timeToCatchFish = calculateStatisticTimeToCatch(surveyRepositories.findAllByPlaceId(id));
-        return new PlaceWithStatisticDTOResponse(placeMapper.toDTO(place), timeToCatchFish);
+        return new PlaceWithStatisticDTOResponse(placeMapper.toDTO(place), timeToCatchFish,weather.getBody());
+
     }
 
     /**
