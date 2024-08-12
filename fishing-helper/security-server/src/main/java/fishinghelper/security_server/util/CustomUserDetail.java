@@ -1,10 +1,7 @@
 package fishinghelper.security_server.util;
 
-import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.entity.user.Privileges;
 import fishinghelper.common_module.entity.user.Role;
-import fishinghelper.common_module.entity.user.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,9 +11,6 @@ import java.util.Collection;
 import java.util.List;
 
 public class CustomUserDetail implements UserDetails {
-    private RoleRepositories roleRepositories;
-    private String login;
-    private String password;
     public Collection<? extends GrantedAuthority> grantedAuthorities;
 
 
@@ -42,11 +36,11 @@ public class CustomUserDetail implements UserDetails {
 
     @Override
     public String getPassword() {
-        return password;
+        return null;
     }
 
     @Override
     public String getUsername() {
-        return login;
+        return null;
     }
 }

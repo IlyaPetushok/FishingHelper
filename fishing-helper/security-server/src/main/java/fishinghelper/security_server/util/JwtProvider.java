@@ -3,9 +3,8 @@ package fishinghelper.security_server.util;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fishinghelper.security_server.exception.CustomResponseException;
-import fishinghelper.security_server.exception.TokenNotFoundException;
 import jakarta.validation.constraints.NotNull;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -71,6 +70,7 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      * @param jwt The JWT token to convert.
      * @return An {@link AbstractAuthenticationToken} containing the JWT and authorities.
      */
+    @SneakyThrows
     @Override
     public AbstractAuthenticationToken convert(@NotNull Jwt jwt) {
         checkActiveSession(jwt);
@@ -79,22 +79,22 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
         List<String> roleNames = getStrings(jwt.getClaims());
 
         Collection<GrantedAuthority> authorities = Stream.concat(
-                    jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
-                    customUserDetailService.loadUserByUsername(login,roleNames).stream()
-            ).collect(Collectors.toSet());
+                jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
+                customUserDetailService.loadUserByUsername(login, roleNames).stream()
+        ).collect(Collectors.toSet());
 
-            return new JwtAuthenticationToken(
-                    jwt,
-                    authorities,
-                    getPrincipleClaimName(jwt)
-            );
+        return new JwtAuthenticationToken(
+                jwt,
+                authorities,
+                getPrincipleClaimName(jwt)
+        );
     }
 
     @SuppressWarnings("unchecked")
     private List<String> getStrings(Map<String, Object> claims) {
-        Map<String,Object> resource_access= (Map<String,Object>) claims.get("resource_access");
-        Map<String,Object> accounts= (Map<String,Object>) resource_access.get("fishing-helper-rest-api");
-        return (List<String>)accounts.get("roles");
+        Map<String, Object> resource_access = (Map<String, Object>) claims.get("resource_access");
+        Map<String, Object> accounts = (Map<String, Object>) resource_access.get("fishing-helper-rest-api");
+        return (List<String>) accounts.get("roles");
     }
 
     /**
@@ -102,7 +102,7 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param jwt The JWT token to check.
      */
-    public void checkActiveSession(Jwt jwt) {
+    public void checkActiveSession(Jwt jwt) throws JsonProcessingException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -113,14 +113,8 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
 
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
 
-        try {
-            ResponseEntity<String> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", requestEntity, String.class);
-            handleResponse(response);
-        } catch (CustomResponseException e) {
-            log.error("An error occurred while checking the active session: ", e);
-            throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Failed to introspect token.");
-        }
-
+        ResponseEntity<String> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", requestEntity, String.class);
+        handleResponse(response);
     }
 
     /**
@@ -128,12 +122,11 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param response The response from the introspection endpoint.
      */
-    private void handleResponse(ResponseEntity<String> response) {
+    private void handleResponse(ResponseEntity<String> response) throws JsonProcessingException {
         if (response.getStatusCode() == HttpStatus.OK) {
             processResponseBody(response.getBody());
         } else {
             log.error("Failed to introspect token. HTTP status: " + response.getStatusCode());
-            throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Failed to introspect token");
         }
     }
 
@@ -142,21 +135,14 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param responseBody The response body from the introspection endpoint.
      */
-    private void processResponseBody(String responseBody) {
+    private void processResponseBody(String responseBody) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            JsonNode jsonNode = objectMapper.readTree(responseBody);
-            boolean isActive = jsonNode.get("active").asBoolean();
-
-            if (isActive) {
-                log.info("Token is active.");
-            } else {
-                log.warn("Token is inactive or invalid.");
-                throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED,"Token is inactive or invalid.");
-            }
-        } catch (JsonProcessingException e) {
-            log.error("Failed to process token introspection response: ", e);
-            throw new CustomResponseException(HttpStatus.NO_CONTENT,"Failed to process token introspection response.");
+        JsonNode jsonNode = objectMapper.readTree(responseBody);
+        boolean isActive = jsonNode.get("active").asBoolean();
+        if (isActive) {
+            log.info("Token is active.");
+        } else {
+            log.warn("Token is inactive or invalid.");
         }
     }
 

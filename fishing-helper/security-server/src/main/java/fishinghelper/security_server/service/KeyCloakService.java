@@ -2,8 +2,6 @@ package fishinghelper.security_server.service;
 
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.User;
-import fishinghelper.security_server.exception.CustomResponseException;
-import fishinghelper.security_server.exception.UserFailedCreateException;
 import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.keycloak.admin.client.Keycloak;
@@ -60,8 +58,6 @@ public class KeyCloakService {
     /**
      * Adds a new user to Keycloak and assigns a role.
      * <p>
-     * If the user creation fails, throws a {@link UserFailedCreateException}.
-     *
      * @param user The user object containing user details.
      */
     public void addUser(User user){
@@ -81,7 +77,6 @@ public class KeyCloakService {
         } else {
             log.error("Failed to create keycloak user. HTTP status: " + response.getStatus());
             log.error("Response body: " + response.readEntity(String.class));
-            throw new UserFailedCreateException(HttpStatus.BAD_REQUEST,"Failed to create user");
         }
 
         String userId = response.getLocation().getPath().split("/")[5];
@@ -140,7 +135,7 @@ public class KeyCloakService {
         return usersResource.search(login, true)
                 .stream()
                 .findFirst()
-                .orElseThrow(()->new CustomResponseException(HttpStatus.UNAUTHORIZED,"User dont authorized"));
+                .orElse(null);
     }
 
     public void updateUserRole(User user){

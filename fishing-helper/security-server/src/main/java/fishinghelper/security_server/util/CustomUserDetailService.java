@@ -4,7 +4,7 @@ import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.User;
-import fishinghelper.security_server.exception.CustomResponseException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CustomUserDetailService {
@@ -37,21 +36,17 @@ public class CustomUserDetailService {
      */
 
     @Transactional
-    public List<GrantedAuthority> loadUserByUsername(String login, List<String> roleNamesRealm) throws UsernameNotFoundException {
-        User user = userRepositories.findUserByLogin(login);
+    public List<GrantedAuthority> loadUserByUsername(String login, List<String> roleNamesRealm) {
+        User user = userRepositories.findUserByLogin(login+"1");
 
         List<Role> rolesRealm = new ArrayList<>();
         List<Role> roles = roleRepositories.findAll();
-
-        if (user == null) {
-            throw new UsernameNotFoundException("doesnt found user by token");
-        }
 
         for (String roleRealm : roleNamesRealm) {
             rolesRealm.add(roles.stream()
                     .filter(role -> role.getName().equals(roleRealm))
                     .findAny()
-                    .orElseThrow(() -> new CustomResponseException(HttpStatus.CONFLICT,"dont found role for realm")));
+                    .orElse(null));
         }
         return CustomUserDetail.fromUserEntity(user.getPrivileges(), rolesRealm);
     }
