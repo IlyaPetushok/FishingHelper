@@ -21,7 +21,7 @@ public class UserServiceGlobalExceptionHandler {
                 .body(customResponseException.toString()) ;
     }
 
-    @ExceptionHandler(value = Exception.class)
+    @ExceptionHandler(value = SQLException.class)
     public ResponseEntity<?> handlerGenericException(SQLException exceptionResponse){
         log.error(exceptionResponse.toString());
         return ResponseEntity
