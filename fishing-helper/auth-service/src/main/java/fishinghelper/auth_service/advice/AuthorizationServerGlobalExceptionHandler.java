@@ -1,7 +1,7 @@
 package fishinghelper.auth_service.advice;
 
 
-import fishinghelper.security_server.exception.CustomResponseException;
+import fishinghelper.auth_service.exception.CustomResponseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,7 @@ import java.sql.SQLException;
 @Slf4j
 @RestControllerAdvice
 public class AuthorizationServerGlobalExceptionHandler {
+
     @ExceptionHandler(value = CustomResponseException.class)
     public ResponseEntity<?> handlerGenericException(CustomResponseException customResponseException){
         log.error(customResponseException.toString());

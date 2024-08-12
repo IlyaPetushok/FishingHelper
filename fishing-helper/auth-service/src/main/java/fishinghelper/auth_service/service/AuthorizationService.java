@@ -6,12 +6,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.auth_service.dto.TokenRequest;
 import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
-import fishinghelper.auth_service.exception.UserNotFoundException;
+import fishinghelper.auth_service.exception.*;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.User;
 import fishinghelper.notification_service.config.RabbitConfig;
 import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
-import fishinghelper.security_server.exception.CustomResponseException;
 import fishinghelper.security_server.service.KeyCloakService;
 import fishinghelper.security_server.util.JwtProvider;
 import jakarta.servlet.http.HttpServletRequest;
@@ -88,7 +87,7 @@ public class AuthorizationService {
             return response;
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             log.error("Authorization request failed with status code {} and response body: {}", e.getStatusCode(), e.getResponseBodyAsString(), e);
-            throw new CustomResponseException(HttpStatus.BAD_REQUEST,"Authorization request failed");
+            throw new InvalidDataException(HttpStatus.BAD_REQUEST,"Authorization request failed");
         }
     }
 
@@ -113,7 +112,7 @@ public class AuthorizationService {
                     log.info("Token is active.");
                 } else {
                     log.error("Token is inactive or invalid.");
-                    throw new RuntimeException("Token is inactive or invalid.");
+                    throw new TokenInvalidException(HttpStatus.UNAUTHORIZED,"Token is inactive or invalid.");
                 }
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
@@ -148,7 +147,7 @@ public class AuthorizationService {
         if (responseEntity.getStatusCode() == HttpStatus.OK) {
             return responseEntity;
         } else {
-            throw new CustomResponseException(HttpStatus.BAD_REQUEST,"Failed to refresh token");
+            throw new RefreshTokenException(HttpStatus.BAD_REQUEST,"Failed to refresh token");
         }
     }
 
