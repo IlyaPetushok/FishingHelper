@@ -57,6 +57,14 @@
 
 
         <dependencies>
+
+<!--            image handler-->
+            <dependency>
+                <groupId>org.imgscalr</groupId>
+                <artifactId>imgscalr-lib</artifactId>
+                <version>4.2</version>
+            </dependency>
+
             <!--             keycloak-->
             <dependency>
                 <groupId>org.keycloak</groupId>

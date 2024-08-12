@@ -4,9 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.photo_service.dto.PhotoResponseDTO;
+import fishinghelper.photo_service.entity.MultiPartFileCustom;
 import fishinghelper.photo_service.exception.*;
 import fishinghelper.photo_service.service.FileSenderYandexCloudService;
 import lombok.extern.slf4j.Slf4j;
+import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -15,11 +17,17 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.util.*;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -87,7 +95,9 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.AUTHORIZATION, "OAuth " + token);
 
-        HttpEntity<byte[]> requestEntity = new HttpEntity<>(file.getBytes(), headers);
+        MultipartFile multipartFile =getResizePhoto(file);
+
+        HttpEntity<byte[]> requestEntity = new HttpEntity<>(multipartFile.getBytes(), headers);
 
         ResponseEntity<String> response = restTemplate.exchange(uploadLink, HttpMethod.PUT, requestEntity, String.class);
 
@@ -97,6 +107,27 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
         } else {
             throw new FileNotUploadingException(HttpStatus.BAD_REQUEST, "Failed to upload file");
         }
+    }
+
+    private static MultiPartFileCustom getResizePhoto(MultipartFile file) throws IOException {
+        BufferedImage image = ImageIO.read(file.getInputStream());
+
+        BufferedImage resizedImage = Scalr.resize(image, Scalr.Method.AUTOMATIC, image.getWidth() / 4);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        System.out.println(file.getContentType());
+        ImageIO.write(resizedImage, "jpg", baos);
+        baos.flush();
+        byte[] imageBytes = baos.toByteArray();
+        baos.close();
+
+        return new MultiPartFileCustom(
+                imageBytes,
+                file.getName(),
+                file.getOriginalFilename(),
+                file.getContentType(),
+                baos.size()
+        );
     }
 
 
@@ -180,10 +211,7 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
     private String parseResponseForGetPublicLink(HttpClient client, java.net.http.HttpRequest httpRequest) throws IOException, InterruptedException {
         HttpResponse<String> httpResponse = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         JsonNode rootNode = objectMapper.readTree(httpResponse.body());
-
-        JsonNode sizesFormatFile = rootNode.get("sizes").get(0);
-
-        return sizesFormatFile.get("url").asText();//original format
+        return rootNode.get("file").asText();
     }
 
     /**
