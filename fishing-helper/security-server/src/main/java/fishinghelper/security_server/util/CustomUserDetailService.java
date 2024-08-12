@@ -37,7 +37,7 @@ public class CustomUserDetailService {
 
     @Transactional
     public List<GrantedAuthority> loadUserByUsername(String login, List<String> roleNamesRealm) {
-        User user = userRepositories.findUserByLogin(login+"1");
+        User user = userRepositories.findUserByLogin(login);
 
         List<Role> rolesRealm = new ArrayList<>();
         List<Role> roles = roleRepositories.findAll();
