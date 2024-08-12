@@ -1,8 +1,5 @@
 package fishinghelper.security_server.service;
 
-import fishinghelper.security_server.exception.CustomResponseException;
-import fishinghelper.security_server.exception.LogoutException;
-import fishinghelper.security_server.exception.TokenNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -50,7 +47,6 @@ public class LogoutService implements LogoutHandler {
 
         if (!hasText(bearer) || !bearer.startsWith(BEARER)) {
             log.error("Authorization header is missing or does not start with Bearer.");
-            throw new TokenNotFoundException(HttpStatus.UNAUTHORIZED, "Authorization header is missing or does not start with Bearer.");
         }
         String token = bearer.replace(BEARER, "").trim();
 
@@ -64,19 +60,13 @@ public class LogoutService implements LogoutHandler {
 
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
 
-        try {
-            ResponseEntity<?> responseEntity = restTemplate.postForEntity(logoutUrl, httpEntity, Object.class);
+        ResponseEntity<?> responseEntity = restTemplate.postForEntity(logoutUrl, httpEntity, Object.class);
 
-            if (responseEntity.getStatusCode() == HttpStatus.OK || responseEntity.getStatusCode() == HttpStatus.NO_CONTENT) {
-                log.info("User successfully logged out.");
-            } else {
-                log.error("Failed to log out user. HTTP status: " + responseEntity.getStatusCode());
-                throw new LogoutException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred while trying to log out user");
-            }
-        } catch (CustomResponseException e) {
-            log.error("An error occurred while trying to log out user: ", e);
-            e.printStackTrace();
-            throw new LogoutException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred while trying to log out user");
+        if (responseEntity.getStatusCode() == HttpStatus.OK || responseEntity.getStatusCode() == HttpStatus.NO_CONTENT) {
+            log.info("User successfully logged out.");
+        } else {
+            log.error("Failed to log out user. HTTP status: " + responseEntity.getStatusCode());
         }
+
     }
 }
