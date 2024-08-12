@@ -2,15 +2,14 @@ package fishinghelper.weather_service.service;
 
 import fishinghelper.weather_service.dto.WeatherPlaceDTORequest;
 import fishinghelper.weather_service.dto.WeatherPlaceDTOResponse;
+import fishinghelper.weather_service.exception.WeatherInvalidLocationException;
 import fishinghelper.weather_service.parser.ParserJsonToEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -55,8 +54,11 @@ public class WeatherService {
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
-
-        return response.getBody();
+        try {
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+            return response.getBody();
+        }catch (HttpClientErrorException exception){
+            throw new WeatherInvalidLocationException(HttpStatus.NO_CONTENT,exception.getMessage());
+        }
     }
 }
