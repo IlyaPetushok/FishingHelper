@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.constraints.NotNull;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +11,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.*;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtClaimNames;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
@@ -70,7 +70,6 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      * @param jwt The JWT token to convert.
      * @return An {@link AbstractAuthenticationToken} containing the JWT and authorities.
      */
-    @SneakyThrows
     @Override
     public AbstractAuthenticationToken convert(@NotNull Jwt jwt) {
         checkActiveSession(jwt);
@@ -102,7 +101,7 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param jwt The JWT token to check.
      */
-    public void checkActiveSession(Jwt jwt) throws JsonProcessingException {
+    public void checkActiveSession(Jwt jwt){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -115,6 +114,7 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
 
         ResponseEntity<String> response = restTemplate.postForEntity(urlOpenIdToken + "/introspect", requestEntity, String.class);
         handleResponse(response);
+
     }
 
     /**
@@ -122,7 +122,7 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param response The response from the introspection endpoint.
      */
-    private void handleResponse(ResponseEntity<String> response) throws JsonProcessingException {
+    private void handleResponse(ResponseEntity<String> response) {
         if (response.getStatusCode() == HttpStatus.OK) {
             processResponseBody(response.getBody());
         } else {
@@ -135,14 +135,19 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
      *
      * @param responseBody The response body from the introspection endpoint.
      */
-    private void processResponseBody(String responseBody) throws JsonProcessingException {
+    private void processResponseBody(String responseBody) {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(responseBody);
-        boolean isActive = jsonNode.get("active").asBoolean();
-        if (isActive) {
-            log.info("Token is active.");
-        } else {
-            log.warn("Token is inactive or invalid.");
+        try {
+            JsonNode jsonNode = objectMapper.readTree(responseBody);
+            boolean isActive = jsonNode.get("active").asBoolean();
+            if (isActive) {
+                log.info("Token is active.");
+            } else {
+                log.warn("Token is inactive or invalid.");
+                throw new OAuth2AuthenticationException("Token is inactive or invalid.");
+            }
+        } catch (JsonProcessingException jsonProcessingException) {
+            jsonProcessingException.printStackTrace();
         }
     }
 
