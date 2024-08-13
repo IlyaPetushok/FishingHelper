@@ -16,5 +16,4 @@ public class UserDTOFilter extends FilterRequest {
     private boolean mailStatus;
     private Date dateRegistrationStart;
     private Date dateRegistrationFinish;
-    private String role;
 }

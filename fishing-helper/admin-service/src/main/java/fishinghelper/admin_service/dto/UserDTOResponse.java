@@ -18,5 +18,4 @@ public class UserDTOResponse {
     private String mail;
     private boolean mailStatus;
     private Date dateRegistration;
-    private List<Role> roles;
 }
