@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class PlaceWithStatisticDTOResponse {
     private PlaceDTOResponse placeDTOResponse;
     private TimeToCatchFish timeToCatchFish;
+    private WeatherPlaceDTOResponse weatherPlaceDTOResponse;
 }
