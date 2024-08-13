@@ -59,7 +59,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public void createArticle(ArticleDTORequest articleDTORequest) {
         log.info("start service article for create");
-        log.info("Received request to create article: {}", articleDTORequest);
+        log.info("Received request to create article:{}", articleDTORequest);
 
         Article article = articleMapper.toEntity(articleDTORequest);
         User user = userRepositories.findById(articleDTORequest.getIdUser())
