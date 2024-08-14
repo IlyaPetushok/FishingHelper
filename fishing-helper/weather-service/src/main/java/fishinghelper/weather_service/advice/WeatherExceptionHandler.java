@@ -10,7 +10,8 @@ public class WeatherExceptionHandler {
 
     @ExceptionHandler(value = WeatherInvalidLocationException.class)
     public ResponseEntity<?> exceptionHandler(WeatherInvalidLocationException weatherInvalidLocationException){
-        return ResponseEntity.status(weatherInvalidLocationException.getHttpStatus())
+        return ResponseEntity
+                .status(weatherInvalidLocationException.getHttpStatus())
                 .body(weatherInvalidLocationException.getMessage());
     }
 }

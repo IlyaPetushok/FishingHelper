@@ -36,12 +36,12 @@ public class WeatherService {
     }
 
     @Cacheable(key = "#placeDTO.coordinates", value = "weather_data")
+    @CircuitBreaker(name = "handlerResilienceVisualCrossingWebServices")
     public WeatherPlaceDTOResponse getDataWeatherForPlace(WeatherPlaceDTORequest placeDTO) {
         String dataWeather= sendRequestWeatherApi(placeDTO.getCoordinates());
         return parserJsonToEntity.parseJsonToEntity(dataWeather);
     }
 
-    @CircuitBreaker(name = "handlerResilienceVisualCrossingWebServices")
     private String sendRequestWeatherApi(String coordinates){
         String localDateTime=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
 
