@@ -11,4 +11,5 @@ public interface AdminService {
     boolean checkUpdateUserRole(UserDTORequest userDTORequest, Integer id);
     void setConstrainUser(ConstrainDTO constrainDTO,Integer idUser);
     List<UserDTOResponseFindRole> findUsersByRole(String role);
+    void deleteConstrainUser(ConstrainDTO constrainDTO, Integer id);
 }

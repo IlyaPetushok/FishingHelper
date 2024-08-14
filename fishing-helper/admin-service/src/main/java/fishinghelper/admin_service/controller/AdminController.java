@@ -44,6 +44,13 @@ public class AdminController {
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("/delete/users/{id}/constrain")
+    public ResponseEntity<?> userDeleteConstrain(@PathVariable("id") Integer id, @RequestBody ConstrainDTO constrainDTO){
+        adminService.deleteConstrainUser(constrainDTO,id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/users/{role}")
     public ResponseEntity<?> findUsersByRole(@PathVariable("role") String role){
         return  new ResponseEntity<>(adminService.findUsersByRole(role),HttpStatus.OK);

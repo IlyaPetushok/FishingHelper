@@ -146,6 +146,18 @@ public class AdminServiceImpl implements AdminService {
         log.info("Constraints set successfully for user with ID: {}", idUser);
     }
 
+    @Override
+    public void deleteConstrainUser(ConstrainDTO constrainDTO, Integer id) {
+        User user = userRepositories.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND, "user not found by id:" + id));
+
+        for (String constr : constrainDTO.getName()) {
+            user.getPrivileges().removeIf(privileges -> privileges.getName().equals(constr));
+        }
+
+        userRepositories.save(user);
+    }
+
     private Specification<User> createSpecification(UserDTOFilter userDTOFilter) {
         return (root, query, criteriaBuilder) -> {
             List<Predicate> predicates = new ArrayList<>();
