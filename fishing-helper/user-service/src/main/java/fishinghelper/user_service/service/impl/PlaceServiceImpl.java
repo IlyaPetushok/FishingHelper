@@ -25,6 +25,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
@@ -238,8 +240,10 @@ public class PlaceServiceImpl implements PlaceService {
      *
      * @param placeDTORequest The PlaceDTORequest containing the information to create a place.
      */
+    @Transactional(
+            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+    )
     @Override
-    @Transactional
     public void createPlace(PlaceDTORequest placeDTORequest) {
         log.info("Starting createPlace method");
         log.info("Received request to create place: {}", placeDTORequest);

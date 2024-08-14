@@ -13,6 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +48,10 @@ public class CommentsServiceImpl implements CommentsService {
      * @param id         The unique identifier of the place where the comment is being created.
      * @throws PlaceNotFoundCustomException if no place exists with the specified ID.
      */
+    @Transactional(
+            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+    )
     @Override
-//    transactional
     public void createCommentForPlace(CommentDTO commentDTO, Integer id) {
         log.info("Starting comment service method: createCommentForPlace");
         log.info("Received request to create comment: {} for place ID: {}", commentDTO, id);
