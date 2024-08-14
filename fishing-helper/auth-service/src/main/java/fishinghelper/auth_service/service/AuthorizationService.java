@@ -69,6 +69,10 @@ public class AuthorizationService {
      * @return a ResponseEntity containing the result of the authorization request
      */
     public ResponseEntity<?> userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
+        if(Objects.isNull(userRepositories.findUserByLogin(userDTORequestAuthorization.getLogin()))){
+            throw new UserNotFoundException(HttpStatus.UNAUTHORIZED,"User was not registered");
+        }
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
