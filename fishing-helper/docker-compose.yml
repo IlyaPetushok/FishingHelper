@@ -1,19 +1,25 @@
 version: '3.3'
 services:
+
   rabbit:
     image: rabbitmq:3-management
     container_name: rabbit_container
     networks:
       - app-network
     ports:
-      - "5436:15672"
-      - "5672:5672"
+      - ${RABBIT_PORTS_UI}
+      - ${RABBIT_PORTS}
+
   load-balancer-nginx:
     build:
       dockerfile: ./load-balancer/nginx.loadbalancer/DockerFile
     container_name: load-balancer-nginx
     ports:
-      - "9999:9999"
+      - ${LOAD_BALANCER_PORTS}
+    depends_on:
+      - admin-service-1
+      - auth-service-1
+      - user-service-1
     networks:
       - app-network
 
@@ -21,13 +27,13 @@ services:
     container_name: fishinghelper_container
     image: postgres
     environment:
-      - POSTGRES_DB=FishingHelpers
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
     networks:
       - app-network
     ports:
-      - "5051:5432"
+      - ${DB_PORT}
 
   redis_db:
     image: redis:latest
@@ -55,7 +61,7 @@ services:
     networks:
       - app-network
     ports:
-      - "8888:8888"
+      - ${SPRING_CLOUD_CONFIG_PORTS}
 
 
   auth-service-1:
@@ -67,6 +73,7 @@ services:
     depends_on:
       - db
       - config-service
+      - rabbit
     environment:
       - SPRING_REDIS_PORT=6379
       - SPRING_REDIS_HOST=redis_db
@@ -87,6 +94,7 @@ services:
     depends_on:
       - db
       - config-service
+      - rabbit
     networks:
       - app-network
     ports:
@@ -106,6 +114,7 @@ services:
     depends_on:
       - db
       - config-service
+      - rabbit
     networks:
       - app-network
     ports:
@@ -127,8 +136,10 @@ services:
       KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
     command:
       - "start-dev"
+    depends_on:
+      - postgres-keycloak
     ports:
-      - "7777:8080"
+      - ${KEYCLOAK_PORTS}
     networks:
       - app-network
 
@@ -140,7 +151,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "5555:5432"
+      - ${POSTGRES_PORT_KEYCLOAK}
     networks:
       - app-network
 
@@ -149,9 +160,10 @@ services:
     container_name: prometheus
     ports:
       - "4000:9090"
+    depends_on:
+      - load-balancer-nginx
     volumes:
       - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-
     networks:
       - app-network
 
@@ -160,6 +172,8 @@ services:
     container_name: grafana
     ports:
       - "3000:3000"
+    depends_on:
+      - prometheus
     volumes:
       - ./monitoring/grafana:/etc/grafana/provisioning/datasources
     networks:
