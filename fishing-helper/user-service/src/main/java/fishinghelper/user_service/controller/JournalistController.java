@@ -24,7 +24,7 @@ JournalistController {
         this.articleService = articleService;
     }
 
-    @PreAuthorize("hasAuthority('CREATE') and hasRole('ROLE_JURNALIST')")
+    @PreAuthorize("hasAuthority('CREATE') and hasRole('ROLE_JOURNALIST')")
     @PostMapping("/create/article")
     public ResponseEntity<?> createArticle(@RequestBody ArticleDTORequest articleDTORequest){
         articleService.createArticle(articleDTORequest);

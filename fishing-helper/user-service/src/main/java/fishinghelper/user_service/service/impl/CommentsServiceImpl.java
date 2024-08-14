@@ -46,6 +46,7 @@ public class CommentsServiceImpl implements CommentsService {
      * @throws PlaceNotFoundCustomException if no place exists with the specified ID.
      */
     @Override
+//    transactional
     public void createCommentForPlace(CommentDTO commentDTO, Integer id) {
         log.info("Starting comment service method: createCommentForPlace");
         log.info("Received request to create comment: {} for place ID: {}", commentDTO, id);

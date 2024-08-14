@@ -22,6 +22,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,7 @@ public class ArticleServiceImpl implements ArticleService {
      * @throws UserNotFoundCustomException if the user with the specified ID is not found.
      */
     @Override
+    @Transactional
     public void createArticle(ArticleDTORequest articleDTORequest) {
         log.info("start service article for create");
         log.info("Received request to create article:{}", articleDTORequest);
@@ -67,6 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
 
         article.setUser(user);
         article.setStatus(Status.getStatus(Status.IN_PROCESSING));
+        article.getPhotos().forEach(photo -> photo.setArticle(article));
 
         tagsRepositories.saveAll(article.getTagsList());
         articleRepositories.save(article);

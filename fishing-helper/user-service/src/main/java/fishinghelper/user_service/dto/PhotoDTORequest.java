@@ -9,7 +9,4 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PhotoDTORequest {
     private String photoPath;
-//    private PlaceDTORequest place;
-//    private FishDTO fish;
-
 }

@@ -24,7 +24,7 @@ public class CustomResponseException extends RuntimeException{
             ObjectMapper objectMapper=new ObjectMapper();
             Map<String, Object> exceptionDetails = new HashMap<>();
             exceptionDetails.put("type", getClass().getSimpleName());
-            exceptionDetails.put("message", getMessage());
+            exceptionDetails.put("message", getErrorMessage());
             exceptionDetails.put("httpStatus", getHttpStatus().toString());
 
             return objectMapper.writeValueAsString(exceptionDetails);

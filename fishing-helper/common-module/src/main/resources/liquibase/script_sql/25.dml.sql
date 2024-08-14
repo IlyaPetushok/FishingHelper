@@ -2,7 +2,7 @@ insert into role (name) values ('MODERATOR');
 insert into role (name) values ('GUEST');
 insert into role (name) values ('USER');
 insert into role (name) values ('ADMIN');
-insert into role (name) values ('JURNALIST');
+insert into role (name) values ('JOURNALIST');
 insert into role (name) values ('AUTHOR');
 
 insert into privileges(name) values ('CREATE');

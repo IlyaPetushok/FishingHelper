@@ -55,6 +55,7 @@ public class SurveyServiceImpl implements SurveyService {
      * @throws PlaceNotFoundCustomException  if no place is found with the specified ID.
      */
     @Override
+//    transactional
     public void createSurvey(SurveyDTORequest surveyDTORequest, Integer idPlace) {
         log.info("Starting createSurvey method");
         log.info("Received survey request: {}", surveyDTORequest);

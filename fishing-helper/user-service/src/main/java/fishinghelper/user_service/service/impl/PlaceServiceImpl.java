@@ -13,8 +13,10 @@ import fishinghelper.common_module.filter.FilterRequest;
 import fishinghelper.user_service.dto.*;
 import fishinghelper.user_service.dto.filter.PlaceDTOFilter;
 import fishinghelper.user_service.exception.PlaceNotFoundCustomException;
+import fishinghelper.user_service.exception.WeatherAPIServiceException;
 import fishinghelper.user_service.mapper.PlaceMapper;
 import fishinghelper.user_service.service.PlaceService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +25,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
@@ -147,6 +151,7 @@ public class PlaceServiceImpl implements PlaceService {
      * @throws PlaceNotFoundCustomException if no place is found with the specified ID.
      */
 
+    @CircuitBreaker(name = "handlerRefuseWeatherService",fallbackMethod = "showPlace")
     @Override
     public PlaceWithStatisticDTOResponse showPlace(Integer id) {
         Place place = placeRepositories.findById(id)
@@ -157,14 +162,34 @@ public class PlaceServiceImpl implements PlaceService {
 
         HttpEntity<WeatherPlaceDTORequest> httpEntity = new HttpEntity<>(new WeatherPlaceDTORequest(place.getCoordinates()), headers);
 
-        ResponseEntity<WeatherPlaceDTOResponse> weather = restTemplate.postForEntity("http://localhost:8083/weather", httpEntity, WeatherPlaceDTOResponse.class);
+        try {
+            ResponseEntity<WeatherPlaceDTOResponse> weather = restTemplate.postForEntity("http://localhost:8083/weather", httpEntity, WeatherPlaceDTOResponse.class);
 
-        if (weather.getStatusCode() != HttpStatus.OK) {
-            throw new PlaceNotFoundCustomException(HttpStatus.NOT_FOUND, "Place not found by location");
+            if (weather.getStatusCode() != HttpStatus.OK) {
+                throw new PlaceNotFoundCustomException(HttpStatus.NOT_FOUND, "Place not found by location");
+            }
+
+            TimeToCatchFish timeToCatchFish = calculateStatisticTimeToCatch(surveyRepositories.findAllByPlaceId(id));
+            return new PlaceWithStatisticDTOResponse(placeMapper.toDTO(place), timeToCatchFish, weather.getBody());
+        } catch (ResourceAccessException exception) {
+            throw new WeatherAPIServiceException(HttpStatus.NOT_FOUND,"Dont try connection weather service");
         }
-        TimeToCatchFish timeToCatchFish = calculateStatisticTimeToCatch(surveyRepositories.findAllByPlaceId(id));
-        return new PlaceWithStatisticDTOResponse(placeMapper.toDTO(place), timeToCatchFish,weather.getBody());
+    }
 
+    public PlaceWithStatisticDTOResponse showPlace(Integer id,Throwable throwable){
+        Place place = placeRepositories.findById(id)
+                .orElseThrow(() -> new PlaceNotFoundCustomException(HttpStatus.NOT_FOUND, "not found place by id"));
+
+        WeatherPlaceDTOResponse weatherPlaceDTOResponse=new WeatherPlaceDTOResponse();
+        weatherPlaceDTOResponse.setTempMax(HttpStatus.NOT_FOUND.toString());
+        weatherPlaceDTOResponse.setTempMin(WeatherAPIServiceException.class.getSimpleName());
+        weatherPlaceDTOResponse.setTemp("Weather service unavailable");
+        weatherPlaceDTOResponse.setSunRise("unavailable");
+        weatherPlaceDTOResponse.setSunSet("unavailable");
+
+        TimeToCatchFish timeToCatchFish = calculateStatisticTimeToCatch(surveyRepositories.findAllByPlaceId(id));
+
+        return new PlaceWithStatisticDTOResponse(placeMapper.toDTO(place), timeToCatchFish, weatherPlaceDTOResponse);
     }
 
     /**
@@ -214,6 +239,7 @@ public class PlaceServiceImpl implements PlaceService {
      * @param placeDTORequest The PlaceDTORequest containing the information to create a place.
      */
     @Override
+    @Transactional
     public void createPlace(PlaceDTORequest placeDTORequest) {
         log.info("Starting createPlace method");
         log.info("Received request to create place: {}", placeDTORequest);
@@ -228,7 +254,9 @@ public class PlaceServiceImpl implements PlaceService {
         place.setOwner(owner);
         place.setRating(0);
         place.setStatus(Status.getStatus(Status.IN_PROCESSING));
+        place.getPhotos().forEach(photo -> photo.setPlace(place));
         placeRepositories.save(place);
+
         log.info("Saved Place entity: {}", place);
     }
 }
