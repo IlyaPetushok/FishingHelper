@@ -7,6 +7,7 @@ import fishinghelper.photo_service.dto.PhotoResponseDTO;
 import fishinghelper.photo_service.entity.MultiPartFileCustom;
 import fishinghelper.photo_service.exception.*;
 import fishinghelper.photo_service.service.FileSenderYandexCloudService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.extern.slf4j.Slf4j;
 import org.imgscalr.Scalr;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,7 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
      * @return List of PhotoResponseDTO containing the names and public links of uploaded files.
      * @throws CustomResponseException if an error occurs during file upload.
      */
+    @CircuitBreaker(name = "resilienceHandlerYandexCloud", fallbackMethod = "uploadFiles")
     @Override
     public List<PhotoResponseDTO> uploadFiles(MultipartFile[] multipartFiles) {
         List<PhotoResponseDTO> photoResponseDTOS = new ArrayList<>();
@@ -80,6 +82,12 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
 
         return photoResponseDTOS;
     }
+
+    public List<PhotoResponseDTO> uploadFiles(Throwable throwable) {
+        return List.of(new PhotoResponseDTO("YandexCloudException:"+throwable.getMessage(),"Dont try send request yandex cloud. Yandex Cloud unavailable"));
+    }
+
+
 
     /**
      * Uploads a single file to Yandex Disk.
