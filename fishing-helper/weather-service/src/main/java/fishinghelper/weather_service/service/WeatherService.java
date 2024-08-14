@@ -4,6 +4,7 @@ import fishinghelper.weather_service.dto.WeatherPlaceDTORequest;
 import fishinghelper.weather_service.dto.WeatherPlaceDTOResponse;
 import fishinghelper.weather_service.exception.WeatherInvalidLocationException;
 import fishinghelper.weather_service.parser.ParserJsonToEntity;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
@@ -40,6 +41,7 @@ public class WeatherService {
         return parserJsonToEntity.parseJsonToEntity(dataWeather);
     }
 
+    @CircuitBreaker(name = "handlerResilienceVisualCrossingWebServices")
     private String sendRequestWeatherApi(String coordinates){
         String localDateTime=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
 
