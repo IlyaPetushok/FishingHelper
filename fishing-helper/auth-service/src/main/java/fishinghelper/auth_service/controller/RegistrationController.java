@@ -18,13 +18,13 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public ResponseEntity<?> registrationUser(@RequestBody UserDTORequestRegistration userDTORequestRegistration){
+    public ResponseEntity<?> registrationUser(@RequestBody UserDTORequestRegistration userDTORequestRegistration) {
         registrationService.createUser(userDTORequestRegistration);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/confirm/email/{mail}")
-    public ResponseEntity<?> confirmMail(@PathVariable("mail") String mail){
+    public ResponseEntity<?> confirmMail(@PathVariable("mail") String mail) {
         registrationService.updateStatusConfirmEmail(mail);
         return new ResponseEntity<>(HttpStatus.OK);
     }
