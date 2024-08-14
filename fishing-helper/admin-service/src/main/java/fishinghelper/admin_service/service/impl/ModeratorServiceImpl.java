@@ -21,6 +21,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -143,7 +146,9 @@ public class ModeratorServiceImpl implements ModeratorService {
      * @param id          Identifier of the entity to update
      * @param entityType  Type of the entity (article or place)
      */
-
+    @Transactional(
+            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+    )
     @Override
     public void updateEntityStatus(RedactorDTO redactorDTO, Integer id, EntityType entityType) {
         log.info("Admin service start updating {} by status", entityType);
@@ -170,7 +175,6 @@ public class ModeratorServiceImpl implements ModeratorService {
      * @param mistake    Mistake entity to save
      * @param id         Identifier of the entity to link the mistake
      */
-
     private void createMistakeForStatus(EntityType entityType,Mistake mistake,Integer id){
         switch (entityType) {
             case ARTICLE -> {

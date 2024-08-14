@@ -7,9 +7,14 @@ import java.util.List;
 
 public interface AdminService {
     void updateRoleForUser(UserDTORequest userDTORequest, Integer id);
+
     List<UserDTOResponse> findUserByFilter(UserDTOFilter userDTOFilter);
+
     boolean checkUpdateUserRole(UserDTORequest userDTORequest, Integer id);
-    void setConstrainUser(ConstrainDTO constrainDTO,Integer idUser);
+
+    void setConstrainUser(ConstrainDTO constrainDTO, Integer idUser);
+
     List<UserDTOResponseFindRole> findUsersByRole(String role);
+
     void deleteConstrainUser(ConstrainDTO constrainDTO, Integer id);
 }

@@ -19,6 +19,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +53,9 @@ public class AdminServiceImpl implements AdminService {
      * @param id             The ID of the user whose roles are to be updated.
      * @throws UserNotFoundException If no user is found with the specified ID.
      */
+    @Transactional(
+            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+    )
     @Override
     public void updateRoleForUser(UserDTORequest userDTORequest, Integer id) {
         log.info("start admin service for update user role");
