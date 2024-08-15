@@ -2,11 +2,9 @@ package fishinghelper.security_server.util;
 
 import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.dao.UserRepositories;
+import fishinghelper.common_module.entity.user.Privileges;
 import fishinghelper.common_module.entity.user.Role;
-import fishinghelper.common_module.entity.user.User;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -37,8 +35,7 @@ public class CustomUserDetailService {
 
     @Transactional
     public List<GrantedAuthority> loadUserByUsername(String login, List<String> roleNamesRealm) {
-        User user = userRepositories.findUserByLogin(login);
-
+        List<Privileges> privileges = userRepositories.findUserByLogin(login).getPrivileges();
         List<Role> rolesRealm = new ArrayList<>();
         List<Role> roles = roleRepositories.findAll();
 
@@ -48,6 +45,6 @@ public class CustomUserDetailService {
                     .findAny()
                     .orElse(null));
         }
-        return CustomUserDetail.fromUserEntity(user.getPrivileges(), rolesRealm);
+        return CustomUserDetail.fromUserEntity(privileges, rolesRealm);
     }
 }
