@@ -23,7 +23,6 @@
         <module>security-server</module>
         <module>auth-service</module>
         <module>user-service</module>
-        <!--        <module>api-gateway</module>-->
         <module>weather-service</module>
         <module>notification-service</module>
         <module>photo-service</module>
