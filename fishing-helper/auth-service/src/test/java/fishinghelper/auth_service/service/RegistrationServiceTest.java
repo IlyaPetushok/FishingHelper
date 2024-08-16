@@ -2,6 +2,7 @@ package fishinghelper.auth_service.service;
 
 import fishinghelper.auth_service.dto.UserDTORequestRegistration;
 import fishinghelper.auth_service.mapper.UserMapper;
+import fishinghelper.auth_service.service.impl.RegistrationServiceImpl;
 import fishinghelper.common_module.dao.RoleRepositories;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.Role;
@@ -14,8 +15,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.server.servlet.OAuth2AuthorizationServerJwtAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.util.Base64Utils;
 
 import java.util.Base64;
 import java.util.List;
@@ -25,9 +30,10 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
+@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class, OAuth2AuthorizationServerJwtAutoConfiguration.class, OAuth2ResourceServerAutoConfiguration.class, OAuth2ClientAutoConfiguration.class})
 public class RegistrationServiceTest {
     @InjectMocks
-    private RegistrationService registrationService; // The class containing the methods to test
+    private RegistrationServiceImpl registrationService;
 
     @Mock
     private UserRepositories userRepositories;

@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.server.servlet.OAuth2AuthorizationServerJwtAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -25,14 +28,14 @@ import static org.mockito.Mockito.verify;
 
 @ContextConfiguration( classes = {RegistrationController.class})
 @WebMvcTest(RegistrationController.class)
-@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
+@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class, OAuth2AuthorizationServerJwtAutoConfiguration.class, OAuth2ResourceServerAutoConfiguration.class, OAuth2ClientAutoConfiguration.class})
 public class RegistrationControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private RegistrationService registrationService;
+    private RegistrationServiceImpl registrationService;
 
     @BeforeEach
     void setUp() {
