@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.server.servlet.OAuth2AuthorizationServerJwtAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -26,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ContextConfiguration( classes = {AuthenticationController.class})
 @WebMvcTest(AuthenticationController.class)
-@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
+@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class, OAuth2AuthorizationServerJwtAutoConfiguration.class, OAuth2ResourceServerAutoConfiguration.class, OAuth2ClientAutoConfiguration.class})
 @PropertySource(value = "classpath:application.properties")
 public class AuthenticationControllerTest  {
 
