@@ -14,6 +14,7 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -60,7 +61,7 @@ public class KeyCloakService {
      * <p>
      * @param user The user object containing user details.
      */
-    public void addUser(User user){
+    public void addUser(User user) throws OAuth2AuthenticationException {
         UserRepresentation userRepresentation = new UserRepresentation();
         userRepresentation.setUsername(user.getLogin());
         userRepresentation.setFirstName(user.getName());
@@ -77,6 +78,7 @@ public class KeyCloakService {
         } else {
             log.error("Failed to create keycloak user. HTTP status: " + response.getStatus());
             log.error("Response body: " + response.readEntity(String.class));
+            throw new OAuth2AuthenticationException("Failed to create keycloak user");
         }
 
         String userId = response.getLocation().getPath().split("/")[5];

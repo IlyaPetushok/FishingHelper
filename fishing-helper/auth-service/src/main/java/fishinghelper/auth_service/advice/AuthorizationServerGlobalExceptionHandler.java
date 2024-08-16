@@ -5,6 +5,7 @@ import fishinghelper.auth_service.exception.CustomResponseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -28,5 +29,13 @@ public class AuthorizationServerGlobalExceptionHandler {
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(exceptionResponse.toString()) ;
+    }
+
+    @ExceptionHandler(value = OAuth2AuthenticationException.class)
+    public ResponseEntity<?> handlerGenericException(OAuth2AuthenticationException oAuth2AuthenticationException){
+        log.error(oAuth2AuthenticationException.toString());
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(oAuth2AuthenticationException.getError().getErrorCode());
     }
 }
