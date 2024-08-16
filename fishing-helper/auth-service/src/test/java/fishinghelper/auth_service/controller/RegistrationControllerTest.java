@@ -3,8 +3,7 @@ package fishinghelper.auth_service.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.auth_service.dto.UserDTORequestRegistration;
-import fishinghelper.auth_service.service.AuthorizationService;
-import fishinghelper.auth_service.service.RegistrationService;
+import fishinghelper.auth_service.service.impl.RegistrationServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;

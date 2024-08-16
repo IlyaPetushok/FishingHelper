@@ -1,12 +1,10 @@
 package fishinghelper.auth_service.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
 import fishinghelper.auth_service.dto.TokenRequest;
 import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
-import fishinghelper.auth_service.service.AuthorizationService;
+import fishinghelper.auth_service.service.impl.AuthorizationServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
@@ -17,7 +15,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -37,7 +34,7 @@ public class AuthenticationControllerTest  {
     private MockMvc mockMvc;
 
     @MockBean
-    private AuthorizationService authorizationService;
+    private AuthorizationServiceImpl authorizationService;
 
     @BeforeEach
     void setUp() {
