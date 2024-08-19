@@ -19,9 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URI;
@@ -42,8 +40,8 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
     @Value("${oauth.token.yandex.cloud}")
     private String token;
 
-    @Value("${upload.url.yandex.cloud}")
-    private String uploadUrl;
+    @Value("${url.yandex.cloud}")
+    private String urlYandex;
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
@@ -155,7 +153,7 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
         HttpEntity<Map<String, String>> requestEntity = new HttpEntity<>(params, headers);
 
         ResponseEntity<String> response = restTemplate.exchange(
-                uploadUrl + "?path={path}&overwrite=true",
+                urlYandex + "/upload?path={path}&overwrite=true",
                 HttpMethod.GET,
                 requestEntity,
                 String.class,
@@ -229,7 +227,7 @@ public class FileSenderYandexCloudServiceImpl implements FileSenderYandexCloudSe
      * @throws CustomResponseException If an error occurs other than file not found.
      */
     public void fileExists(String filePath) {
-        String url = "https://cloud-api.yandex.net/v1/disk/resources?path="+directoryName+"/" + filePath;
+        String url = urlYandex+"?path="+directoryName+"/" + filePath;
 
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.AUTHORIZATION, "OAuth " + token);
