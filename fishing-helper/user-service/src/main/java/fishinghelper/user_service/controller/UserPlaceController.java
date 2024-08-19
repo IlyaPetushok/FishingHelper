@@ -3,7 +3,6 @@ package fishinghelper.user_service.controller;
 import fishinghelper.common_module.filter.FilterRequest;
 import fishinghelper.user_service.dto.CommentDTO;
 import fishinghelper.user_service.dto.filter.PlaceDTOFilter;
-import fishinghelper.user_service.exception.PlaceNotFoundCustomException;
 import fishinghelper.user_service.service.CommentsService;
 import fishinghelper.user_service.service.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class UserPlaceController {
 
     @PreAuthorize("hasAuthority('READ') and hasRole('ROLE_USER')")
     @GetMapping("/{id}")
-    public ResponseEntity<?> showPlace(@PathVariable("id") Integer id) throws PlaceNotFoundCustomException {
+    public ResponseEntity<?> showPlace(@PathVariable("id") Integer id) {
         return new ResponseEntity<>(placeService.showPlace(id), HttpStatus.OK);
     }
 
