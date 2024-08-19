@@ -7,6 +7,7 @@ import fishinghelper.notification_service.service.EmailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,9 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class RabbitMQConsumer {
+    @Value("url.confirm.email")
+    private String confirmUrlEmail;
+
     private final UserRepositories userRepositories;
     private final EmailService emailService;
 
@@ -50,7 +54,7 @@ public class RabbitMQConsumer {
         String encodedEmail = Base64.getEncoder().encodeToString(user.getMail().getBytes(StandardCharsets.UTF_8));
         String body="Dear "+user.getName()+"!!!\n"
                 +"Please confirm your mail for FishingHelpers\n"
-                +"http://localhost:8081/auth/confirm/email/"
+                +confirmUrlEmail
                 + encodedEmail;
 
         emailService.sendMessage(message,"Confirm Email",body);

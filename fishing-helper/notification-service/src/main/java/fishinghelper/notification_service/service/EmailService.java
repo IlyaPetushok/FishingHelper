@@ -5,6 +5,7 @@ import jakarta.mail.Transport;
 import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -16,6 +17,9 @@ import java.util.List;
 @Slf4j
 @Service
 public class EmailService {
+    @Value("email.send.message")
+    private String emailForSendMessage;
+
     private final JavaMailSender javaMailSender;
 
     @Autowired
@@ -23,7 +27,6 @@ public class EmailService {
         this.javaMailSender = javaMailSender;
     }
 
-//    @Async
     public  void sendMessageToUsers(List<String> userEmails,String subject,String body){
         for (String mail : userEmails){
             sendMessage(mail,subject,body);
@@ -41,7 +44,7 @@ public class EmailService {
         SimpleMailMessage message=new SimpleMailMessage();
 
         message.setTo(mail);
-        message.setFrom("a3310010752@mail.ru");
+        message.setFrom(emailForSendMessage);//todo prop
         message.setSubject(subject);
         message.setText(body);
         javaMailSender.send(message);
@@ -54,7 +57,7 @@ public class EmailService {
         MimeMessageHelper helper ;
         try {
             helper = new MimeMessageHelper(message, true);
-            message.setFrom("a3310010752@mail.ru");
+            message.setFrom(emailForSendMessage);
             helper.setTo(mail);
             helper.setSubject(subject);
             helper.setText(htmlContent, true);
