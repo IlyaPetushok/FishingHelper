@@ -23,8 +23,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ContextConfiguration( classes = {AuthenticationController.class})
@@ -82,7 +81,7 @@ public class AuthenticationControllerTest  {
 
     @Test
     void testUpdatePassword() throws Exception {
-        mockMvc.perform(post("/auth/update/password")
+        mockMvc.perform(put("/auth/update/password")
                         .param("password", "newPassword"))
                 .andExpect(status().isOk());
 
