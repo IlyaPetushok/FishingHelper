@@ -44,7 +44,7 @@ public class EmailService {
         SimpleMailMessage message=new SimpleMailMessage();
 
         message.setTo(mail);
-        message.setFrom(emailForSendMessage);//todo prop
+        message.setFrom(emailForSendMessage);
         message.setSubject(subject);
         message.setText(body);
         javaMailSender.send(message);
