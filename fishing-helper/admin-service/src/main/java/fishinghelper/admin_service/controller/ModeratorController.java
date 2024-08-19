@@ -29,48 +29,48 @@ public class ModeratorController {
     }
 
     @PreAuthorize("hasAuthority('UPDATE') and hasRole('ROLE_MODERATOR')")
-    @PostMapping("/redactor/article/{id}/status")
+    @PutMapping("/redactor/article/{id}/status")
     public ResponseEntity<?> updateStatusArticle(@PathVariable("id") Integer id, @RequestBody RedactorDTO redactorDTO){
         moderatorService.updateEntityStatus(redactorDTO,id, EntityType.ARTICLE);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('UPDATE') and hasRole('ROLE_MODERATOR')")
-    @PostMapping("/redactor/article/{id}/update")
+    @PutMapping("/redactor/article/{id}")
     public ResponseEntity<?> updateArticle(@PathVariable("id") Integer id, @RequestBody ArticleDTO articleDTO){
         moderatorService.updateArticle(articleDTO,id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('DELETE') and hasRole('ROLE_MODERATOR')")
-    @GetMapping("/article/{id}/delete")
+    @DeleteMapping("/article/{id}")
     public ResponseEntity<?> deleteArticle(@PathVariable("id") Integer id){
         moderatorService.deleteArticle(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PreAuthorize("hasAuthority('UPDATE') and hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasAuthority('READ') and hasRole('ROLE_MODERATOR')")
     @GetMapping("/redactor/place/{status}")
-    public ResponseEntity<?> updateStatusPlace(@PathVariable("status") String status,@RequestBody FilterRequest filterRequest){
+    public ResponseEntity<?> findStatusPlace(@PathVariable("status") String status,@RequestBody FilterRequest filterRequest){
         return new ResponseEntity<>(moderatorService.showPlaceByStatus(status,filterRequest) ,HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('UPDATE') and hasRole('ROLE_MODERATOR')")
-    @PostMapping("/redactor/place/{id}/status")
-    public ResponseEntity<?> showPlaceNotProcessing(@PathVariable("id") Integer id,@RequestBody RedactorDTO redactorDTO){
+    @PutMapping("/redactor/place/{id}/status")
+    public ResponseEntity<?> updateStatusPlace(@PathVariable("id") Integer id,@RequestBody RedactorDTO redactorDTO){
         moderatorService.updateEntityStatus(redactorDTO,id, EntityType.PLACE);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('DELETE') and hasRole('ROLE_MODERATOR')")
-    @GetMapping("/place/{id}/delete")
+    @DeleteMapping("/place/{id}")
     public ResponseEntity<?> deletePlace(@PathVariable("id") Integer id){
         moderatorService.deletePlace(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('UPDATE') and hasRole('ROLE_MODERATOR')")
-    @PostMapping("/redactor/place/{id}/update")
+    @PutMapping("/redactor/place/{id}")
     public ResponseEntity<?> updatePlace(@PathVariable("id") Integer id,@RequestBody PlaceDTO placeDTO){
         moderatorService.updatePlace(placeDTO,id);
         return new ResponseEntity<>(HttpStatus.OK);

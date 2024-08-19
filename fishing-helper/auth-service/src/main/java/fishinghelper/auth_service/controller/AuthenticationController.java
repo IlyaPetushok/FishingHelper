@@ -44,7 +44,7 @@ public class AuthenticationController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PostMapping("/update/password")
+    @PutMapping("/update/password")
     public ResponseEntity<?> updatePassword(HttpServletRequest httpServletRequest) {
         authorizationService.updatePassword(httpServletRequest);
         return new ResponseEntity<>(HttpStatus.OK);

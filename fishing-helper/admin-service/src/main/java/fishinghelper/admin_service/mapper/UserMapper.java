@@ -1,8 +1,10 @@
 package fishinghelper.admin_service.mapper;
 
+import fishinghelper.admin_service.dto.PrivilegesDTO;
 import fishinghelper.admin_service.dto.RoleDTO;
 import fishinghelper.admin_service.dto.UserDTOResponse;
 import fishinghelper.admin_service.dto.UserDTOResponseFindRole;
+import fishinghelper.common_module.entity.user.Privileges;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.User;
 import org.mapstruct.Mapper;
@@ -15,13 +17,16 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface UserMapper {
     UserDTOResponse toDTOResponse(User user);
-    @Mapping(target = "roles",source = "roles",qualifiedByName = "mapToRole")
+    @Mapping(target = "constraints",source = "user.privileges",qualifiedByName = "mapToPrivileges")
     List<UserDTOResponseFindRole> toDTOSResponse(List<User> userList);
 
-    @Named("mapToRole")
-    default List<RoleDTO> mapToRole(List<Role> role){
-        return role.stream()
-                .map(rol ->  new RoleDTO(rol.getName()))
+    @Mapping(target = "constraints", source = "user.privileges")
+    UserDTOResponseFindRole toDTOResponseFindRole(User user);
+
+    @Named("mapToPrivileges")
+    default List<PrivilegesDTO> mapToPrivileges(List<Privileges> privileges){
+        return privileges.stream()
+                .map(privil ->  new PrivilegesDTO(privil.getName()))
                 .collect(Collectors.toList());
     }
  }
