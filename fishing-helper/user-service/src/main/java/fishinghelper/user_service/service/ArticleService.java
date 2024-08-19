@@ -1,6 +1,7 @@
 package fishinghelper.user_service.service;
 
 import fishinghelper.common_module.filter.FilterRequest;
+import fishinghelper.common_module.filter.FilterResponse;
 import fishinghelper.user_service.dto.ArticleDTORequest;
 import fishinghelper.user_service.dto.ArticleDTOResponse;
 import fishinghelper.user_service.dto.TagsDTO;
@@ -17,7 +18,7 @@ public interface ArticleService {
 
     ArticleDTOResponse findArticleById(Integer id);
 
-    List<ArticleDTOResponse> showAllArticle(FilterRequest filterRequest);
+    FilterResponse<ArticleDTOResponse> showAllArticle(FilterRequest filterRequest);
 
-    List<ArticleDTOResponse> showAllArticleFilter(ArticleDTOFilter articleDTOFilter);
+    FilterResponse<ArticleDTOResponse> showAllArticleFilter(ArticleDTOFilter articleDTOFilter);
 }

@@ -2,6 +2,7 @@ package fishinghelper.user_service.service;
 
 import fishinghelper.common_module.entity.common.Survey;
 import fishinghelper.common_module.filter.FilterRequest;
+import fishinghelper.common_module.filter.FilterResponse;
 import fishinghelper.user_service.dto.PlaceDTORequest;
 import fishinghelper.user_service.dto.PlaceDTOResponseAll;
 import fishinghelper.user_service.dto.PlaceWithStatisticDTOResponse;
@@ -16,9 +17,9 @@ public interface PlaceService {
 
     List<PlaceDTOResponseAll> showAllPlaces();
 
-    List<PlaceDTOResponseAll> showAllPlaces(FilterRequest filterRequest);
+    FilterResponse<PlaceDTOResponseAll> showAllPlaces(FilterRequest filterRequest);
 
-    List<PlaceDTOResponseAll> showAllPlacesFilter(PlaceDTOFilter placeDTOFilter);
+    FilterResponse<PlaceDTOResponseAll> showAllPlacesFilter(PlaceDTOFilter placeDTOFilter);
 
     PlaceWithStatisticDTOResponse showPlace(Integer id);
 

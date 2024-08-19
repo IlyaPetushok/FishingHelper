@@ -6,6 +6,7 @@ import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.common.*;
 import fishinghelper.common_module.entity.user.User;
 import fishinghelper.common_module.filter.FilterRequest;
+import fishinghelper.common_module.filter.FilterResponse;
 import fishinghelper.user_service.dto.ArticleDTORequest;
 import fishinghelper.user_service.dto.ArticleDTOResponse;
 import fishinghelper.user_service.dto.TagsDTO;
@@ -61,7 +62,7 @@ public class ArticleServiceImpl implements ArticleService {
      */
     @Override
     @Transactional(
-            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+            isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED
     )
     public void createArticle(ArticleDTORequest articleDTORequest) {
         log.info("start service article for create");
@@ -119,13 +120,16 @@ public class ArticleServiceImpl implements ArticleService {
      * @return A list of {@link ArticleDTOResponse} objects representing the retrieved articles.
      */
     @Override
-    public List<ArticleDTOResponse> showAllArticle(FilterRequest filterRequest) {
+    public FilterResponse<ArticleDTOResponse> showAllArticle(FilterRequest filterRequest) {
         log.debug("Fetching all articles with filter: {}", filterRequest);
 
         Page<Article> articlePage = articleRepositories.findAll(filterRequest.getPageable());
-        return articlePage.stream()
+
+        Integer pageSize = (int) Math.ceil((double) articlePage.getTotalElements() / filterRequest.getSize());
+
+        return new FilterResponse<>(pageSize, articlePage.stream()
                 .map(articleMapper::toDTO)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()));
     }
 
 
@@ -136,14 +140,17 @@ public class ArticleServiceImpl implements ArticleService {
      * @return A list of {@link ArticleDTOResponse} objects representing the retrieved articles.
      */
     @Override
-    public List<ArticleDTOResponse> showAllArticleFilter(ArticleDTOFilter articleDTOFilter) {
+    public FilterResponse<ArticleDTOResponse> showAllArticleFilter(ArticleDTOFilter articleDTOFilter) {
         log.debug("Fetching articles with filter: {}", articleDTOFilter);
 
         Specification<Article> articleSpecification = createSpecification(articleDTOFilter);
         Page<Article> articlePage = articleRepositories.findAll(articleSpecification, articleDTOFilter.getPageable());
-        return articlePage.stream()
+
+        Integer pageSize = (int) Math.ceil((double) articlePage.getTotalElements() / articleDTOFilter.getSize());
+
+        return new FilterResponse<>(pageSize,articlePage.stream()
                 .map(articleMapper::toDTO)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()));
     }
 
 
