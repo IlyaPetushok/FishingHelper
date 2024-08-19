@@ -24,7 +24,7 @@ public class AuthenticationController {
 
     @PostMapping("/authorization")
     public ResponseEntity<?> authorization(@RequestBody UserDTORequestAuthorization userDTORequestAuthorization) {
-        return authorizationService.userAuthorization(userDTORequestAuthorization);
+        return new ResponseEntity<>(authorizationService.userAuthorization(userDTORequestAuthorization), HttpStatus.OK);
     }
 
     @PostMapping("/introspect")

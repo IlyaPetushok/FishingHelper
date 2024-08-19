@@ -4,9 +4,11 @@ package fishinghelper.auth_service.service.impl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
 import fishinghelper.auth_service.dto.TokenRequest;
 import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
 import fishinghelper.auth_service.exception.*;
+import fishinghelper.auth_service.mapper.UserMapper;
 import fishinghelper.auth_service.service.AuthorizationService;
 import fishinghelper.common_module.dao.UserRepositories;
 import fishinghelper.common_module.entity.user.User;
@@ -47,6 +49,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     @Value("${spring.security.oauth2.client.url.token}")
     private String urlOpenIdToken;
 
+    private final UserMapper userMapper;
     private final UserRepositories userRepositories;
     private final ObjectMapper objectMapper;
     private final RestTemplate restTemplate;
@@ -55,7 +58,8 @@ public class AuthorizationServiceImpl implements AuthorizationService {
     private final RabbitMQProducer rabbitMQProducer;
 
     @Autowired
-    public AuthorizationServiceImpl(UserRepositories userRepositories, ObjectMapper objectMapper, RestTemplate restTemplate, JwtProvider jwtProvider, KeyCloakService keyCloakService, RabbitMQProducer rabbitMQProducer) {
+    public AuthorizationServiceImpl(UserMapper userMapper, UserRepositories userRepositories, ObjectMapper objectMapper, RestTemplate restTemplate, JwtProvider jwtProvider, KeyCloakService keyCloakService, RabbitMQProducer rabbitMQProducer) {
+        this.userMapper = userMapper;
         this.userRepositories = userRepositories;
         this.objectMapper = objectMapper;
         this.restTemplate = restTemplate;
@@ -71,8 +75,9 @@ public class AuthorizationServiceImpl implements AuthorizationService {
      * @return a ResponseEntity containing the result of the authorization request
      */
     @Override
-    public ResponseEntity<?> userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
-        if(Objects.isNull(userRepositories.findUserByLogin(userDTORequestAuthorization.getLogin()))){
+    public AuthenticationDTOResponse userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
+        User user=userRepositories.findUserByLogin(userDTORequestAuthorization.getLogin());
+        if(Objects.isNull(user)){
             throw new UserNotFoundException(HttpStatus.UNAUTHORIZED,"User was not registered");
         }
 
@@ -92,7 +97,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         try {
             ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken, httpEntity, Object.class);
             log.info("Authorization request successful. Response: {}", response);
-            return response;
+            return new AuthenticationDTOResponse(response.getBody(),userMapper.toDtoUserResponseAuthorization(user));
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             log.error("Authorization request failed with status code {} and response body: {}", e.getStatusCode(), e.getResponseBodyAsString(), e);
             throw new InvalidDataException(HttpStatus.BAD_REQUEST,"Authorization request failed");

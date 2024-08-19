@@ -14,6 +14,5 @@ public class UserDTOResponseAuthorization {
     private Integer id;
     private String name;
     private String login;
-    private String password;
     private List<RoleDTO> roles;
 }

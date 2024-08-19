@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class RoleDTO {
-    private Integer id;
+//    private Integer id;
     private String name;
-    private List<PrivilegesDTO> privileges;
+//    private List<PrivilegesDTO> privileges;
 }

@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-//@SpringBootTest(classes = {UserMapperImpl.class})// worked
-@SpringBootTest
+@SpringBootTest(classes = {UserMapperImpl.class})// worked
+//@SpringBootTest
 public class UserMapperTest {
     @Autowired
     private UserMapper userMapper;
