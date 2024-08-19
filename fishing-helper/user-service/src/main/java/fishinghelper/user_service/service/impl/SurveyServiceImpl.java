@@ -8,6 +8,7 @@ import fishinghelper.common_module.entity.fish.Fish;
 import fishinghelper.common_module.entity.place.Place;
 import fishinghelper.common_module.entity.user.User;
 import fishinghelper.common_module.filter.FilterRequest;
+import fishinghelper.common_module.filter.FilterResponse;
 import fishinghelper.user_service.dto.FishDTO;
 import fishinghelper.user_service.dto.SurveyDTORequest;
 import fishinghelper.user_service.exception.PlaceNotFoundCustomException;
@@ -30,6 +31,7 @@ import java.util.stream.Collectors;
 
 /**
  * Service class for managing operations related to surveys.
+ *
  * @author Ilya Petushok
  */
 @Slf4j
@@ -54,11 +56,11 @@ public class SurveyServiceImpl implements SurveyService {
      *
      * @param surveyDTORequest The SurveyDTORequest containing the survey information.
      * @param idPlace          The ID of the place associated with the survey.
-     * @throws UserNotFoundCustomException   if no user is found with the specified ID.
-     * @throws PlaceNotFoundCustomException  if no place is found with the specified ID.
+     * @throws UserNotFoundCustomException  if no user is found with the specified ID.
+     * @throws PlaceNotFoundCustomException if no place is found with the specified ID.
      */
     @Transactional(
-            isolation = Isolation.READ_COMMITTED,propagation = Propagation.REQUIRED
+            isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED
     )
     @Override
     public void createSurvey(SurveyDTORequest surveyDTORequest, Integer idPlace) {
@@ -89,8 +91,8 @@ public class SurveyServiceImpl implements SurveyService {
     /**
      * Updates the list of Fish associated with a Place by adding new FishDTOs to the existing list.
      *
-     * @param fish      The current list of Fish associated with the Place.
-     * @param fishDTOS  The list of FishDTOs to add to the Place.
+     * @param fish     The current list of Fish associated with the Place.
+     * @param fishDTOS The list of FishDTOs to add to the Place.
      * @return The updated list of Fish associated with the Place after adding new Fish.
      */
     private List<Fish> updateListFishForPlace(List<Fish> fish, List<FishDTO> fishDTOS) {
@@ -108,10 +110,13 @@ public class SurveyServiceImpl implements SurveyService {
      * @return A list of {@link SurveyDTORequest} objects representing the retrieved surveys.
      */
     @Override
-    public List<SurveyDTORequest> findSurveyByFilter(FilterRequest filterRequest) {
-        Page<Survey> surveyPage= surveyRepositories.findAll(filterRequest.getPageable());
-        return surveyPage.stream()
+    public FilterResponse<SurveyDTORequest> findSurveyByFilter(FilterRequest filterRequest) {
+        Page<Survey> surveyPage = surveyRepositories.findAll(filterRequest.getPageable());
+
+        Integer pageSize = (int) Math.ceil((double) surveyPage.getTotalElements() / filterRequest.getSize());
+        
+        return new FilterResponse<>(pageSize, surveyPage.stream()
                 .map(surveyMapper::toDTO)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()));
     }
 }
