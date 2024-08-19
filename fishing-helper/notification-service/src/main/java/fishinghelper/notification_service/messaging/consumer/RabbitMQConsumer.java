@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.mail.MailSendException;
+import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 
@@ -57,7 +59,11 @@ public class RabbitMQConsumer {
                 +confirmUrlEmail
                 + encodedEmail;
 
-        emailService.sendMessage(message,"Confirm Email",body);
+        try {
+            emailService.sendMessage(message,"Confirm Email",body);
+        }catch (MailSendException e) {
+            log.error(e.getMessage());
+        }
     }
 
     @RabbitListener(queues = RabbitConfig.QUEUE_NAME_3)
