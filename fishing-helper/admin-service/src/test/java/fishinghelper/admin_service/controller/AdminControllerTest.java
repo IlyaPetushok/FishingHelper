@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.server.servlet.OAuth2AuthorizationServerJwtAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -24,11 +27,12 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ContextConfiguration( classes = {AdminController.class})
 @WebMvcTest(AdminController.class)
-@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
+@ImportAutoConfiguration(exclude = {SecurityAutoConfiguration.class, OAuth2AuthorizationServerJwtAutoConfiguration.class, OAuth2ResourceServerAutoConfiguration.class, OAuth2ClientAutoConfiguration.class})
 public class AdminControllerTest {
     @Autowired
     MockMvc mockMvc;
@@ -47,7 +51,7 @@ public class AdminControllerTest {
     public void testAdminUpdateRole_Success() throws Exception {
         String jsonRequest = "{\"field\":\"value\"}";
 
-        mockMvc.perform(post("/admin/user/1/role")
+        mockMvc.perform(put("/admin/user/1/role")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk());

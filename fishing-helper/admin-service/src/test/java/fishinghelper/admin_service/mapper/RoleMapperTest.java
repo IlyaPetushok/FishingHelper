@@ -35,9 +35,9 @@ public class RoleMapperTest {
         assertEquals(2, roles.size());
 
         Role role1 = roles.get(0);
-        assertEquals(roleDTO1.getId(), role1.getId());
+        assertEquals(roleDTO1.getName(), role1.getName());
 
         Role role2 = roles.get(1);
-        assertEquals(roleDTO2.getId(), role2.getId());
+        assertEquals(roleDTO2.getName(), role2.getName());
     }
 }

@@ -12,6 +12,7 @@ import fishinghelper.common_module.entity.user.Privileges;
 import fishinghelper.common_module.entity.user.Role;
 import fishinghelper.common_module.entity.user.RoleType;
 import fishinghelper.common_module.entity.user.User;
+import fishinghelper.security_server.service.KeyCloakService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -28,6 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
+
 public class AdminServiceTest {
     @Mock
     private UserRepositories userRepositories;
@@ -41,6 +43,9 @@ public class AdminServiceTest {
     @Mock
     private PrivilegesRepository privilegesRepository;
 
+    @Mock
+    private KeyCloakService keyCloakService;
+
 
     @InjectMocks
     private AdminServiceImpl adminService;
@@ -53,26 +58,24 @@ public class AdminServiceTest {
     @Test
     void testUpdateRoleForUser() {
         UserDTORequest userDTORequest = new UserDTORequest();
-        userDTORequest.setRoles(List.of(new RoleDTO(1)));
+        userDTORequest.setRoles(List.of(new RoleDTO("1")));
 
         User user = new User();
         user.setId(1);
 
         when(userRepositories.findById(anyInt())).thenReturn(Optional.of(user));
-        when(roleMapper.toEntities(anyList())).thenReturn(List.of(new Role()));
         when(userRepositories.save(any(User.class))).thenReturn(user);
 
         adminService.updateRoleForUser(userDTORequest, 1);
 
         verify(userRepositories, times(1)).findById(anyInt());
-        verify(roleMapper, times(1)).toEntities(anyList());
         verify(userRepositories, times(1)).save(any(User.class));
     }
 
     @Test
     void testCheckUpdateUserRole() {
         UserDTORequest userDTORequest = new UserDTORequest();
-        userDTORequest.setRoles(Collections.singletonList(new RoleDTO(1)));
+        userDTORequest.setRoles(Collections.singletonList(new RoleDTO("USER")));
         Role role=new Role();
         role.setName(RoleType.USER.name());
 
@@ -80,13 +83,12 @@ public class AdminServiceTest {
         user.setRoles(List.of(role));
 
         when(userRepositories.findById(anyInt())).thenReturn(Optional.of(user));
-        when(roleRepositories.findAllById(anyList())).thenReturn(Collections.singletonList(role));
+        when(roleRepositories.findAllById(any())).thenReturn(Collections.singletonList(role));
 
         boolean hasPermission = adminService.checkUpdateUserRole(userDTORequest, 1);
 
         assertTrue(hasPermission);
         verify(userRepositories, times(1)).findById(anyInt());
-        verify(roleRepositories, times(1)).findAllById(anyList());
     }
 
     @Test
