@@ -110,6 +110,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
                     .httpOnly(true)
                     .secure(false)
                     .path("/auth/refresh-token")
+                    .path("/logout")
                     .maxAge(Duration.ofDays(30))
                     .build();
             responseHeaders.add(HttpHeaders.SET_COOKIE,responseCookie.toString());

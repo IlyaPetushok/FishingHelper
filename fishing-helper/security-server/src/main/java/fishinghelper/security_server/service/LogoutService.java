@@ -43,20 +43,13 @@ public class LogoutService implements LogoutHandler {
      */
     @Override
     public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
-        String bearer = request.getHeader(HttpHeaders.AUTHORIZATION);
-
-        if (!hasText(bearer) || !bearer.startsWith(BEARER)) {
-            log.error("Authorization header is missing or does not start with Bearer.");
-        }
-        String token = bearer.replace(BEARER, "").trim();
-
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
         MultiValueMap<String, String> multiValueMap = new LinkedMultiValueMap<>();
         multiValueMap.add("client_id", clientId);
         multiValueMap.add("client_secret", clientSecret);
-        multiValueMap.add("refresh_token", token);
+        multiValueMap.add("refresh_token", request.getCookies()[0].getValue());
 
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
 
@@ -67,6 +60,5 @@ public class LogoutService implements LogoutHandler {
         } else {
             log.error("Failed to log out user. HTTP status: " + responseEntity.getStatusCode());
         }
-
     }
 }
