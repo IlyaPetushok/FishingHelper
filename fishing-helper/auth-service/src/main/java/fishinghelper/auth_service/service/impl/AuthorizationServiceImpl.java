@@ -2,6 +2,7 @@ package fishinghelper.auth_service.service.impl;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
@@ -17,6 +18,7 @@ import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
 import fishinghelper.security_server.service.KeyCloakService;
 import fishinghelper.security_server.util.JwtProvider;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,6 +30,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.Duration;
 import java.util.Objects;
 
 /**
@@ -75,10 +78,10 @@ public class AuthorizationServiceImpl implements AuthorizationService {
      * @return a ResponseEntity containing the result of the authorization request
      */
     @Override
-    public AuthenticationDTOResponse userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
-        User user=userRepositories.findUserByLogin(userDTORequestAuthorization.getLogin());
-        if(Objects.isNull(user)){
-            throw new UserNotFoundException(HttpStatus.UNAUTHORIZED,"User was not registered");
+    public ResponseEntity<?> userAuthorization(UserDTORequestAuthorization userDTORequestAuthorization) {
+        User user = userRepositories.findUserByLogin(userDTORequestAuthorization.getLogin());
+        if (Objects.isNull(user)) {
+            throw new UserNotFoundException(HttpStatus.UNAUTHORIZED, "User was not registered");
         }
 
         HttpHeaders headers = new HttpHeaders();
@@ -95,12 +98,28 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(multiValueMap, headers);
 
         try {
-            ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken, httpEntity, Object.class);
+            ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken, httpEntity, String.class);
             log.info("Authorization request successful. Response: {}", response);
-            return new AuthenticationDTOResponse(response.getBody(),userMapper.toDtoUserResponseAuthorization(user));
+
+            JsonNode jsonNode = objectMapper.readTree(Objects.requireNonNull(response.getBody()).toString());
+            String accessToken = jsonNode.get("access_token").asText();
+            String refreshToken = jsonNode.get("refresh_token").asText();
+
+            HttpHeaders responseHeaders = new HttpHeaders();
+            ResponseCookie responseCookie = ResponseCookie.from("refresh_token", refreshToken)
+                    .httpOnly(true)
+                    .secure(false)
+                    .path("/auth/refresh-token")
+                    .maxAge(Duration.ofDays(30))
+                    .build();
+            responseHeaders.add(HttpHeaders.SET_COOKIE,responseCookie.toString());
+
+            return new ResponseEntity<>(new AuthenticationDTOResponse(accessToken), responseHeaders, HttpStatus.OK);
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             log.error("Authorization request failed with status code {} and response body: {}", e.getStatusCode(), e.getResponseBodyAsString(), e);
-            throw new InvalidDataException(HttpStatus.BAD_REQUEST,"Authorization request failed");
+            throw new InvalidDataException(HttpStatus.BAD_REQUEST, "Authorization request failed");
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -127,26 +146,19 @@ public class AuthorizationServiceImpl implements AuthorizationService {
                     log.info("Token is active.");
                 } else {
                     log.error("Token is inactive or invalid.");
-                    throw new TokenInvalidException(HttpStatus.UNAUTHORIZED,"Token is inactive or invalid.");
+                    throw new TokenInvalidException(HttpStatus.UNAUTHORIZED, "Token is inactive or invalid.");
                 }
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
         } else {
-            throw new CustomResponseException(HttpStatus.UNAUTHORIZED,"Failed to introspect token: ");
+            throw new CustomResponseException(HttpStatus.UNAUTHORIZED, "Failed to introspect token: ");
         }
     }
 
 
-    /**
-     * Refreshes the access token using the provided refresh token.
-     *
-     * @param tokenRequest the request containing the refresh token
-     * @return a ResponseEntity containing the response from the token endpoint
-     * @throws RuntimeException if the token refresh fails or if an unexpected error occurs
-     */
     @Override
-    public ResponseEntity<?> refreshToken(TokenRequest tokenRequest) {
+    public ResponseEntity<?> refreshToken(String refreshToken) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -154,16 +166,22 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         body.add("grant_type", "refresh_token");
         body.add("client_id", clientId);
         body.add("client_secret", clientSecret);
-        body.add("refresh_token", tokenRequest.getToken());
+        body.add("refresh_token", refreshToken);
 
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
 
-        ResponseEntity<?> responseEntity = restTemplate.postForEntity(urlOpenIdToken, requestEntity, Object.class);
+        ResponseEntity<?> response = restTemplate.postForEntity(urlOpenIdToken, requestEntity, String.class);
 
-        if (responseEntity.getStatusCode() == HttpStatus.OK) {
-            return responseEntity;
+        if (response.getStatusCode() == HttpStatus.OK) {
+            try {
+                JsonNode jsonNode = objectMapper.readTree(Objects.requireNonNull(response.getBody()).toString());
+                String accessToken = jsonNode.get("access_token").asText();
+                return new ResponseEntity<>(new AuthenticationDTOResponse(accessToken), HttpStatus.OK);
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
         } else {
-            throw new RefreshTokenException(HttpStatus.BAD_REQUEST,"Failed to refresh token");
+            throw new RefreshTokenException(HttpStatus.BAD_REQUEST, "Failed to refresh token");
         }
     }
 

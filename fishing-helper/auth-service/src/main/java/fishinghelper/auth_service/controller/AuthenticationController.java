@@ -6,6 +6,7 @@ import fishinghelper.auth_service.dto.UserDTORequestAuthorization;
 import fishinghelper.auth_service.service.AuthorizationService;
 import fishinghelper.auth_service.service.impl.AuthorizationServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class AuthenticationController {
 
     @PostMapping("/authorization")
     public ResponseEntity<?> authorization(@RequestBody UserDTORequestAuthorization userDTORequestAuthorization) {
-        return new ResponseEntity<>(authorizationService.userAuthorization(userDTORequestAuthorization), HttpStatus.OK);
+        return authorizationService.userAuthorization(userDTORequestAuthorization);
     }
 
     @PostMapping("/introspect")
@@ -34,8 +35,8 @@ public class AuthenticationController {
     }
 
     @PostMapping("/refresh-token")
-    public ResponseEntity<?> refreshToken(@RequestBody TokenRequest tokenRequest) {
-        return authorizationService.refreshToken(tokenRequest);
+    public ResponseEntity<?> refreshToken(@CookieValue(value = "refresh_token") String refreshToken) {
+        return authorizationService.refreshToken(refreshToken);
     }
 
     @GetMapping("/update/user/{id}/password")

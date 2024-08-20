@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthenticationDTOResponse {
-    private Object response;
-    private UserDTOResponseAuthorization userDTO;
+    private String accessToken;
+//    private Object response;
+//    private UserDTOResponseAuthorization userDTO;
 }
