@@ -90,7 +90,7 @@ public class PlaceServiceImpl implements PlaceService {
 
         Integer pageSize = (int) Math.ceil((double) placePage.getTotalElements() / filterRequest.getSize());
 
-        return new FilterResponse<>(pageSize,placePage.stream()
+        return new FilterResponse<>(placePage.getTotalElements(),pageSize,placePage.stream()
                 .map(placeMapper::toDTOResponseAll)
                 .collect(Collectors.toList()));
     }
@@ -111,7 +111,7 @@ public class PlaceServiceImpl implements PlaceService {
 
         Integer pageSize = (int) Math.ceil((double) placePage.getTotalElements() / placeDTOFilter.getSize());
 
-        return new FilterResponse<>(pageSize,placePage.stream()
+        return new FilterResponse<>(placePage.getTotalElements(),pageSize,placePage.stream()
                 .map(placeMapper::toDTOResponseAll)
                 .collect(Collectors.toList()));
     }

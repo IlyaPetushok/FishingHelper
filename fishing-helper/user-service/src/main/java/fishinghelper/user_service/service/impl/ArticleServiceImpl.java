@@ -127,7 +127,7 @@ public class ArticleServiceImpl implements ArticleService {
 
         Integer pageSize = (int) Math.ceil((double) articlePage.getTotalElements() / filterRequest.getSize());
 
-        return new FilterResponse<>(pageSize, articlePage.stream()
+        return new FilterResponse<>(articlePage.getTotalElements(),pageSize, articlePage.stream()
                 .map(articleMapper::toDTO)
                 .collect(Collectors.toList()));
     }
@@ -148,7 +148,7 @@ public class ArticleServiceImpl implements ArticleService {
 
         Integer pageSize = (int) Math.ceil((double) articlePage.getTotalElements() / articleDTOFilter.getSize());
 
-        return new FilterResponse<>(pageSize,articlePage.stream()
+        return new FilterResponse<>(articlePage.getTotalElements(),pageSize,articlePage.stream()
                 .map(articleMapper::toDTO)
                 .collect(Collectors.toList()));
     }

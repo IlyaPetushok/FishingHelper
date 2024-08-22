@@ -115,7 +115,7 @@ public class SurveyServiceImpl implements SurveyService {
 
         Integer pageSize = (int) Math.ceil((double) surveyPage.getTotalElements() / filterRequest.getSize());
         
-        return new FilterResponse<>(pageSize, surveyPage.stream()
+        return new FilterResponse<>(surveyPage.getTotalElements(),pageSize, surveyPage.stream()
                 .map(surveyMapper::toDTO)
                 .collect(Collectors.toList()));
     }

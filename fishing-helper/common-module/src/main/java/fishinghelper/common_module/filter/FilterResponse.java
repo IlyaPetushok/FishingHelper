@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class FilterResponse<T> {
+    private Long itemCounts;
     private Integer pageSize;
     private List<T> listObject;
 }
