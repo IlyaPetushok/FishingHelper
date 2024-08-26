@@ -2,7 +2,6 @@ package fishinghelper.auth_service.service.impl;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fishinghelper.auth_service.dto.AuthenticationDTOResponse;
@@ -18,7 +17,6 @@ import fishinghelper.notification_service.messaging.producer.RabbitMQProducer;
 import fishinghelper.security_server.service.KeyCloakService;
 import fishinghelper.security_server.util.JwtProvider;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -105,23 +103,35 @@ public class AuthorizationServiceImpl implements AuthorizationService {
             String accessToken = jsonNode.get("access_token").asText();
             String refreshToken = jsonNode.get("refresh_token").asText();
 
-            HttpHeaders responseHeaders = new HttpHeaders();
-            ResponseCookie responseCookie = ResponseCookie.from("refresh_token", refreshToken)
-                    .httpOnly(true)
-                    .secure(false)
-                    .path("/auth/refresh-token")
-                    .path("/logout")
-                    .maxAge(Duration.ofDays(30))
-                    .build();
-            responseHeaders.add(HttpHeaders.SET_COOKIE,responseCookie.toString());
-
-            return new ResponseEntity<>(new AuthenticationDTOResponse(accessToken), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<>(new AuthenticationDTOResponse(accessToken), getHttpHeadersWithCookies(refreshToken), HttpStatus.OK);
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             log.error("Authorization request failed with status code {} and response body: {}", e.getStatusCode(), e.getResponseBodyAsString(), e);
             throw new InvalidDataException(HttpStatus.BAD_REQUEST, "Authorization request failed");
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private HttpHeaders getHttpHeadersWithCookies(String refreshToken) {
+        HttpHeaders responseHeaders = new HttpHeaders();
+
+        ResponseCookie responseCookie = ResponseCookie.from("refresh_token", refreshToken)
+                .httpOnly(true)
+                .secure(false)
+                .path("/logout")
+                .maxAge(Duration.ofDays(30))
+                .build();
+
+        ResponseCookie responseCookie2 = ResponseCookie.from("refresh_token", refreshToken)
+                .httpOnly(true)
+                .secure(false)
+                .path("/auth/refresh-token")
+                .maxAge(Duration.ofDays(30))
+                .build();
+
+        responseHeaders.add(HttpHeaders.SET_COOKIE,responseCookie.toString());
+        responseHeaders.add(HttpHeaders.SET_COOKIE,responseCookie2.toString());
+        return responseHeaders;
     }
 
     @Override
