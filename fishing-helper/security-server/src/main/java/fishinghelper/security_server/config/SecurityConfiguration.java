@@ -63,6 +63,11 @@ public class SecurityConfiguration {
             "/swagger-resources"
     };
 
+    private static final String[] USER_SERVICE_ENDPOINT = {
+            "/user/place*",
+            "/user/place/*"
+    };
+
     private static final String[] AUTH_SERVICE_ENDPOINT = {
             "/auth/registration",
             "/auth/authorization",
@@ -110,6 +115,7 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers(SWAGGER_LIST).permitAll()
                 .requestMatchers(AUTH_SERVICE_ENDPOINT).permitAll()
+                .requestMatchers(USER_SERVICE_ENDPOINT).permitAll()
                 .anyRequest().authenticated());
 
         http.oauth2Login(Customizer.withDefaults());

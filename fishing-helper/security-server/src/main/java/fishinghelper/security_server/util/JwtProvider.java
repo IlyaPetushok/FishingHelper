@@ -11,6 +11,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.*;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtClaimNames;
@@ -23,10 +24,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -77,6 +75,12 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
         String login = jwt.getClaimAsString(principleAttribute);
         List<String> roleNames = getStrings(jwt.getClaims());
 
+        if(roleNames.stream().anyMatch(roleName-> roleName.equals("BOT"))){
+            return new JwtAuthenticationToken(jwt,
+                    new ArrayList<>(List.of(new SimpleGrantedAuthority("ROLE_BOT")))
+                    ,getPrincipleClaimName(jwt));
+        }
+
         Collection<GrantedAuthority> authorities = Stream.concat(
                 jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
                 customUserDetailService.loadUserByUsername(login, roleNames).stream()
@@ -93,6 +97,9 @@ public class JwtProvider implements Converter<Jwt, AbstractAuthenticationToken> 
     private List<String> getStrings(Map<String, Object> claims) {
         Map<String, Object> resource_access = (Map<String, Object>) claims.get("resource_access");
         Map<String, Object> accounts = (Map<String, Object>) resource_access.get("fishing-helper-rest-api");
+        if(accounts == null) {
+            accounts = (Map<String, Object>) resource_access.get("telegrams_bots_client");
+        }
         return (List<String>) accounts.get("roles");
     }
 
